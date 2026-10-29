@@ -152,6 +152,18 @@ class ApplicationTests(unittest.TestCase):
         for _ in range(20): b.advance(.05)
         self.assertAlmostEqual(a.yaw,b.yaw)
 
+    def test_live_orbit_speed_controls(self):
+        app=tui.App(options(),'au'); app.input(']');self.assertEqual(app.orbit_speed,6.5)
+        app.input('[');self.assertEqual(app.orbit_speed,6.)
+        app.input('\\');self.assertEqual(app.orbit_speed,-6.)
+        app.input(']');self.assertEqual(app.orbit_speed,-6.5)
+        app.open('settings');app.setting=6;app.input('LEFT');self.assertEqual(app.orbit_speed,-6.)
+        app.setting=7;app.input('ENTER');self.assertEqual(app.orbit_speed,6.)
+        for _ in range(150): app.adjust_orbit_speed(-1)
+        self.assertEqual(app.orbit_speed,.1)
+        for _ in range(150): app.adjust_orbit_speed(1)
+        self.assertEqual(app.orbit_speed,60.)
+
     def test_terminal_restoration(self):
         master,slave=pty.openpty(); old=termios.tcgetattr(slave)
         import fcntl

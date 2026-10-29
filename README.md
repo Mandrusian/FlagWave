@@ -218,3 +218,9 @@ per second, one turn per minute. `--orbit-speed -6` reverses the direction.
 Space pauses both the cloth and orbit. Browsing menus holds the camera position;
 returning resumes the orbit. Arrow keys still adjust the camera angle and tilt.
 The existing canvas limits and adaptive sampling apply during orbit too.
+
+Change orbit speed live with **[** (slower) and **]** (faster), in 0.5-degree/sec
+steps. **Backslash** reverses direction. Settings (**s**) has separate **Orbit
+speed** and **Orbit direction** rows; use left/right to change them. Speed is
+limited to 0.1–60 degrees/sec; changing it keeps the current direction and angle.
+Normal mode: `flagwave --orbit`. Low power is optional: `flagwave --low-power --orbit`.

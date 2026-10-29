@@ -216,8 +216,8 @@ class App:
             return True
         if self.mode=='settings':
             if key in ('ESC','s'): self.mode='stage'
-            elif key=='UP': self.setting=(self.setting-1)%6
-            elif key=='DOWN': self.setting=(self.setting+1)%6
+            elif key=='UP': self.setting=(self.setting-1)%8
+            elif key=='DOWN': self.setting=(self.setting+1)%8
             elif key in ('LEFT','RIGHT','ENTER',' '):
                 direction=-1 if key=='LEFT' else 1
                 if self.setting==0: self.wind=round(max(0,min(2.5,self.wind+.1*direction)),1)
@@ -227,6 +227,8 @@ class App:
                 if self.setting==3: self.args.vertical=not self.args.vertical; self.reload()
                 if self.setting==4: self.args.blocks=not self.args.blocks
                 if self.setting==5: self.orbit=not self.orbit
+                if self.setting==6: self.adjust_orbit_speed(direction)
+                if self.setting==7: self.orbit_speed=-self.orbit_speed
             return True
         if key=='q': return False
         if key in ('f','/'): self.open('countries')
@@ -238,6 +240,8 @@ class App:
         elif key=='?': self.open('help')
         elif key=='TAB': self.side=not self.side
         elif key=='o': self.orbit=not self.orbit
+        elif key in ('[',']'): self.adjust_orbit_speed(1 if key==']' else -1)
+        elif key=='\\': self.orbit_speed=-self.orbit_speed
         elif key==' ': self.paused=not self.paused
         elif key in ('LEFT','h'): self.yaw-=.1
         elif key in ('RIGHT','l'): self.yaw+=.1
@@ -292,17 +296,19 @@ class App:
             items=[('Wind strength',f'{self.wind:.1f}'),('Target frame rate',f'{self.args.fps} FPS'),
                    ('Colour mode',self.color),('Artwork orientation','Vertical' if self.args.vertical else 'Horizontal'),
                    ('ASCII style','Solid #' if self.args.blocks else 'Shaded characters'),
-                   ('Auto orbit',f'{self.orbit_speed:g} deg/s' if self.orbit else 'Off')]
-            for i,(label,value) in enumerate(items): s.text(3,5+i*(2 if s.h>=22 else 1),f' {label:<24} {value}',s.w-6,SELECT if i==self.setting else WHITE)
+                   ('Auto orbit','On' if self.orbit else 'Off'),
+                   ('Orbit speed',f'{abs(self.orbit_speed):g} deg/s'),
+                   ('Orbit direction','Reverse' if self.orbit_speed<0 else 'Forward')]
+            for i,(label,value) in enumerate(items): s.text(3,5+i*(2 if s.h>=24 else 1),f' {label:<24} {value}',s.w-6,SELECT if i==self.setting else WHITE)
         elif self.mode=='help':
             self.header(s,'KEYBOARD GUIDE','Press any key to return')
             help_lines=['a         Historical / military / ideology archive','f or /    Search the 195 country flags','i         Browse folders and import an image','b         Open your saved imported images',
-                        's         Settings: wind, FPS, colour, orientation','o         Toggle slow automatic orbit','Arrows    Orbit and tilt the camera','+ / -     Adjust wind strength','Space     Pause / resume cloth',
+                        's         Settings: wind, FPS, colour, orientation','o         Toggle slow automatic orbit','[ / ]     Slower / faster orbit','\\         Reverse orbit direction','Arrows    Orbit and tilt the camera','+ / -     Adjust wind strength','Space     Pause / resume cloth',
                         'n / p     Next / previous country','v / c     Rotate artwork / cycle colours','Tab       Toggle stage sidebar','r         Reset wind and camera','q         Quit (Ctrl-C works on every screen)']
             for i,line in enumerate(help_lines[:s.h-6]): s.text(3,5+i,line)
         else:
             name=clean(ARCHIVE_BY_ID[self.archive_id]['name'] if self.archive_id else (self.path.stem.rsplit('-',1)[0] if self.path else COUNTRIES[self.code]))
-            self.header(s,name,('PAUSED' if self.paused else 'LIVE')+f'   |   Wind {self.wind:.1f}   |   {self.fps:.0f}/{self.args.fps} FPS   |   '+self.color+('   |   ORBIT' if self.orbit else ''))
+            self.header(s,name,('PAUSED' if self.paused else 'LIVE')+f'   |   Wind {self.wind:.1f}   |   {self.fps:.0f}/{self.args.fps} FPS   |   '+self.color+(f'   |   ORBIT {self.orbit_speed:g} deg/s' if self.orbit else ''))
             sidebar=25 if self.side and s.w>=90 else 0
             if sidebar:
                 lines=[('EXPLORE',CYAN),('f  Country flags',WHITE),('a  Historical archive',WHITE),('i  Import image',WHITE),('b  My images',WHITE),('o  Auto orbit',WHITE),('s  Settings',WHITE),('?  Keyboard guide',WHITE),('',DIM),(f'{195+len(ARCHIVE)} offline flags',DIM),('PNG / JPG / WebP',DIM),('No GPU required',DIM),('',DIM),('Arrows  Orbit camera',DIM),('+ / -   Wind',DIM),('Space   Pause',DIM),('Tab     Hide sidebar',DIM)]
@@ -364,6 +370,11 @@ class App:
                     s.text(x,8,'Cannot preview this image.',width,DIM)
                     s.text(x,9,clean(e),width,DIM)
         s.text(2,s.h-3,f'{self.selected+1 if self.entries else 0} / {len(self.entries)}   |   PgUp/PgDn: scroll',style=DIM)
+
+    def adjust_orbit_speed(self,direction):
+        magnitude=round(max(.1,min(60,abs(self.orbit_speed)+direction*.5)),1)
+        self.orbit_speed=math.copysign(magnitude,self.orbit_speed)
+        self.message=f'Orbit speed: {magnitude:g} deg/s. [ slower / ] faster / backslash reverses.'
 
     def advance(self,dt):
         if self.paused: return
