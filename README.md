@@ -33,7 +33,6 @@ flagwave au
 flagwave china
 flagwave ussr
 flagwave ussr-1936
-flagwave nazi-germany
 flagwave --archive
 flagwave --list-archive
 flagwave "United Kingdom"
