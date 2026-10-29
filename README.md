@@ -76,8 +76,6 @@ resized/rasterized into palette PNG; the flag designs were not altered.
 
 ## Interactive TUI
 
-![FlagWave terminal interface](docs/screenshot.png)
-
 The stage has a collapsible sidebar, live status and camera controls. Open the
 country picker with **f** and type a name or code to filter all 195 flags.
 The selected flag has an animated preview in wide terminals.
