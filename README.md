@@ -221,3 +221,18 @@ steps. **Backslash** reverses direction. Settings (**s**) has separate **Orbit
 speed** and **Orbit direction** rows; use left/right to change them. Speed is
 limited to 0.1–60 degrees/sec; changing it keeps the current direction and angle.
 Normal mode: `flagwave --orbit`. Low power is optional: `flagwave --low-power --orbit`.
+
+## Native Android app (APK)
+
+The native Android project lives in [android/](android/README.md): Material 3
+UI, C++ cloth, GPU ASCII, the full offline flag library, image imports and touch
+controls. No Android Studio is needed. Build APKs from the terminal or download
+successful **Android APK** workflow artifacts from [GitHub Actions](https://github.com/Mandrusian/FlagWave/actions/workflows/android.yml).
+
+```bash
+bash tools/setup-android.sh
+bash tools/build-apk.sh
+```
+
+Use GitHub Actions for Fedora Asahi; Google's Linux NDK host tools require
+x86_64. See the Android README for requirements and first-version limitations.

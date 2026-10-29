@@ -2,3 +2,10 @@ __pycache__/
 *.py[cod]
 .venv/
 *.egg-info/
+android/.gradle/
+android/.kotlin/
+android/local.properties
+android/**/build/
+android/**/.cxx/
+*.keystore
+*.jks
