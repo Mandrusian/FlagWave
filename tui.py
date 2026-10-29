@@ -1,5 +1,6 @@
 """Keyboard-first FlagWave interface, file browser and saved image collection."""
 import codecs
+import math
 import hashlib
 import os
 from pathlib import Path
@@ -94,6 +95,7 @@ class App:
         if self.archive_id: self.path=ROOT/ARCHIVE_BY_ID[self.archive_id]['asset']
         self.group='All'; self.groups=['All']+sorted({tag for e in ARCHIVE for tag in e['tags']})
         self.info_record=None; self.info_return='stage'; self.info_scroll=0
+        self.orbit=getattr(args,"orbit",False); self.orbit_speed=getattr(args,"orbit_speed",6.)
         self.yaw=.24; self.pitch=.12; self.wind=args.wind; self.paused=False
         self.color='none' if args.mono else args.color
         self.clock=0.; self.mode='stage'; self.query=''; self.selected=0; self.offset=0
@@ -214,8 +216,8 @@ class App:
             return True
         if self.mode=='settings':
             if key in ('ESC','s'): self.mode='stage'
-            elif key=='UP': self.setting=(self.setting-1)%5
-            elif key=='DOWN': self.setting=(self.setting+1)%5
+            elif key=='UP': self.setting=(self.setting-1)%6
+            elif key=='DOWN': self.setting=(self.setting+1)%6
             elif key in ('LEFT','RIGHT','ENTER',' '):
                 direction=-1 if key=='LEFT' else 1
                 if self.setting==0: self.wind=round(max(0,min(2.5,self.wind+.1*direction)),1)
@@ -224,6 +226,7 @@ class App:
                     colors=['truecolor','256','none']; self.color=colors[(colors.index(self.color)+direction)%3]
                 if self.setting==3: self.args.vertical=not self.args.vertical; self.reload()
                 if self.setting==4: self.args.blocks=not self.args.blocks
+                if self.setting==5: self.orbit=not self.orbit
             return True
         if key=='q': return False
         if key in ('f','/'): self.open('countries')
@@ -234,6 +237,7 @@ class App:
         elif key=='s': self.open('settings')
         elif key=='?': self.open('help')
         elif key=='TAB': self.side=not self.side
+        elif key=='o': self.orbit=not self.orbit
         elif key==' ': self.paused=not self.paused
         elif key in ('LEFT','h'): self.yaw-=.1
         elif key in ('RIGHT','l'): self.yaw+=.1
@@ -287,20 +291,21 @@ class App:
             self.header(s,'SETTINGS','Up/down: choose   Left/right: adjust   Esc: back')
             items=[('Wind strength',f'{self.wind:.1f}'),('Target frame rate',f'{self.args.fps} FPS'),
                    ('Colour mode',self.color),('Artwork orientation','Vertical' if self.args.vertical else 'Horizontal'),
-                   ('ASCII style','Solid #' if self.args.blocks else 'Shaded characters')]
-            for i,(label,value) in enumerate(items): s.text(3,5+i*2,f' {label:<24} {value}',s.w-6,SELECT if i==self.setting else WHITE)
+                   ('ASCII style','Solid #' if self.args.blocks else 'Shaded characters'),
+                   ('Auto orbit',f'{self.orbit_speed:g} deg/s' if self.orbit else 'Off')]
+            for i,(label,value) in enumerate(items): s.text(3,5+i*(2 if s.h>=22 else 1),f' {label:<24} {value}',s.w-6,SELECT if i==self.setting else WHITE)
         elif self.mode=='help':
             self.header(s,'KEYBOARD GUIDE','Press any key to return')
             help_lines=['a         Historical / military / ideology archive','f or /    Search the 195 country flags','i         Browse folders and import an image','b         Open your saved imported images',
-                        's         Settings: wind, FPS, colour, orientation','Arrows    Orbit and tilt the camera','+ / -     Adjust wind strength','Space     Pause / resume cloth',
+                        's         Settings: wind, FPS, colour, orientation','o         Toggle slow automatic orbit','Arrows    Orbit and tilt the camera','+ / -     Adjust wind strength','Space     Pause / resume cloth',
                         'n / p     Next / previous country','v / c     Rotate artwork / cycle colours','Tab       Toggle stage sidebar','r         Reset wind and camera','q         Quit (Ctrl-C works on every screen)']
             for i,line in enumerate(help_lines[:s.h-6]): s.text(3,5+i,line)
         else:
             name=clean(ARCHIVE_BY_ID[self.archive_id]['name'] if self.archive_id else (self.path.stem.rsplit('-',1)[0] if self.path else COUNTRIES[self.code]))
-            self.header(s,name,('PAUSED' if self.paused else 'LIVE')+f'   |   Wind {self.wind:.1f}   |   {self.fps:.0f}/{self.args.fps} FPS   |   '+self.color)
+            self.header(s,name,('PAUSED' if self.paused else 'LIVE')+f'   |   Wind {self.wind:.1f}   |   {self.fps:.0f}/{self.args.fps} FPS   |   '+self.color+('   |   ORBIT' if self.orbit else ''))
             sidebar=25 if self.side and s.w>=90 else 0
             if sidebar:
-                lines=[('EXPLORE',CYAN),('f  Country flags',WHITE),('a  Historical archive',WHITE),('i  Import image',WHITE),('b  My images',WHITE),('s  Settings',WHITE),('?  Keyboard guide',WHITE),('',DIM),(f'{195+len(ARCHIVE)} offline flags',DIM),('PNG / JPG / WebP',DIM),('No GPU required',DIM),('',DIM),('Arrows  Orbit camera',DIM),('+ / -   Wind',DIM),('Space   Pause',DIM),('Tab     Hide sidebar',DIM)]
+                lines=[('EXPLORE',CYAN),('f  Country flags',WHITE),('a  Historical archive',WHITE),('i  Import image',WHITE),('b  My images',WHITE),('o  Auto orbit',WHITE),('s  Settings',WHITE),('?  Keyboard guide',WHITE),('',DIM),(f'{195+len(ARCHIVE)} offline flags',DIM),('PNG / JPG / WebP',DIM),('No GPU required',DIM),('',DIM),('Arrows  Orbit camera',DIM),('+ / -   Wind',DIM),('Space   Pause',DIM),('Tab     Hide sidebar',DIM)]
                 for i,(line,style) in enumerate(lines[:s.h-8]): s.text(2,5+i,line,22,style)
             quality=getattr(self.args,'quality','auto')
             capw,caph={'low':(90,34),'auto':(140,50),'high':(200,70)}[quality]
@@ -313,7 +318,7 @@ class App:
             footer=' Enter: select  Esc: back  Tab: switch  Type: filter'
             if self.mode=='archive': footer=' Ctrl-F/R: category  Ctrl-O: details  Enter: wave  Esc: back'
             if self.mode=='browser': footer=' Enter: open/import  Left: parent  Ctrl-G: path  Esc: back'
-        else: footer=' f: flags  a: archive  i: import  b: images  s: settings  d: details  q: quit'
+        else: footer=' f: flags  a: archive  i: import  b: images  o: orbit  s: settings  q: quit'
         s.text(0,s.h-1,footer,style=SELECT)
         s.present()
 
@@ -360,13 +365,19 @@ class App:
                     s.text(x,9,clean(e),width,DIM)
         s.text(2,s.h-3,f'{self.selected+1 if self.entries else 0} / {len(self.entries)}   |   PgUp/PgDn: scroll',style=DIM)
 
+    def advance(self,dt):
+        if self.paused: return
+        self.clock+=min(dt,.2)
+        if self.orbit and self.mode=='stage':
+            self.yaw=(self.yaw+math.radians(self.orbit_speed)*dt)%math.tau
+
     def run(self):
         count=0; previous=time.monotonic()
         with Terminal() as terminal:
             keys=Keys(terminal.fd)
             while True:
-                start=time.monotonic(); dt=min(start-previous,.2); previous=start
-                if not self.paused: self.clock+=dt
+                start=time.monotonic(); dt=max(0,start-previous); previous=start
+                self.advance(dt)
                 # Process queued events without dropping batched typing/pastes.
                 for _ in range(512):
                     key=keys.read()

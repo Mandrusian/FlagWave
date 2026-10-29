@@ -180,6 +180,8 @@ def main():
     p.add_argument('--fps',type=int,default=20)
     p.add_argument('--quality',choices=['auto','low','high'],default='auto',help='auto adapts sampling to your CPU')
     p.add_argument('--low-power',action='store_true',help='12 FPS with low-cost sampling')
+    p.add_argument('--orbit',action='store_true',help='slowly spin the camera around the waving flag')
+    p.add_argument('--orbit-speed',type=float,default=6.,help='orbit degrees per second, -60..60 excluding zero (default 6)')
     p.add_argument('--wind',type=float,default=1.)
     p.add_argument('--color',choices=['truecolor','256','none'],default='truecolor')
     p.add_argument('--mono',action='store_true',help='uncoloured ASCII')
@@ -197,6 +199,7 @@ def main():
         return
     if not 1<=args.fps<=60: p.error('--fps must be 1..60')
     if not math.isfinite(args.wind) or not 0<=args.wind<=2.5: p.error('--wind must be 0..2.5')
+    if not math.isfinite(args.orbit_speed) or not 0<abs(args.orbit_speed)<=60: p.error('--orbit-speed must be nonzero within -60..60')
     if args.frames<0: p.error('--frames must be non-negative')
     if not sys.stdin.isatty() or not sys.stdout.isatty(): p.error('run in an interactive terminal; --list works in pipes')
     import random

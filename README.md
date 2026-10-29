@@ -203,3 +203,18 @@ flagwave --low-power
 Low power uses 12 FPS and at most 90 x 34 animated cells. `--quality high`
 raises the cap to 200 x 70; `--fps 15` sets a lower target independently.
 Performance still depends on the CPU, terminal emulator and system load.
+
+## Automatic 3D orbit
+
+```bash
+flagwave --orbit
+flagwave --low-power --orbit
+flagwave eu --orbit --orbit-speed 4
+```
+
+Press **o** on the stage (or toggle **Auto orbit** in settings) for a full slow
+360-degree camera rotation while the cloth waves. The default speed is 6 degrees
+per second, one turn per minute. `--orbit-speed -6` reverses the direction.
+Space pauses both the cloth and orbit. Browsing menus holds the camera position;
+returning resumes the orbit. Arrow keys still adjust the camera angle and tilt.
+The existing canvas limits and adaptive sampling apply during orbit too.

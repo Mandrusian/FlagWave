@@ -132,6 +132,26 @@ class ApplicationTests(unittest.TestCase):
             self.assertLessEqual(frame.call_args.args[1],50)
         self.assertEqual(core.resolve_archive('rek'),'red-eureka')
 
+    def test_auto_orbit_time_pause_and_toggle(self):
+        import math
+        app=tui.App(options(),'au'); start=app.yaw
+        app.advance(.5); self.assertEqual(app.yaw,start)
+        app.input('o'); app.advance(10)
+        self.assertAlmostEqual(app.yaw,start+math.pi/3)
+        app.input(' '); frozen=app.yaw; clock=app.clock
+        app.advance(5); self.assertEqual(app.yaw,frozen);self.assertEqual(app.clock,clock)
+        app.input(' '); app.open('countries');app.advance(5);self.assertEqual(app.yaw,frozen)
+        app.input('ESC'); app.orbit_speed=-6;app.advance(10)
+        self.assertAlmostEqual(app.yaw,start)
+        app.input('s');app.setting=5;app.input('ENTER');self.assertFalse(app.orbit)
+
+    def test_auto_orbit_frame_rate_independent(self):
+        a=tui.App(options(),'au'); b=tui.App(options(),'au')
+        a.orbit=b.orbit=True
+        a.advance(1)
+        for _ in range(20): b.advance(.05)
+        self.assertAlmostEqual(a.yaw,b.yaw)
+
     def test_terminal_restoration(self):
         master,slave=pty.openpty(); old=termios.tcgetattr(slave)
         import fcntl
