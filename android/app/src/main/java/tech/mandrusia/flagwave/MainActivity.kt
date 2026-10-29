@@ -145,8 +145,10 @@ class MainActivity:ComponentActivity() {
         if(owner.lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) surface?.onResume()
         onDispose {owner.lifecycle.removeObserver(observer);surface?.onPause()}
     }
-    Column(Modifier.fillMaxSize().padding(if(fullscreen) 0.dp else 20.dp),verticalArrangement=Arrangement.spacedBy(16.dp)) {
-        if(!fullscreen) {
+    BoxWithConstraints(Modifier.fillMaxSize()) {
+    val compact=maxHeight<360.dp
+    Column(Modifier.fillMaxSize().padding(if(fullscreen) 0.dp else if(compact) 12.dp else 20.dp),verticalArrangement=Arrangement.spacedBy(if(compact) 8.dp else 16.dp)) {
+        if(!fullscreen && !compact) {
             Row(verticalAlignment=Alignment.CenterVertically) {
                 Column(Modifier.weight(1f)) {
                     Text(if(options.paused) "PAUSED" else "LIVE CANVAS",color=MaterialTheme.colorScheme.primary,style=MaterialTheme.typography.labelMedium)
@@ -165,13 +167,14 @@ class MainActivity:ComponentActivity() {
             }
         }
         if(!fullscreen) {
-            Text("Drag to orbit · Pinch to zoom",Modifier.align(Alignment.CenterHorizontally),style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+            if(!compact) Text("Drag to orbit · Pinch to zoom",Modifier.align(Alignment.CenterHorizontally),style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
             Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(12.dp)) {
                 FilledIconButton(onClick={onOptions(options.copy(paused=!options.paused))},modifier=Modifier.size(56.dp)) {Icon(if(options.paused) Icons.Default.PlayArrow else Icons.Default.Pause,if(options.paused) "Resume" else "Pause")}
                 FilledTonalButton(onClick={onOptions(options.copy(orbit=!options.orbit))},modifier=Modifier.weight(1f).height(56.dp)) {Icon(Icons.Default.RotateRight,null);Spacer(Modifier.width(8.dp));Text(if(options.orbit) "Orbit on" else "Orbit off")}
                 FilledTonalIconButton(onClick=onControls,modifier=Modifier.size(56.dp)) {Icon(Icons.Default.Tune,"Motion and appearance")}
             }
         }
+    }
     }
 }
 

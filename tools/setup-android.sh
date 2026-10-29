@@ -7,6 +7,7 @@ setup_flagwave_android() {
             return 1 ;;
     esac
     command -v java >/dev/null || { printf 'Install JDK 17 or newer, then rerun.\n' >&2; return 1; }
+    command -v javac >/dev/null || { printf 'Install the full JDK 17 (including javac), not only a Java runtime, then rerun.\n' >&2; return 1; }
     command -v python3 >/dev/null || { printf 'Install Python 3, then rerun.\n' >&2; return 1; }
     local sdk="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-$HOME/.local/share/android-sdk}}"
     mkdir -p "$sdk"
