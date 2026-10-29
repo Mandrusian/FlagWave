@@ -85,6 +85,7 @@ Use `--list` to list countries and `--list-archive` to list archive entries.
 | **i** | Browse folders and import an image |
 | **b** | Open My images |
 | **s** | Open settings |
+| **t** | Fastfetch logo setup and animated preview |
 | **?** | Show the keyboard guide |
 | **Tab** | Toggle the stage sidebar |
 | **← / →** or **h / l** | Rotate the camera |
@@ -132,6 +133,33 @@ Orbit defaults to 6°/s, one turn per minute. Set `--orbit-speed` to a nonzero
 value from −60 to 60; negative values reverse direction. Live controls and
 settings allow speeds of 0.1–60°/s. Menus hold the camera position, and Space
 pauses both orbit and cloth.
+
+## Fastfetch integration
+
+Choose any country, archive flag or imported image, then press **t** on the stage.
+Use up/down to choose an action, left/right to set logo dimensions, and Enter to:
+
+- Preview animated cloth beside system information collected by Fastfetch.
+- Export a coloured ANSI logo without changing Fastfetch settings.
+- Set the current flag frame as the logo for normal `fastfetch` runs.
+- Restore the config from before FlagWave's first setup.
+
+The exported logo uses the current camera angle, wind, orientation, colour mode
+and ASCII style. Normal Fastfetch output is a **still frame**; continuous waving
+and orbit are available in the TUI preview. Fastfetch must be installed separately
+for the system-info preview; exporting and configuring do not require it.
+
+FlagWave edits the `logo` field in
+`${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/config.jsonc`, preserving other fields
+and comments. It keeps the original config and exported logos under
+`${XDG_DATA_HOME:-$HOME/.local/share}/flagwave/fastfetch`. If the config changes
+outside FlagWave, automatic updates and restore stop to protect those edits.
+Symlinked configs are left alone; use Export and point your dotfiles at the logo.
+Custom `fastfetch --config ...` files are not modified. No shell startup file is
+changed. Restore before uninstalling if you enabled a FlagWave logo.
+
+The integration uses Fastfetch's documented
+[file-raw logo support](https://github.com/fastfetch-cli/fastfetch/wiki/Logo-options#file-raw).
 
 ## Web and Android
 

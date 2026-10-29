@@ -9,6 +9,8 @@ import shutil
 import sys
 import time
 import textwrap
+import subprocess
+import fastfetch_integration as fetch
 
 import numpy as np
 from PIL import Image
@@ -103,6 +105,7 @@ class App:
         if not self.folder.is_dir(): self.folder=Path.home()
         self.error=''; self.message=''; self.side=True; self.preview_key=None; self.preview=None
         self.fps=0.; self.entries=[]; self.show_hidden=False; self.setting=0; self.goto=None
+        self.fetch_setting=0; self.fetch_width=38; self.fetch_height=18; self.fetch_lines=[]; self.fetch_scroll=0
         self.render_scale=1.; self.last_layout=None; self.renderer=None; self.reload()
         if getattr(args,'archive',False): self.open('archive')
 
@@ -214,6 +217,23 @@ class App:
         if self.mode=='help':
             if key: self.mode='stage'
             return True
+        if self.mode=='fastfetch-preview':
+            if key=='ESC': self.open('fastfetch')
+            elif key=='UP': self.fetch_scroll=max(0,self.fetch_scroll-1)
+            elif key=='DOWN': self.fetch_scroll=min(max(0,len(self.fetch_lines)-1),self.fetch_scroll+1)
+            elif key==' ': self.paused=not self.paused
+            elif key=='o': self.orbit=not self.orbit
+            return True
+        if self.mode=='fastfetch':
+            if key in ('ESC','t'): self.mode='stage'
+            elif key=='UP': self.fetch_setting=(self.fetch_setting-1)%6
+            elif key=='DOWN': self.fetch_setting=(self.fetch_setting+1)%6
+            elif key in ('LEFT','RIGHT','ENTER'):
+                direction=-1 if key=='LEFT' else 1
+                if self.fetch_setting==0: self.fetch_width=max(20,min(60,self.fetch_width+2*direction))
+                elif self.fetch_setting==1: self.fetch_height=max(8,min(28,self.fetch_height+direction))
+                elif key=='ENTER': self.fastfetch_action()
+            return True
         if self.mode=='settings':
             if key in ('ESC','s'): self.mode='stage'
             elif key=='UP': self.setting=(self.setting-1)%8
@@ -237,6 +257,7 @@ class App:
         elif key=='i': self.open('browser')
         elif key=='b': self.open('collection')
         elif key=='s': self.open('settings')
+        elif key=='t': self.open('fastfetch')
         elif key=='?': self.open('help')
         elif key=='TAB': self.side=not self.side
         elif key=='o': self.orbit=not self.orbit
@@ -291,6 +312,8 @@ class App:
             for paragraph in paragraphs: lines.extend(textwrap.wrap(clean(paragraph),max(15,s.w-6)) or ['']); lines.append('')
             visible=s.h-8; self.info_scroll=min(self.info_scroll,max(0,len(lines)-visible))
             for row,line in enumerate(lines[self.info_scroll:self.info_scroll+visible]): s.text(3,5+row,line,s.w-6,WHITE)
+        elif self.mode in ('fastfetch','fastfetch-preview'):
+            self.draw_fastfetch(s)
         elif self.mode=='settings':
             self.header(s,'SETTINGS','Up/down: choose   Left/right: adjust   Esc: back')
             items=[('Wind strength',f'{self.wind:.1f}'),('Target frame rate',f'{self.args.fps} FPS'),
@@ -303,7 +326,7 @@ class App:
         elif self.mode=='help':
             self.header(s,'KEYBOARD GUIDE','Press any key to return')
             help_lines=['a         Historical / military / ideology archive','f or /    Search the 195 country flags','i         Browse folders and import an image','b         Open your saved imported images',
-                        's         Settings: wind, FPS, colour, orientation','o         Toggle slow automatic orbit','[ / ]     Slower / faster orbit','\\         Reverse orbit direction','Arrows    Orbit and tilt the camera','+ / -     Adjust wind strength','Space     Pause / resume cloth',
+                        't         Fastfetch setup and animated preview','s         Settings: wind, FPS, colour, orientation','o         Toggle slow automatic orbit','[ / ]     Slower / faster orbit','\\         Reverse orbit direction','Arrows    Orbit and tilt the camera','+ / -     Adjust wind strength','Space     Pause / resume cloth',
                         'n / p     Next / previous country','v / c     Rotate artwork / cycle colours','Tab       Toggle stage sidebar','r         Reset wind and camera','q         Quit (Ctrl-C works on every screen)']
             for i,line in enumerate(help_lines[:s.h-6]): s.text(3,5+i,line)
         else:
@@ -311,7 +334,7 @@ class App:
             self.header(s,name,('PAUSED' if self.paused else 'LIVE')+f'   |   Wind {self.wind:.1f}   |   {self.fps:.0f}/{self.args.fps} FPS   |   '+self.color+(f'   |   ORBIT {self.orbit_speed:g} deg/s' if self.orbit else ''))
             sidebar=25 if self.side and s.w>=90 else 0
             if sidebar:
-                lines=[('EXPLORE',CYAN),('f  Country flags',WHITE),('a  Historical archive',WHITE),('i  Import image',WHITE),('b  My images',WHITE),('o  Auto orbit',WHITE),('s  Settings',WHITE),('?  Keyboard guide',WHITE),('',DIM),(f'{195+len(ARCHIVE)} offline flags',DIM),('PNG / JPG / WebP',DIM),('No GPU required',DIM),('',DIM),('Arrows  Orbit camera',DIM),('+ / -   Wind',DIM),('Space   Pause',DIM),('Tab     Hide sidebar',DIM)]
+                lines=[('EXPLORE',CYAN),('f  Country flags',WHITE),('a  Historical archive',WHITE),('i  Import image',WHITE),('b  My images',WHITE),('o  Auto orbit',WHITE),('t  Fastfetch',WHITE),('s  Settings',WHITE),('?  Keyboard guide',WHITE),('',DIM),(f'{195+len(ARCHIVE)} offline flags',DIM),('PNG / JPG / WebP',DIM),('No GPU required',DIM),('',DIM),('Arrows  Orbit camera',DIM),('+ / -   Wind',DIM),('Space   Pause',DIM),('Tab     Hide sidebar',DIM)]
                 for i,(line,style) in enumerate(lines[:s.h-8]): s.text(2,5+i,line,22,style)
             quality=getattr(self.args,'quality','auto')
             capw,caph={'low':(90,34),'auto':(140,50),'high':(200,70)}[quality]
@@ -324,7 +347,9 @@ class App:
             footer=' Enter: select  Esc: back  Tab: switch  Type: filter'
             if self.mode=='archive': footer=' Ctrl-F/R: category  Ctrl-O: details  Enter: wave  Esc: back'
             if self.mode=='browser': footer=' Enter: open/import  Left: parent  Ctrl-G: path  Esc: back'
-        else: footer=' f: flags  a: archive  i: import  b: images  o: orbit  s: settings  q: quit'
+        elif self.mode=='fastfetch': footer=' Up/down: choose  Left/right: size  Enter: action  Esc: back'
+        elif self.mode=='fastfetch-preview': footer=' Space: pause  o: orbit  Up/down: scroll info  Esc: setup'
+        else: footer=' t: Fastfetch  f: flags  a: archive  i: import  b: images  o: orbit  s: settings  q: quit'
         s.text(0,s.h-1,footer,style=SELECT)
         s.present()
 
@@ -371,6 +396,51 @@ class App:
                     s.text(x,9,clean(e),width,DIM)
         s.text(2,s.h-3,f'{self.selected+1 if self.entries else 0} / {len(self.entries)}   |   PgUp/PgDn: scroll',style=DIM)
 
+    def fetch_frame(self,width=None,height=None):
+        return self.renderer.frame(width or self.fetch_width,height or self.fetch_height,
+                                   self.clock,self.wind,self.yaw,self.pitch,self.color,self.args.blocks)
+
+    def fastfetch_action(self):
+        try:
+            if self.fetch_setting==2:
+                self.fetch_lines=fetch.system_info();self.fetch_scroll=0;self.mode='fastfetch-preview'
+                self.message='Live FlagWave cloth beside a one-time Fastfetch system snapshot.'
+            elif self.fetch_setting==3:
+                path=fetch.export_logo(self.fetch_frame())
+                self.message='Exported: '+str(path)
+            elif self.fetch_setting==4:
+                path=fetch.apply_logo(self.fetch_frame())
+                self.message='Saved logo. Run fastfetch. Original config backed up. '+str(path)
+            elif self.fetch_setting==5:
+                fetch.restore_config();self.message='Original Fastfetch config restored.'
+            self.error=''
+        except (OSError,ValueError,subprocess.TimeoutExpired) as e:
+            self.error=clean(e)
+
+    def draw_fastfetch(self,s):
+        if self.mode=='fastfetch-preview':
+            self.header(s,'FASTFETCH + FLAGWAVE','Animated cloth; system information collected once. Esc: setup')
+            if s.w<75:
+                s.text(2,5,'Enlarge to 76 columns for the side-by-side preview.',style=DIM)
+                return
+            width=min(self.fetch_width,max(20,s.w//2-3));height=min(self.fetch_height,s.h-8)
+            s.art(2,5,self.fetch_frame(width,height))
+            for i,line in enumerate(self.fetch_lines[self.fetch_scroll:self.fetch_scroll+s.h-8]):
+                s.text(width+5,5+i,line,s.w-width-7,WHITE)
+            return
+        self.header(s,'FASTFETCH','Selected flag + current camera, wind, colours and ASCII style')
+        items=[('Logo width',str(self.fetch_width)+' columns'),('Logo height',str(self.fetch_height)+' rows'),
+               ('Preview with system info','Enter'),('Export ANSI logo only','Enter'),
+               ('Use as Fastfetch logo','Enter (backs up config)'),('Restore original config','Enter')]
+        pane=min(51,s.w-4)
+        for i,(label,value) in enumerate(items):
+            s.text(2,5+i,f' {label:<25} {value}',pane,SELECT if i==self.fetch_setting else WHITE)
+        notes=['Normal fastfetch uses a still frame.','Preview animates inside FlagWave.','Only the logo setting is replaced.','Modules and comments are preserved.']
+        for i,line in enumerate(notes[:max(0,s.h-16)]): s.text(3,12+i,line,pane-1,DIM)
+        if s.w>=95:
+            width=min(self.fetch_width,s.w-pane-5);height=min(self.fetch_height,s.h-9)
+            s.art(pane+3,5,self.fetch_frame(width,height))
+
     def adjust_orbit_speed(self,direction):
         magnitude=round(max(.1,min(60,abs(self.orbit_speed)+direction*.5)),1)
         self.orbit_speed=math.copysign(magnitude,self.orbit_speed)
@@ -379,7 +449,7 @@ class App:
     def advance(self,dt):
         if self.paused: return
         self.clock+=min(dt,.2)
-        if self.orbit and self.mode=='stage':
+        if self.orbit and self.mode in ('stage','fastfetch-preview'):
             self.yaw=(self.yaw+math.radians(self.orbit_speed)*dt)%math.tau
 
     def run(self):

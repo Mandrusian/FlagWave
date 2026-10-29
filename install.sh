@@ -72,7 +72,7 @@ PY
     fi
     if [[ "$source_dir" != "$target" ]]; then
         cp -R "$source_dir/archive" "$source_dir/flags" "$target/"
-        cp "$source_dir/flagwave.py" "$source_dir/tui.py" "$source_dir/countries.json" \
+        cp "$source_dir/flagwave.py" "$source_dir/tui.py" "$source_dir/fastfetch_integration.py" "$source_dir/countries.json" \
            "$source_dir/archive.json" "$source_dir/README.md" "$source_dir/LICENSE" \
            "$source_dir/ARCHIVE-SOURCES.md" "$target/"
     fi
