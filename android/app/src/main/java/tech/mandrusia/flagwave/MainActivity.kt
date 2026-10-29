@@ -238,6 +238,8 @@ class MainActivity:ComponentActivity() {
     Slider(o.wind,{onChange(o.copy(wind=it))},valueRange=0f..2.5f)
     HorizontalDivider(Modifier.padding(vertical=16.dp))
     ControlSwitch("ASCII rendering","A terminal-inspired character canvas",o.ascii) {onChange(o.copy(ascii=it))}
+    ControlSwitch("Sextants","Render each character cell as 2 × 3 blocks; overrides ASCII marks",o.sextants) {onChange(o.copy(sextants=it))}
+    ControlSwitch("Lift dark colours","Make black areas visible while keeping the canvas dark",o.liftDark) {onChange(o.copy(liftDark=it))}
     ControlSwitch("Solid ASCII marks","Use # instead of shaded characters",o.blocks) {onChange(o.copy(blocks=it))}
     ControlSwitch("Monochrome","Use light characters instead of flag colours",o.monochrome) {onChange(o.copy(monochrome=it))}
     Text("Character detail · ${o.cells.toInt()} columns",Modifier.padding(top=12.dp),fontWeight=FontWeight.SemiBold)

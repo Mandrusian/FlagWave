@@ -21,7 +21,8 @@ data class RenderOptions(
     val wind: Float=1f, val ascii: Boolean=true, val monochrome: Boolean=false,
     val vertical: Boolean=false, val lowPower: Boolean=false, val cells: Float=100f,
     val fps: Int=60, val quality: String="auto", val blocks: Boolean=false,
-    val layout: String="auto", val resetToken: Int=0
+    val layout: String="auto", val resetToken: Int=0,
+    val liftDark: Boolean=true, val sextants: Boolean=false
 )
 object NativeCloth {
     init { System.loadLibrary("flagwave") }
@@ -150,6 +151,8 @@ class FlagRenderer: GLSurfaceView.Renderer {
         glUniform1i(glGetUniformLocation(postProgram,"ascii"),if(s.ascii)1 else 0)
         glUniform1i(glGetUniformLocation(postProgram,"mono"),if(s.monochrome)1 else 0)
         glUniform1i(glGetUniformLocation(postProgram,"blocks"),if(s.blocks)1 else 0)
+        glUniform1i(glGetUniformLocation(postProgram,"liftDark"),if(s.liftDark)1 else 0)
+        glUniform1i(glGetUniformLocation(postProgram,"sextants"),if(s.sextants)1 else 0)
         quad.position(0);glVertexAttribPointer(0,2,GL_FLOAT,false,16,quad)
         quad.position(2);glVertexAttribPointer(1,2,GL_FLOAT,false,16,quad)
         glDrawArrays(GL_TRIANGLES,0,6)
@@ -196,11 +199,16 @@ void main(){gl_Position=vec4(position,0.0,1.0);uv=texCoord;}
 """
         const val asciiShader="""#version 300 es
 precision highp float;
-in vec2 uv;uniform sampler2D scene;uniform sampler2D glyphs;uniform vec2 grid;uniform bool ascii;uniform bool mono;uniform bool blocks;out vec4 color;
-void main(){vec3 bg=vec3(.035,.055,.065);vec2 cell=(floor(uv*grid)+.5)/grid;vec4 c=texture(scene,ascii?cell:uv);
+in vec2 uv;uniform sampler2D scene;uniform sampler2D glyphs;uniform vec2 grid;uniform bool ascii;uniform bool mono;uniform bool blocks;uniform bool liftDark;uniform bool sextants;out vec4 color;
+void main(){vec3 bg=vec3(.035,.055,.065);
+// Each character cell has two columns and three rows of font-independent blocks.
+vec2 sampleGrid=ascii&&sextants?grid*vec2(2.,3.):grid;
+vec2 cell=(floor(uv*sampleGrid)+.5)/sampleGrid;vec4 c=texture(scene,ascii?cell:uv);
 if(c.a<.1){color=vec4(bg,1);return;}float lum=dot(c.rgb,vec3(.2126,.7152,.0722));
-vec3 ink=mono?vec3(.35+lum*.65):max(c.rgb,vec3(.035));float a=1.;
-if(ascii){float index=blocks?12.:floor(clamp(.4+lum*.59,0.,.999)*16.);vec2 local=fract(uv*grid);a=texture(glyphs,vec2((index+local.x)/16.,1.-local.y)).a;}
+// Lift luminance without changing hue; leave bright colours and transparency alone.
+float lift=liftDark?max(0.,.28-lum):0.;
+vec3 ink=mono?vec3(.35+lum*.65):min(vec3(1.),c.rgb+vec3(lift));float a=1.;
+if(ascii&&!sextants){float index=blocks?12.:floor(clamp(.4+lum*.59,0.,.999)*16.);vec2 local=fract(uv*grid);a=texture(glyphs,vec2((index+local.x)/16.,1.-local.y)).a;}
 color=vec4(mix(bg,ink,a),1.);}
 """
     }

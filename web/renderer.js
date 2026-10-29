@@ -37,12 +37,19 @@ export class FlagRenderer {
   g.uniformMatrix4fv(g.getUniformLocation(this.flag,'m'),false,this.matrix);g.uniform1i(g.getUniformLocation(this.flag,'vertical'),o.vertical?1:0);
   g.activeTexture(g.TEXTURE0);g.bindTexture(g.TEXTURE_2D,this.flagTex);g.uniform1i(g.getUniformLocation(this.flag,'image'),0);g.bindBuffer(g.ARRAY_BUFFER,this.buffer);g.bufferData(g.ARRAY_BUFFER,this.points,g.DYNAMIC_DRAW);g.enableVertexAttribArray(0);g.enableVertexAttribArray(1);g.vertexAttribPointer(0,3,g.FLOAT,false,20,0);g.vertexAttribPointer(1,2,g.FLOAT,false,20,12);g.drawArrays(g.TRIANGLES,0,40*24*6);
   g.bindFramebuffer(g.FRAMEBUFFER,null);g.viewport(0,0,w,h);g.disable(g.DEPTH_TEST);g.useProgram(this.post);g.activeTexture(g.TEXTURE0);g.bindTexture(g.TEXTURE_2D,this.sceneTex);g.uniform1i(g.getUniformLocation(this.post,'scene'),0);g.activeTexture(g.TEXTURE1);g.bindTexture(g.TEXTURE_2D,this.glyphTex);g.uniform1i(g.getUniformLocation(this.post,'glyphs'),1);
-  const columns=Math.max(35,Math.min(o.lowPower?100:180,o.cells));g.uniform2f(g.getUniformLocation(this.post,'grid'),columns,Math.max(12,columns*h/w*.52));for(const [name,value]of Object.entries({ascii:o.ascii,mono:o.monochrome,blocks:o.blocks}))g.uniform1i(g.getUniformLocation(this.post,name),value?1:0);g.bindBuffer(g.ARRAY_BUFFER,this.quad);g.vertexAttribPointer(0,2,g.FLOAT,false,16,0);g.vertexAttribPointer(1,2,g.FLOAT,false,16,8);g.drawArrays(g.TRIANGLES,0,6);
+  const columns=Math.max(35,Math.min(o.lowPower?100:180,o.cells));g.uniform2f(g.getUniformLocation(this.post,'grid'),columns,Math.max(12,columns*h/w*.52));for(const [name,value]of Object.entries({ascii:o.ascii,mono:o.monochrome,blocks:o.blocks,liftDark:o.liftDark,sextants:o.sextants}))g.uniform1i(g.getUniformLocation(this.post,name),value?1:0);g.bindBuffer(g.ARRAY_BUFFER,this.quad);g.vertexAttribPointer(0,2,g.FLOAT,false,16,0);g.vertexAttribPointer(1,2,g.FLOAT,false,16,8);g.drawArrays(g.TRIANGLES,0,6);
  }
 }
 
+// Match the shared shader's dark-colour lift (RGB values in the 0–255 range).
+export function visibleInk(red,green,blue,liftDark){
+ const luminance=(red*.2126+green*.7152+blue*.0722)/255;
+ const lift=liftDark?Math.max(0,.28-luminance)*255:0;
+ return [red,green,blue].map(c=>Math.min(255,c+lift));
+}
+
 // Compatibility path for browsers that disable WebGL (bounded CPU canvas).
-class SoftwareRenderer {
+export class SoftwareRenderer {
  constructor(canvas,options,onError){
   Object.assign(this,{canvas,options,onError,active:true,dirty:true,yaw:.24,pitch:.12,zoom:1,angle:0,time:0,last:0,aspect:1.5,generation:0});
   this.ctx=canvas.getContext('2d',{alpha:false});if(!this.ctx){onError('This browser cannot create a graphics canvas.');return;}
@@ -53,7 +60,8 @@ class SoftwareRenderer {
  async load(url){const generation=++this.generation,image=new Image();image.src=url;try{await image.decode();if(generation!==this.generation)return;const off=document.createElement('canvas'),scale=Math.min(1,640/Math.max(image.naturalWidth,image.naturalHeight));off.width=Math.max(1,Math.round(image.naturalWidth*scale));off.height=Math.max(1,Math.round(image.naturalHeight*scale));const c=off.getContext('2d');c.drawImage(image,0,0,off.width,off.height);this.tex=c.getImageData(0,0,off.width,off.height);this.aspect=off.width/off.height;this.dirty=true;this.onError('');}catch(e){this.onError('Could not load this flag image.');}}
  loop(now){requestAnimationFrame(this.loop);if(!this.active||document.hidden){this.last=now;return;}const o=this.options,rate=Math.min(o.lowPower?10:15,o.fps);if(now-this.last<1000/rate)return;if(o.paused&&!this.dirty){this.last=now;return;}const dt=this.last?Math.min(.1,(now-this.last)/1000):0;this.last=now;if(!o.paused){this.time+=dt;if(o.orbit)this.angle=(this.angle+o.speed*dt)%360;}this.draw();this.dirty=false;}
  draw(){const c=this.canvas,ctx=this.ctx,o=this.options,rect=c.getBoundingClientRect();const w=Math.max(1,Math.round(rect.width)),h=Math.max(1,Math.round(rect.height));if(c.width!==w||c.height!==h){c.width=w;c.height=h;}ctx.fillStyle='#090e11';ctx.fillRect(0,0,w,h);if(!this.tex)return;
-  const cols=Math.min(o.lowPower?65:100,Math.round(o.cells)),rows=Math.max(12,Math.round(cols*h/w*.52)),size=cols*rows;
+  const baseCols=Math.min(o.lowPower?65:100,Math.round(o.cells)),baseRows=Math.max(12,Math.round(baseCols*h/w*.52));
+  const sextants=o.ascii&&o.sextants,cols=baseCols*(sextants?2:1),rows=baseRows*(sextants?3:1),size=cols*rows;
   if(this.size!==size){this.depth=new Float32Array(size);this.colors=new Uint8Array(size*3);this.shade=new Float32Array(size);this.size=size;}this.depth.fill(-Infinity);
   const tex=this.tex,aspect=o.vertical?1/this.aspect:this.aspect,fit=Math.min(1.65/aspect,1.55*h/w)*this.zoom,a=this.yaw+this.angle*Math.PI/180,cy=Math.cos(a),sy=Math.sin(a),cp=Math.cos(this.pitch),sp=Math.sin(this.pitch),nu=Math.max(100,cols*3),nv=Math.max(60,rows*3);
   for(let j=0;j<nv;j++)for(let i=0;i<nu;i++){
@@ -64,6 +72,6 @@ class SoftwareRenderer {
    this.depth[p]=depth;const light=.6+.4*Math.abs(Math.cos(phase));for(let k=0;k<3;k++)this.colors[p*3+k]=tex.data[src+k]*light;this.shade[p]=light;
   }
   const cw=w/cols,ch=h/rows,ramp=' .,:;irsXAHM#B&@';ctx.font=`${Math.ceil(ch*1.05)}px monospace`;ctx.textAlign='center';
-  for(let p=0;p<size;p++){if(this.depth[p]===-Infinity)continue;const red=this.colors[p*3],green=this.colors[p*3+1],blue=this.colors[p*3+2],lum=(red*.2126+green*.7152+blue*.0722)/255;ctx.fillStyle=o.monochrome?`rgb(${90+lum*165} ${90+lum*165} ${90+lum*165})`:`rgb(${Math.max(9,red)} ${Math.max(9,green)} ${Math.max(9,blue)})`;const x=p%cols*cw,y=Math.floor(p/cols)*ch;if(o.ascii)ctx.fillText(o.blocks?'#':ramp[Math.min(15,Math.floor((.4+lum*.59)*16))],x+cw/2,y+ch*.8);else ctx.fillRect(x,y,cw+1,ch+1);}
+  for(let p=0;p<size;p++){if(this.depth[p]===-Infinity)continue;const red=this.colors[p*3],green=this.colors[p*3+1],blue=this.colors[p*3+2],lum=(red*.2126+green*.7152+blue*.0722)/255;const ink=visibleInk(red,green,blue,o.liftDark);ctx.fillStyle=o.monochrome?`rgb(${90+lum*165} ${90+lum*165} ${90+lum*165})`:`rgb(${ink[0]} ${ink[1]} ${ink[2]})`;const x=p%cols*cw,y=Math.floor(p/cols)*ch;if(o.ascii&&!sextants)ctx.fillText(o.blocks?'#':ramp[Math.min(15,Math.floor((.4+lum*.59)*16))],x+cw/2,y+ch*.8);else ctx.fillRect(x,y,cw+1,ch+1);}
  }
 }

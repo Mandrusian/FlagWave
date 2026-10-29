@@ -74,3 +74,14 @@ solid ASCII `#`, target FPS, Auto/Low/High render quality, camera reset (button
 or double-tap), and saved Auto/Android/Desktop layout. Desktop uses a navigation
 rail and, on wide screens, an inline inspector. Android uses bottom navigation.
 Auto switches at 840dp. These controls are mirrored by the web version.
+
+## Dark colours and sextants
+
+In Controls, **Lift dark colours** (on by default) raises near-black flag colours
+to charcoal while leaving the interface and canvas dark. Turn it off for the
+original colour values. The setting also works in the textured view.
+
+Enable **Sextants** with ASCII rendering for a 2 × 3 block grid per character
+cell. Blocks are drawn directly, so no Unicode sextant font is needed. This
+style takes precedence over Solid ASCII marks. Both preferences are saved on
+the device or browser; transparent parts of imported flags stay transparent.
