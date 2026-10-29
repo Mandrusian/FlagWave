@@ -258,6 +258,11 @@ The expanded catalogue now has **424 entries**, with **59 newly added party flag
 
 ## Web version and layout modes
 
+**[Open FlagWave in your browser](https://mandrusian.github.io/FlagWave/)** — public, no sign-in required.
+
+GitHub Actions builds, tests and deploys the web app to GitHub Pages on changes
+to the web source, shared shaders or flag catalogue on `main`.
+
 The [web app](web/README.md) matches the native Android design and shares its
 flag catalogue and GPU shaders. Auto, Android and Desktop layouts are available
 from the top bar or Controls. Android 0.3 adds the same layout selector, quality
