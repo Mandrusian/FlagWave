@@ -164,6 +164,18 @@ class ApplicationTests(unittest.TestCase):
         for _ in range(150): app.adjust_orbit_speed(1)
         self.assertEqual(app.orbit_speed,60.)
 
+    def test_political_party_catalogue(self):
+        for id in ['cpc','cpusa','cpaus','cpv','wpk','cpim','cpi','pki','lebanese-cp','ldp-japan','chp']:
+            entry=core.ARCHIVE_BY_ID[id]
+            self.assertIn('Political parties',entry['tags'])
+            self.assertTrue(entry['license'])
+            self.assertTrue(entry['source_file'])
+        self.assertEqual(core.resolve_archive('ccp'),'cpc')
+        self.assertEqual(core.resolve_archive('cpa'),'cpaus')
+        app=tui.App(options(),'au');app.open('archive');app.group='Political parties'
+        app.query='cpusa';app.input('ENTER')
+        self.assertEqual(app.archive_id,'cpusa')
+
     def test_terminal_restoration(self):
         master,slave=pty.openpty(); old=termios.tcgetattr(slave)
         import fcntl

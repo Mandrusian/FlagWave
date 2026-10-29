@@ -1,6 +1,6 @@
 # Historical and alternate flag artwork
 
-170 designs. Labels distinguish national, civil, military, party and symbolic flags.
+229 designs. Labels distinguish national, civil, military, party and symbolic flags.
 Categories and dates describe the selected design, not an endorsement or a ranking.
 Symbolic ideology flags are representative designs; movements do not necessarily have one official flag.
 
@@ -1387,3 +1387,593 @@ diese Datei: Jwnabd
 - Credit: Flagpedia / Wikimedia Commons
 - License: Public domain
 - Changes: resized PNG
+
+## Communist Party of China (CPC / CCP) (`cpc`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/cpc.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Chinese_Communist_Party.svg
+- Credit: See original file history for the public-domain party symbol
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Chinese_Communist_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of China - 12th Congress (1982) (`cpc-1982`)
+
+- Period: 12th National Congress, 1982
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/cpc-1982.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Chinese_Communist_Party_(1982).svg
+- Credit: Martufellon
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Chinese_Communist_Party_(1982).svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party USA (CPUSA) (`cpusa`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/cpusa.png`
+- Source: https://commons.wikimedia.org/wiki/File:Communist_Party_USA_Flag.svg
+- Credit: RootOfAllLight
+- License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Australia (CPA) (`cpaus`)
+
+- Period: 2020 flag artwork
+- Categories: Political parties, Communist, Australian, Political
+- File: `archive/cpaus.png`
+- Source: https://commons.wikimedia.org/wiki/File:CPA-flag-2020-rgb.png
+- Credit: Communist Party of Australia
+- License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Vietnam (CPV) (`cpv`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/cpv.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Vietnam.svg
+- Credit: Original work by Eureka287, vector work by Lasse Havelund.
+- License: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Workers' Party of Korea (WPK) (`wpk`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/wpk.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Workers%27_Party_of_Korea.svg
+- Credit: Originally uploaded to en.wikipedia by en:User:U2blueEagle on 3 December 2007 with file name en:Image:Workers' Party of Korea Flag.svg
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Workers%27_Party_of_Korea.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Portuguese Communist Party (PCP) (`pcp`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/pcp.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Portuguese_Communist_Party.svg
+- Credit: ThecentreCZ
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Portuguese_Communist_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Japanese Communist Party (JCP) (`jcp`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/jcp.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Japanese_Communist_Party.svg
+- Credit: Sshu94
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Japanese_Communist_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Nepal (Unified Marxist-Leninist) (`cpn-uml`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/cpn-uml.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Nepal_(Unified_Marxist-Leninist).svg
+- Credit: Mysid
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Nepal_(Unified_Marxist-Leninist).svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Lao People's Revolutionary Party (LPRP) (`lprp`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/lprp.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Lao_People%27s_Revolutionary_Party.svg
+- Credit: Sshu94
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Lao_People%27s_Revolutionary_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of India (CPI) - banner (`cpi`)
+
+- Period: Party banner design
+- Categories: Political parties, Communist, Political
+- File: `archive/cpi.png`
+- Source: https://commons.wikimedia.org/wiki/File:Banner_of_the_Communist_Party_of_India.svg
+- Credit: Martufellon
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of India (Marxist) - CPI(M) (`cpim`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/cpim.png`
+- Source: https://commons.wikimedia.org/wiki/File:CPI-M-flag.svg
+- Credit: 
+- License: Public domain (https://commons.wikimedia.org/wiki/File:CPI-M-flag.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Greece (KKE) - 1940s (`kke-1940s`)
+
+- Period: 1940s historical party flag
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/kke-1940s.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Greece_(1940s).svg
+- Credit: Thespoondragon
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Spain (PCE) - 1930s (`pce-1930s`)
+
+- Period: 1930s historical party flag
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/pce-1930s.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Spain_(1930s).svg
+- Credit: Partido Comunista de EspañaMartufellon (vector)
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## French Communist Party (PCF) - 1950s (`pcf-1950s`)
+
+- Period: 1950s historical party flag
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/pcf-1950s.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_French_Communist_Party_(1950s).svg
+- Credit: Parti communiste françaisMartufellon (vector)
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_French_Communist_Party_(1950s).svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Britain (CPB) - 2004-2023 (`cpb-2004`)
+
+- Period: 2004-2023 historical party flag
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/cpb-2004.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_Communist_Party_of_Britain_(2004%E2%80%932023).svg
+- Credit: Original: Trotskists, SVG: DraftSaturn15
+- License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Great Britain (Marxist-Leninist) (`cpgb-ml`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/cpgb-ml.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Great_Britain_(Marxist%E2%80%93Leninist).svg
+- Credit: MrPenguin20
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Great_Britain_(Marxist%E2%80%93Leninist).svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Ireland (`cpi-ireland`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/cpi-ireland.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Ireland.svg
+- Credit: Communist Party of Ireland
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Ireland.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Brazil (PCdoB) - historical (`pcdob-old`)
+
+- Period: Historical party flag design
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/pcdob-old.png`
+- Source: https://commons.wikimedia.org/wiki/File:Bandeira_antiga_do_PCdoB.svg
+- Credit: Vetorização por Jorgamo
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Bandeira_antiga_do_PCdoB.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Indonesia (PKI) (`pki`)
+
+- Period: Historical party flag design
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/pki.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Indonesia.svg
+- Credit: PKI
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Indonesia.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Lebanese Communist Party (`lebanese-cp`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/lebanese-cp.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Lebanese_Communist_Party.svg
+- Credit: Lexicon
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Lebanese_Communist_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Argentina (Extraordinary Congress) (`pce-argentina`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/pce-argentina.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Argentina_(Extraordinary_Congress).svg
+- Credit: Unknown authorUnknown author
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Argentina_(Extraordinary_Congress).svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Iraqi Communist Party - historical (`iraqi-cp-old`)
+
+- Period: Historical party flag design
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/iraqi-cp-old.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Iraqi_Communist_Party_(old).svg
+- Credit: Iraqi Communist PartyMartufellon (vector)
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Austria - historical (`kpo-old`)
+
+- Period: Historical party flag design
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/kpo-old.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Austria_(old).svg
+- Credit: Kommunistische Partei ÖsterreichsMartufellon (vector)
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Kampuchea - variant (`cp-kampuchea`)
+
+- Period: Historical party flag variant
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/cp-kampuchea.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Kampuchea_(3-5).svg
+- Credit: Martufellon
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## People's Revolutionary Party of Vietnam (`prp-vietnam`)
+
+- Period: Historical party flag design
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/prp-vietnam.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_People%27s_Revolutionary_Party_of_Vietnam.svg
+- Credit: Martufellon
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Japanese Communist Party - Central Committee (`jcp-committee`)
+
+- Period: Central Committee flag
+- Categories: Political parties, Communist, Political
+- File: `archive/jcp-committee.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Japanese_Communist_Party_Central_Committee.svg
+- Credit: 日本共産党
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Unified Socialist Party of Catalonia (PSUC) (`psuc`)
+
+- Period: Historical party flag design
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/psuc.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Unified_Socialist_Party_of_Catalonia.svg
+- Credit: Partit Socialista Unificat de CatalunyaMartufellon (vector)
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Italian Communist Party - 1946 (`pci-1946`)
+
+- Period: 1946 historical party flag design
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/pci-1946.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Italian_Communist_Party_(1946).svg
+- Credit: Partito Comunista ItalianoMartufellon (vector)
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Italian_Communist_Party_(1946).svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Kampuchean People's Revolutionary Party (`kprp`)
+
+- Period: Historical party flag design
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/kprp.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Kampuchean_People%27s_Revolutionary_Party.svg
+- Credit: Kampuchean People's Revolutionary PartyMartufellon (vector)
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Party of Burma - 1970 (`cp-burma-1970`)
+
+- Period: 1970 historical party flag design
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/cp-burma-1970.png`
+- Source: https://commons.wikimedia.org/wiki/File:Communist_Party_of_Burma_flag_(1970).svg
+- Credit: Albert Poliakoff
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Communist Refoundation Party (Italy) (`prc-italy`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/prc-italy.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Refoundation_Party.svg
+- Credit: HaisollokopasCommunist Refoundation Party
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Socialist Labour Party of Croatia (`srp-croatia`)
+
+- Period: Party flag design
+- Categories: Political parties, Socialist, Political
+- File: `archive/srp-croatia.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Socialist_Labour_Party_of_Croatia.svg
+- Credit: HaeKN
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Labor Party (Taiwan) (`labor-taiwan`)
+
+- Period: Party flag design
+- Categories: Political parties, Socialist, Political
+- File: `archive/labor-taiwan.png`
+- Source: https://commons.wikimedia.org/wiki/File:Labor_Party_(Taiwan)_flag.svg
+- Credit: Labor Party (Taiwan)
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Labor_Party_(Taiwan)_flag.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## United Wa State Party (`uwsp`)
+
+- Period: Party flag design
+- Categories: Political parties, Communist, Political
+- File: `archive/uwsp.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Wa_State_Party.svg
+- Credit: Turtle-bienhoa
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Wa_State_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Workers' Party of South Korea (`wpk-south`)
+
+- Period: Historical party flag design
+- Categories: Political parties, Historical, Communist, Political
+- File: `archive/wpk-south.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Workers%27_Party_of_South_Korea.svg
+- Credit: Workers' Party of Korea's predecessors Workers' Party of North Korea and Workers' Party of South Korea
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Workers%27_Party_of_South_Korea.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Yemeni Socialist Party (`yemeni-socialist`)
+
+- Period: Party flag design
+- Categories: Political parties, Socialist, Political
+- File: `archive/yemeni-socialist.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Yemeni_Socialist_Party.svg
+- Credit: Yemeni Socialist Party
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Yemeni_Socialist_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Socialist Revolutionary Workers' Party (South Korea) (`srwp`)
+
+- Period: Party flag design
+- Categories: Political parties, Socialist, Political
+- File: `archive/srwp.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_Socialist_Revolutionary_Workers%27_Party.svg
+- Credit: 사회변혁노동자당
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_Socialist_Revolutionary_Workers%27_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Workers' Party (Uruguay) (`workers-uruguay`)
+
+- Period: Party flag design
+- Categories: Political parties, Socialist, Political
+- File: `archive/workers-uruguay.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_Workers%27_Party_(Uruguay).svg
+- Credit: Swiãtopôłk
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Liberal Democratic Party (Japan) (`ldp-japan`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/ldp-japan.png`
+- Source: https://commons.wikimedia.org/wiki/File:Liberal_Democratic_Party_(Japan)_Flag.svg
+- Credit: Alejandro Basombrio
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Liberal_Democratic_Party_(Japan)_Flag.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Pakistan People's Party (`ppp-pakistan`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/ppp-pakistan.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_Pakistan_People%27s_Party.svg
+- Credit: See source file history
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_Pakistan_People%27s_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Bangladesh Nationalist Party (`bnp`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/bnp.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Bangladesh_Nationalist_Party.svg
+- Credit: Bangladesh Nationalist Party - BNP
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Bangladesh_Nationalist_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Republican People's Party (Turkey) (`chp`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/chp.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Republican_People%27s_Party_(Turkey).svg
+- Credit: ThecentreCZ
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Republican_People%27s_Party_(Turkey).svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Felicity Party (Turkey) (`felicity`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/felicity.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Felicity_Party.svg
+- Credit: Kirsehirlitv
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Musavat Party (`musavat`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/musavat.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Musavat_Party.svg
+- Credit: Unknown authorUnknown author
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Musavat_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## People Power Party (South Korea) (`ppp-korea`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/ppp-korea.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_People_Power_Party_of_Korea.svg
+- Credit: People Power Party
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_People_Power_Party_of_Korea.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Social Democratic Party of Korea (`social-democratic-korea`)
+
+- Period: Source-documented party flag design
+- Categories: Political parties, Political
+- File: `archive/social-democratic-korea.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Social_Democratic_Party_of_Korea.svg
+- Credit: Wheatley2
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Social_Democratic_Party_of_Korea.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Mongolian Democratic Party (`mongolian-democratic`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/mongolian-democratic.png`
+- Source: https://commons.wikimedia.org/wiki/File:Mongolian_Democratic_Party_Flag.svg
+- Credit: Democratic Party of Mongolia
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Mongolian_Democratic_Party_Flag.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Liberal Party of Honduras (`liberal-honduras`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/liberal-honduras.png`
+- Source: https://commons.wikimedia.org/wiki/File:Liberal_Party_of_Honduras_flag.svg
+- Credit: KES47
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Liberal_Party_of_Honduras_flag.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Democratic Party of Uganda (`democratic-uganda`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/democratic-uganda.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_Democratic_Party_of_Uganda.svg
+- Credit: Democratic Party
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_Democratic_Party_of_Uganda.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## United Democratic Party (Belize) (`udp-belize`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/udp-belize.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Belize_United_Democratic_Party.svg
+- Credit: The original uploader was Fuebar at English Wikipedia.
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Belize_United_Democratic_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Christian Democratic Party of Uruguay (`christian-democratic-uruguay`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/christian-democratic-uruguay.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_Christian_Democratic_Party_of_Uruguay.svg
+- Credit: Swiãtopôłk
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Istiqlal Party (`istiqlal`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/istiqlal.png`
+- Source: https://commons.wikimedia.org/wiki/File:PI_-_Istiql%C4%81l_Party_Flag.svg
+- Credit: Animax Fan 2016
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Swatantra Party (`swatantra`)
+
+- Period: Historical party flag design
+- Categories: Political parties, Historical, Political
+- File: `archive/swatantra.png`
+- Source: https://commons.wikimedia.org/wiki/File:Swatantra-Party-flag.svg
+- Credit: See source file history
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Swatantra-Party-flag.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Qaumi Watan Party (`qaumi-watan`)
+
+- Period: Party flag design
+- Categories: Political parties, Political
+- File: `archive/qaumi-watan.png`
+- Source: https://commons.wikimedia.org/wiki/File:Qaumi_Watan_Party_Official_Flag.svg
+- Credit: Unknown authorUnknown author
+- License: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Janata Samajbadi Party (`janata-samajbadi`)
+
+- Period: Source-documented party flag design
+- Categories: Political parties, Political
+- File: `archive/janata-samajbadi.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_Janata_Samajbadi_Party.svg
+- Credit: Janata Samajbadi Party
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_Janata_Samajbadi_Party.svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## People's Party (Thailand, 2024) (`peoples-thailand-2024`)
+
+- Period: 2024 party flag design
+- Categories: Political parties, Political
+- File: `archive/peoples-thailand-2024.png`
+- Source: https://commons.wikimedia.org/wiki/File:People%27s_Party_Flag_(Thailand%2C_2024).svg
+- Credit: HaeKN
+- License: Public domain (https://commons.wikimedia.org/wiki/File:People%27s_Party_Flag_(Thailand%2C_2024).svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## Socialist Party of Serbia - 1990-1992 (`sps-1990`)
+
+- Period: 1990-1992 historical party flag
+- Categories: Political parties, Historical, Socialist, Political
+- File: `archive/sps-1990.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_Socialist_Party_of_Serbia_(1990-1992).svg
+- Credit: Haisollokopas (SVG version)
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_Socialist_Party_of_Serbia_(1990-1992).svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.
+
+## New Conservative Party (South Korea) - variant 1 (`new-conservative-korea`)
+
+- Period: Source-documented party flag variant
+- Categories: Political parties, Political
+- File: `archive/new-conservative-korea.png`
+- Source: https://commons.wikimedia.org/wiki/File:Flag_of_the_New_Conservative_Party_(South_Korea%3B_variant_1).svg
+- Credit: New Conservative Party (새로운보수당)
+- License: Public domain (https://commons.wikimedia.org/wiki/File:Flag_of_the_New_Conservative_Party_(South_Korea%3B_variant_1).svg)
+- Changes: rasterized/resized to 256-colour PNG; design unchanged.

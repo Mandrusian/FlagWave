@@ -158,7 +158,7 @@ def resolve(value):
 
 def resolve_archive(value):
     value=value.casefold().strip()
-    aliases={'rek':'red-eureka','red eureka':'red-eureka','communist-eureka':'red-eureka','soviet union':'ussr','soviet-union':'ussr','su':'ussr','ussr-ww2':'ussr-1936',
+    aliases={'ccp':'cpc','cpa':'cpaus','cp-australia':'cpaus','rek':'red-eureka','red eureka':'red-eureka','communist-eureka':'red-eureka','soviet union':'ussr','soviet-union':'ussr','su':'ussr','ussr-ww2':'ussr-1936',
              'germany-ww2':'nazi-germany','nazi':'nazi-germany','east germany':'east-germany',
              'gdr':'east-germany','rising-sun':'japan-army'}
     value=aliases.get(value,value)

@@ -189,6 +189,21 @@
     "asset": "archive/azerbaijan-ssr.png"
   },
   {
+    "id": "bnp",
+    "name": "Bangladesh Nationalist Party",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Bangladesh Nationalist Party - BNP",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Bangladesh_Nationalist_Party.svg",
+    "source_file": "Flag of the Bangladesh Nationalist Party.svg",
+    "asset": "archive/bnp.png"
+  },
+  {
     "id": "black-flag",
     "name": "Black flag - anarchist symbol",
     "period": "Symbolic design; no single adoption date",
@@ -224,7 +239,8 @@
     "tags": [
       "Historical",
       "Fascist",
-      "Political"
+      "Political",
+      "Political parties"
     ],
     "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_British_Union_of_Fascists.svg",
     "source_file": "Flag of the British Union of Fascists.svg",
@@ -321,6 +337,21 @@
     "asset": "archive/chinese-soviet.png"
   },
   {
+    "id": "christian-democratic-uruguay",
+    "name": "Christian Democratic Party of Uruguay",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Swiãtopôłk",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Christian_Democratic_Party_of_Uruguay.svg",
+    "source_file": "Flag of Christian Democratic Party of Uruguay.svg",
+    "asset": "archive/christian-democratic-uruguay.png"
+  },
+  {
     "id": "cx",
     "name": "Christmas Island",
     "period": "Contemporary design snapshot",
@@ -347,6 +378,336 @@
     "license": "Public domain",
     "license_url": "",
     "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "pce-argentina",
+    "name": "Communist Party of Argentina (Extraordinary Congress)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Unknown authorUnknown author",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Argentina_(Extraordinary_Congress).svg",
+    "source_file": "Flag of the Communist Party of Argentina (Extraordinary Congress).svg",
+    "asset": "archive/pce-argentina.png"
+  },
+  {
+    "id": "cpaus",
+    "name": "Communist Party of Australia (CPA)",
+    "period": "2020 flag artwork",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Australian",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:CPA-flag-2020-rgb.png",
+    "source_file": "CPA-flag-2020-rgb.png",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Communist Party of Australia",
+    "asset": "archive/cpaus.png"
+  },
+  {
+    "id": "kpo-old",
+    "name": "Communist Party of Austria - historical",
+    "period": "Historical party flag design",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Kommunistische Partei ÖsterreichsMartufellon (vector)",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Austria_(old).svg",
+    "source_file": "Flag of the Communist Party of Austria (old).svg",
+    "asset": "archive/kpo-old.png"
+  },
+  {
+    "id": "pcdob-old",
+    "name": "Communist Party of Brazil (PCdoB) - historical",
+    "period": "Historical party flag design",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Bandeira_antiga_do_PCdoB.svg",
+    "source_file": "Bandeira antiga do PCdoB.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Vetorização por Jorgamo",
+    "asset": "archive/pcdob-old.png"
+  },
+  {
+    "id": "cpb-2004",
+    "name": "Communist Party of Britain (CPB) - 2004-2023",
+    "period": "2004-2023 historical party flag",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Communist_Party_of_Britain_(2004%E2%80%932023).svg",
+    "source_file": "Flag of Communist Party of Britain (2004–2023).svg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Original: Trotskists, SVG: DraftSaturn15",
+    "asset": "archive/cpb-2004.png"
+  },
+  {
+    "id": "cp-burma-1970",
+    "name": "Communist Party of Burma - 1970",
+    "period": "1970 historical party flag design",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Albert Poliakoff",
+    "source": "https://commons.wikimedia.org/wiki/File:Communist_Party_of_Burma_flag_(1970).svg",
+    "source_file": "Communist Party of Burma flag (1970).svg",
+    "asset": "archive/cp-burma-1970.png"
+  },
+  {
+    "id": "cpc",
+    "name": "Communist Party of China (CPC / CCP)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Chinese_Communist_Party.svg",
+    "source_file": "Flag of the Chinese Communist Party.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "See original file history for the public-domain party symbol",
+    "asset": "archive/cpc.png"
+  },
+  {
+    "id": "cpc-1982",
+    "name": "Communist Party of China - 12th Congress (1982)",
+    "period": "12th National Congress, 1982",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Chinese_Communist_Party_(1982).svg",
+    "source_file": "Flag of the Chinese Communist Party (1982).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Martufellon",
+    "asset": "archive/cpc-1982.png"
+  },
+  {
+    "id": "cpgb-ml",
+    "name": "Communist Party of Great Britain (Marxist-Leninist)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Great_Britain_(Marxist%E2%80%93Leninist).svg",
+    "source_file": "Flag of the Communist Party of Great Britain (Marxist–Leninist).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "MrPenguin20",
+    "asset": "archive/cpgb-ml.png"
+  },
+  {
+    "id": "kke-1940s",
+    "name": "Communist Party of Greece (KKE) - 1940s",
+    "period": "1940s historical party flag",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Greece_(1940s).svg",
+    "source_file": "Flag of the Communist Party of Greece (1940s).svg",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Thespoondragon",
+    "asset": "archive/kke-1940s.png"
+  },
+  {
+    "id": "cpi",
+    "name": "Communist Party of India (CPI) - banner",
+    "period": "Party banner design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Banner_of_the_Communist_Party_of_India.svg",
+    "source_file": "Banner of the Communist Party of India.svg",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Martufellon",
+    "asset": "archive/cpi.png"
+  },
+  {
+    "id": "cpim",
+    "name": "Communist Party of India (Marxist) - CPI(M)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:CPI-M-flag.svg",
+    "source_file": "CPI-M-flag.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "",
+    "asset": "archive/cpim.png"
+  },
+  {
+    "id": "pki",
+    "name": "Communist Party of Indonesia (PKI)",
+    "period": "Historical party flag design",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "PKI",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Indonesia.svg",
+    "source_file": "Flag of the Communist Party of Indonesia.svg",
+    "asset": "archive/pki.png"
+  },
+  {
+    "id": "cpi-ireland",
+    "name": "Communist Party of Ireland",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Ireland.svg",
+    "source_file": "Flag of the Communist Party of Ireland.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Communist Party of Ireland",
+    "asset": "archive/cpi-ireland.png"
+  },
+  {
+    "id": "cp-kampuchea",
+    "name": "Communist Party of Kampuchea - variant",
+    "period": "Historical party flag variant",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Martufellon",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Kampuchea_(3-5).svg",
+    "source_file": "Flag of the Communist Party of Kampuchea (3-5).svg",
+    "asset": "archive/cp-kampuchea.png"
+  },
+  {
+    "id": "cpn-uml",
+    "name": "Communist Party of Nepal (Unified Marxist-Leninist)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Nepal_(Unified_Marxist-Leninist).svg",
+    "source_file": "Flag of the Communist Party of Nepal (Unified Marxist-Leninist).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Mysid",
+    "asset": "archive/cpn-uml.png"
+  },
+  {
+    "id": "pce-1930s",
+    "name": "Communist Party of Spain (PCE) - 1930s",
+    "period": "1930s historical party flag",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Spain_(1930s).svg",
+    "source_file": "Flag of the Communist Party of Spain (1930s).svg",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Partido Comunista de EspañaMartufellon (vector)",
+    "asset": "archive/pce-1930s.png"
+  },
+  {
+    "id": "cpv",
+    "name": "Communist Party of Vietnam (CPV)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Vietnam.svg",
+    "source_file": "Flag of the Communist Party of Vietnam.svg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "credit": "Original work by Eureka287, vector work by Lasse Havelund.",
+    "asset": "archive/cpv.png"
+  },
+  {
+    "id": "cpusa",
+    "name": "Communist Party USA (CPUSA)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Communist_Party_USA_Flag.svg",
+    "source_file": "Communist Party USA Flag.svg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "RootOfAllLight",
+    "asset": "archive/cpusa.png"
+  },
+  {
+    "id": "prc-italy",
+    "name": "Communist Refoundation Party (Italy)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "HaisollokopasCommunist Refoundation Party",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Refoundation_Party.svg",
+    "source_file": "Flag of the Communist Refoundation Party.svg",
+    "asset": "archive/prc-italy.png"
   },
   {
     "id": "us-ct",
@@ -403,6 +764,21 @@
     "license": "Public domain",
     "license_url": "",
     "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "democratic-uganda",
+    "name": "Democratic Party of Uganda",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Democratic Party",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Democratic_Party_of_Uganda.svg",
+    "source_file": "Flag of Democratic Party of Uganda.svg",
+    "asset": "archive/democratic-uganda.png"
   },
   {
     "id": "gb-eng",
@@ -491,6 +867,21 @@
     "credit": "Flagpedia / Wikimedia Commons"
   },
   {
+    "id": "felicity",
+    "name": "Felicity Party (Turkey)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Kirsehirlitv",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Felicity_Party.svg",
+    "source_file": "Flag of the Felicity Party.svg",
+    "asset": "archive/felicity.png"
+  },
+  {
     "id": "us-fl",
     "name": "Florida (US state)",
     "period": "Contemporary design snapshot",
@@ -518,6 +909,23 @@
     "license_url": "",
     "credit": "See File history below for details.",
     "asset": "archive/france-free.png"
+  },
+  {
+    "id": "pcf-1950s",
+    "name": "French Communist Party (PCF) - 1950s",
+    "period": "1950s historical party flag",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_French_Communist_Party_(1950s).svg",
+    "source_file": "Flag of the French Communist Party (1950s).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Parti communiste françaisMartufellon (vector)",
+    "asset": "archive/pcf-1950s.png"
   },
   {
     "id": "gf",
@@ -854,6 +1262,23 @@
     "credit": "Flagpedia / Wikimedia Commons"
   },
   {
+    "id": "iraqi-cp-old",
+    "name": "Iraqi Communist Party - historical",
+    "period": "Historical party flag design",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Iraqi Communist PartyMartufellon (vector)",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Iraqi_Communist_Party_(old).svg",
+    "source_file": "Flag of the Iraqi Communist Party (old).svg",
+    "asset": "archive/iraqi-cp-old.png"
+  },
+  {
     "id": "im",
     "name": "Isle of Man",
     "period": "Contemporary design snapshot",
@@ -868,13 +1293,46 @@
     "credit": "Flagpedia / Wikimedia Commons"
   },
   {
+    "id": "istiqlal",
+    "name": "Istiqlal Party",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Animax Fan 2016",
+    "source": "https://commons.wikimedia.org/wiki/File:PI_-_Istiql%C4%81l_Party_Flag.svg",
+    "source_file": "PI - Istiqlāl Party Flag.svg",
+    "asset": "archive/istiqlal.png"
+  },
+  {
+    "id": "pci-1946",
+    "name": "Italian Communist Party - 1946",
+    "period": "1946 historical party flag design",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Partito Comunista ItalianoMartufellon (vector)",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Italian_Communist_Party_(1946).svg",
+    "source_file": "Flag of the Italian Communist Party (1946).svg",
+    "asset": "archive/pci-1946.png"
+  },
+  {
     "id": "pnf",
     "name": "Italian National Fascist Party - party flag",
     "period": "1927-1943 design",
     "tags": [
       "Historical",
       "Fascist",
-      "Political"
+      "Political",
+      "Political parties"
     ],
     "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_National_Fascist_Party_(PNF).svg",
     "source_file": "Flag of the National Fascist Party (PNF).svg",
@@ -901,6 +1359,21 @@
     "asset": "archive/italy-rsi.png"
   },
   {
+    "id": "janata-samajbadi",
+    "name": "Janata Samajbadi Party",
+    "period": "Source-documented party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Janata Samajbadi Party",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Janata_Samajbadi_Party.svg",
+    "source_file": "Flag of Janata Samajbadi Party.svg",
+    "asset": "archive/janata-samajbadi.png"
+  },
+  {
     "id": "japan-navy",
     "name": "Japan - naval Rising Sun ensign",
     "period": "1889-1945; readopted 1954",
@@ -915,6 +1388,38 @@
     "license_url": "",
     "credit": "David Newton, uploader was Denelson83",
     "asset": "archive/japan-navy.png"
+  },
+  {
+    "id": "jcp",
+    "name": "Japanese Communist Party (JCP)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Japanese_Communist_Party.svg",
+    "source_file": "Flag of the Japanese Communist Party.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Sshu94",
+    "asset": "archive/jcp.png"
+  },
+  {
+    "id": "jcp-committee",
+    "name": "Japanese Communist Party - Central Committee",
+    "period": "Central Committee flag",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "日本共産党",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Japanese_Communist_Party_Central_Committee.svg",
+    "source_file": "Flag of the Japanese Communist Party Central Committee.svg",
+    "asset": "archive/jcp-committee.png"
   },
   {
     "id": "je",
@@ -944,6 +1449,23 @@
     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "credit": "Oren neu dag",
     "asset": "archive/jolly-roger.png"
+  },
+  {
+    "id": "kprp",
+    "name": "Kampuchean People's Revolutionary Party",
+    "period": "Historical party flag design",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Kampuchean People's Revolutionary PartyMartufellon (vector)",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Kampuchean_People%27s_Revolutionary_Party.svg",
+    "source_file": "Flag of the Kampuchean People's Revolutionary Party.svg",
+    "asset": "archive/kprp.png"
   },
   {
     "id": "us-ks",
@@ -1035,6 +1557,38 @@
     "credit": "Flagpedia / Wikimedia Commons"
   },
   {
+    "id": "labor-taiwan",
+    "name": "Labor Party (Taiwan)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Socialist",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Labor Party (Taiwan)",
+    "source": "https://commons.wikimedia.org/wiki/File:Labor_Party_(Taiwan)_flag.svg",
+    "source_file": "Labor Party (Taiwan) flag.svg",
+    "asset": "archive/labor-taiwan.png"
+  },
+  {
+    "id": "lprp",
+    "name": "Lao People's Revolutionary Party (LPRP)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Lao_People%27s_Revolutionary_Party.svg",
+    "source_file": "Flag of the Lao People's Revolutionary Party.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Sshu94",
+    "asset": "archive/lprp.png"
+  },
+  {
     "id": "latvian-ssr",
     "name": "Latvian SSR",
     "period": "1953-1990",
@@ -1048,6 +1602,52 @@
     "license_url": "",
     "credit": "Denelson83, Urmas, Nokka, Great Brightstar",
     "asset": "archive/latvian-ssr.png"
+  },
+  {
+    "id": "lebanese-cp",
+    "name": "Lebanese Communist Party",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Lexicon",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Lebanese_Communist_Party.svg",
+    "source_file": "Flag of the Lebanese Communist Party.svg",
+    "asset": "archive/lebanese-cp.png"
+  },
+  {
+    "id": "ldp-japan",
+    "name": "Liberal Democratic Party (Japan)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Alejandro Basombrio",
+    "source": "https://commons.wikimedia.org/wiki/File:Liberal_Democratic_Party_(Japan)_Flag.svg",
+    "source_file": "Liberal Democratic Party (Japan) Flag.svg",
+    "asset": "archive/ldp-japan.png"
+  },
+  {
+    "id": "liberal-honduras",
+    "name": "Liberal Party of Honduras",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "KES47",
+    "source": "https://commons.wikimedia.org/wiki/File:Liberal_Party_of_Honduras_flag.svg",
+    "source_file": "Liberal Party of Honduras flag.svg",
+    "asset": "archive/liberal-honduras.png"
   },
   {
     "id": "lithuanian-ssr",
@@ -1249,6 +1849,21 @@
     "asset": "archive/moldavian-ssr.png"
   },
   {
+    "id": "mongolian-democratic",
+    "name": "Mongolian Democratic Party",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Democratic Party of Mongolia",
+    "source": "https://commons.wikimedia.org/wiki/File:Mongolian_Democratic_Party_Flag.svg",
+    "source_file": "Mongolian Democratic Party Flag.svg",
+    "asset": "archive/mongolian-democratic.png"
+  },
+  {
     "id": "mongolia-socialist",
     "name": "Mongolian People's Republic",
     "period": "1945-1992",
@@ -1290,6 +1905,21 @@
     "license": "Public domain",
     "license_url": "",
     "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "musavat",
+    "name": "Musavat Party",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Unknown authorUnknown author",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Musavat_Party.svg",
+    "source_file": "Flag of the Musavat Party.svg",
+    "asset": "archive/musavat.png"
   },
   {
     "id": "mutualism",
@@ -1380,6 +2010,21 @@
     "license": "Public domain",
     "license_url": "",
     "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "new-conservative-korea",
+    "name": "New Conservative Party (South Korea) - variant 1",
+    "period": "Source-documented party flag variant",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "New Conservative Party (새로운보수당)",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_New_Conservative_Party_(South_Korea%3B_variant_1).svg",
+    "source_file": "Flag of the New Conservative Party (South Korea; variant 1).svg",
+    "asset": "archive/new-conservative-korea.png"
   },
   {
     "id": "us-nh",
@@ -1580,6 +2225,21 @@
     "asset": "archive/ottoman.png"
   },
   {
+    "id": "ppp-pakistan",
+    "name": "Pakistan People's Party",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Pakistan_People%27s_Party.svg",
+    "source_file": "Flag of Pakistan People's Party.svg",
+    "asset": "archive/ppp-pakistan.png"
+  },
+  {
     "id": "us-pa",
     "name": "Pennsylvania (US state)",
     "period": "Contemporary design snapshot",
@@ -1592,6 +2252,21 @@
     "license": "Public domain",
     "license_url": "",
     "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "ppp-korea",
+    "name": "People Power Party (South Korea)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "People Power Party",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_People_Power_Party_of_Korea.svg",
+    "source_file": "Flag of People Power Party of Korea.svg",
+    "asset": "archive/ppp-korea.png"
   },
   {
     "id": "south-yemen",
@@ -1607,6 +2282,38 @@
     "license_url": "",
     "credit": "National Front - الجبهة القومية",
     "asset": "archive/south-yemen.png"
+  },
+  {
+    "id": "peoples-thailand-2024",
+    "name": "People's Party (Thailand, 2024)",
+    "period": "2024 party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "HaeKN",
+    "source": "https://commons.wikimedia.org/wiki/File:People%27s_Party_Flag_(Thailand%2C_2024).svg",
+    "source_file": "People's Party Flag (Thailand, 2024).svg",
+    "asset": "archive/peoples-thailand-2024.png"
+  },
+  {
+    "id": "prp-vietnam",
+    "name": "People's Revolutionary Party of Vietnam",
+    "period": "Historical party flag design",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Martufellon",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_People%27s_Revolutionary_Party_of_Vietnam.svg",
+    "source_file": "Flag of the People's Revolutionary Party of Vietnam.svg",
+    "asset": "archive/prp-vietnam.png"
   },
   {
     "id": "vichy-petain",
@@ -1639,6 +2346,22 @@
     "credit": "Flagpedia / Wikimedia Commons"
   },
   {
+    "id": "pcp",
+    "name": "Portuguese Communist Party (PCP)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Portuguese_Communist_Party.svg",
+    "source_file": "Flag of the Portuguese Communist Party.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "ThecentreCZ",
+    "asset": "archive/pcp.png"
+  },
+  {
     "id": "pr",
     "name": "Puerto Rico",
     "period": "Contemporary design snapshot",
@@ -1651,6 +2374,21 @@
     "license": "Public domain",
     "license_url": "",
     "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "qaumi-watan",
+    "name": "Qaumi Watan Party",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Unknown authorUnknown author",
+    "source": "https://commons.wikimedia.org/wiki/File:Qaumi_Watan_Party_Official_Flag.svg",
+    "source_file": "Qaumi Watan Party Official Flag.svg",
+    "asset": "archive/qaumi-watan.png"
   },
   {
     "id": "qing",
@@ -1759,6 +2497,21 @@
     "license_url": "",
     "credit": "(many, see history)",
     "asset": "archive/south-vietnam.png"
+  },
+  {
+    "id": "chp",
+    "name": "Republican People's Party (Turkey)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "ThecentreCZ",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Republican_People%27s_Party_(Turkey).svg",
+    "source_file": "Flag of the Republican People's Party (Turkey).svg",
+    "asset": "archive/chp.png"
   },
   {
     "id": "us-ri",
@@ -1918,6 +2671,21 @@
     "credit": "Flagpedia / Wikimedia Commons"
   },
   {
+    "id": "social-democratic-korea",
+    "name": "Social Democratic Party of Korea",
+    "period": "Source-documented party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Wheatley2",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Social_Democratic_Party_of_Korea.svg",
+    "source_file": "Flag of the Social Democratic Party of Korea.svg",
+    "asset": "archive/social-democratic-korea.png"
+  },
+  {
     "id": "albania-socialist",
     "name": "Socialist Albania",
     "period": "1946-1992",
@@ -1933,6 +2701,39 @@
     "asset": "archive/albania-socialist.png"
   },
   {
+    "id": "srp-croatia",
+    "name": "Socialist Labour Party of Croatia",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Socialist",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "HaeKN",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Socialist_Labour_Party_of_Croatia.svg",
+    "source_file": "Flag of the Socialist Labour Party of Croatia.svg",
+    "asset": "archive/srp-croatia.png"
+  },
+  {
+    "id": "sps-1990",
+    "name": "Socialist Party of Serbia - 1990-1992",
+    "period": "1990-1992 historical party flag",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Socialist",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Haisollokopas (SVG version)",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Socialist_Party_of_Serbia_(1990-1992).svg",
+    "source_file": "Flag of the Socialist Party of Serbia (1990-1992).svg",
+    "asset": "archive/sps-1990.png"
+  },
+  {
     "id": "romania-socialist",
     "name": "Socialist Republic of Romania",
     "period": "1965-1989",
@@ -1946,6 +2747,22 @@
     "license_url": "",
     "credit": "Various, see File History below for details.",
     "asset": "archive/romania-socialist.png"
+  },
+  {
+    "id": "srwp",
+    "name": "Socialist Revolutionary Workers' Party (South Korea)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Socialist",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "사회변혁노동자당",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Socialist_Revolutionary_Workers%27_Party.svg",
+    "source_file": "Flag of Socialist Revolutionary Workers' Party.svg",
+    "asset": "archive/srwp.png"
   },
   {
     "id": "yugoslavia",
@@ -2080,6 +2897,22 @@
     "credit": "Flagpedia / Wikimedia Commons"
   },
   {
+    "id": "swatantra",
+    "name": "Swatantra Party",
+    "period": "Historical party flag design",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Swatantra-Party-flag.svg",
+    "source_file": "Swatantra-Party-flag.svg",
+    "asset": "archive/swatantra.png"
+  },
+  {
     "id": "tw",
     "name": "Taiwan",
     "period": "Contemporary design snapshot",
@@ -2195,6 +3028,38 @@
     "asset": "archive/ukrainian-ssr.png"
   },
   {
+    "id": "psuc",
+    "name": "Unified Socialist Party of Catalonia (PSUC)",
+    "period": "Historical party flag design",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Partit Socialista Unificat de CatalunyaMartufellon (vector)",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Unified_Socialist_Party_of_Catalonia.svg",
+    "source_file": "Flag of the Unified Socialist Party of Catalonia.svg",
+    "asset": "archive/psuc.png"
+  },
+  {
+    "id": "udp-belize",
+    "name": "United Democratic Party (Belize)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "The original uploader was Fuebar at English Wikipedia.",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Belize_United_Democratic_Party.svg",
+    "source_file": "Flag of the Belize United Democratic Party.svg",
+    "asset": "archive/udp-belize.png"
+  },
+  {
     "id": "uk-white-ensign",
     "name": "United Kingdom - White Ensign",
     "period": "1801-present",
@@ -2282,6 +3147,22 @@
     "license": "Public domain",
     "license_url": "",
     "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "uwsp",
+    "name": "United Wa State Party",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Turtle-bienhoa",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Wa_State_Party.svg",
+    "source_file": "Flag of the United Wa State Party.svg",
+    "asset": "archive/uwsp.png"
   },
   {
     "id": "us-ut",
@@ -2440,6 +3321,55 @@
     "credit": "Flagpedia / Wikimedia Commons"
   },
   {
+    "id": "workers-uruguay",
+    "name": "Workers' Party (Uruguay)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Socialist",
+      "Political"
+    ],
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Swiãtopôłk",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Workers%27_Party_(Uruguay).svg",
+    "source_file": "Flag of Workers' Party (Uruguay).svg",
+    "asset": "archive/workers-uruguay.png"
+  },
+  {
+    "id": "wpk",
+    "name": "Workers' Party of Korea (WPK)",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Communist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Workers%27_Party_of_Korea.svg",
+    "source_file": "Flag of the Workers' Party of Korea.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Originally uploaded to en.wikipedia by en:User:U2blueEagle on 3 December 2007 with file name en:Image:Workers' Party of Korea Flag.svg",
+    "asset": "archive/wpk.png"
+  },
+  {
+    "id": "wpk-south",
+    "name": "Workers' Party of South Korea",
+    "period": "Historical party flag design",
+    "tags": [
+      "Political parties",
+      "Historical",
+      "Communist",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Workers' Party of Korea's predecessors Workers' Party of North Korea and Workers' Party of South Korea",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Workers%27_Party_of_South_Korea.svg",
+    "source_file": "Flag of the Workers' Party of South Korea.svg",
+    "asset": "archive/wpk-south.png"
+  },
+  {
     "id": "us-wy",
     "name": "Wyoming (US state)",
     "period": "Contemporary design snapshot",
@@ -2452,6 +3382,22 @@
     "license": "Public domain",
     "license_url": "",
     "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "yemeni-socialist",
+    "name": "Yemeni Socialist Party",
+    "period": "Party flag design",
+    "tags": [
+      "Political parties",
+      "Socialist",
+      "Political"
+    ],
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Yemeni Socialist Party",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Yemeni_Socialist_Party.svg",
+    "source_file": "Flag of the Yemeni Socialist Party.svg",
+    "asset": "archive/yemeni-socialist.png"
   },
   {
     "id": "ax",

@@ -53,7 +53,7 @@ SVG is not supported: export it to PNG first.
 
 ## Historical, wartime and political flags
 
-**170 additional designs**, alongside the 195 country flags. Press **a** for the
+**229 additional designs**, alongside the 195 country flags. Press **a** for the
 archive; type to search by name, ID, period or category. **Ctrl-F / Ctrl-R**
 cycles category filters; **Ctrl-O** shows dates, attribution and the source.
 Press **d** on the stage to inspect the active archive flag.
@@ -236,3 +236,22 @@ bash tools/build-apk.sh
 
 Use GitHub Actions for Fedora Asahi; Google's Linux NDK host tools require
 x86_64. See the Android README for requirements and first-version limitations.
+
+## Political-party flags
+
+The **Political parties** archive category includes CPC/CCP, CPUSA, the Communist
+Party of Australia (CPA), CPV, WPK, CPI, CPI(M), JCP, PCP, CPN-UML and LPRP,
+plus clearly labelled historical designs from several other parties. Source
+artwork is documented per entry; these are not substitutes for national flags.
+The same catalogue ships in the terminal app and Android APK.
+
+```bash
+flagwave cpc
+flagwave cpusa
+flagwave cpaus
+```
+
+In Android, open Library and select **Political parties** or search the party
+name. For the terminal picker, press **a** and type a party name or ID.
+
+The expanded catalogue now has **424 entries**, with **59 newly added party flag entries**. More examples include PKI (Indonesia), the Lebanese Communist Party, Communist Refoundation (Italy), LDP (Japan), Pakistan People’s Party, CHP (Turkey), and clearly identified historical party flags. Each entry has a source and artwork license.

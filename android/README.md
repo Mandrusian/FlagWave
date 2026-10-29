@@ -37,7 +37,7 @@ ARM64, ARMv7 and x86_64 native libraries in one APK.
 ## Included in this first version
 
 - Material 3 dark interface, Stage / Library / Controls navigation and a controls sheet.
-- All 365 existing flags bundled offline, with searchable categories and attribution.
+- All 424 flags bundled offline, with searchable categories and attribution.
 - Red Eureka selected on first launch; last selection and controls restored afterward.
 - GPU ASCII effect, solid textured view, monochrome, character density and vertical artwork.
 - C++ procedural cloth, orbit speed/direction, wind, pause, drag rotation and pinch zoom.
