@@ -51,7 +51,7 @@ class MainActivity:ComponentActivity() {
         super.onCreate(savedInstanceState);enableEdgeToEdge()
         val store=FlagStore(this)
         setContent {
-            MaterialTheme(colorScheme=darkColorScheme(primary=Color(0xFF8DE2CF),onPrimary=Color(0xFF00382E),primaryContainer=Color(0xFF175448),secondary=Color(0xFFB2CCC5),background=Color(0xFF0D1418),surface=Color(0xFF111C20),surfaceVariant=Color(0xFF233238))) {
+            MaterialTheme(colorScheme=darkColorScheme(primary=Color(0xFF8DE2CF),onPrimary=Color(0xFF00382E),primaryContainer=Color(0xFF175448),secondary=Color(0xFFB2CCC5),background=Color(0xFF0D1418),surface=Color(0xFF111C20),surfaceVariant=Color(0xFF233238),secondaryContainer=Color(0xFF284B44),onSecondaryContainer=Color(0xFFB4EFE0),onSurface=Color(0xFFE0E3E5),onSurfaceVariant=Color(0xFFB9C4C9),outline=Color(0xFF879398),surfaceContainer=Color(0xFF152226),surfaceContainerLow=Color(0xFF18252A),surfaceContainerHigh=Color(0xFF18252A),surfaceContainerHighest=Color(0xFF263237))) {
                 FlagWave(store)
             }
         }
@@ -89,7 +89,7 @@ class MainActivity:ComponentActivity() {
         BackHandler(fullscreen || tab!=0) {fullscreen=false;tab=0}
         Scaffold(
             containerColor=MaterialTheme.colorScheme.background,
-            topBar={if(!fullscreen) CenterAlignedTopAppBar(title={Text("FlagWave",fontWeight=FontWeight.Bold)},actions={TextButton(onClick={val modes=listOf("auto","android","desktop");update(settings.copy(layout=modes[(modes.indexOf(settings.layout)+1)%3]))}) {Text(settings.layout.replaceFirstChar {it.uppercase()})};IconButton(onClick={info=selected}) {Icon(Icons.Default.Info,"Flag details")}})},
+            topBar={if(!fullscreen) CenterAlignedTopAppBar(colors=TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor=MaterialTheme.colorScheme.background),title={Text("FlagWave",fontWeight=FontWeight.Bold)},actions={TextButton(onClick={val modes=listOf("auto","android","desktop");update(settings.copy(layout=modes[(modes.indexOf(settings.layout)+1)%3]))}) {Text(settings.layout.replaceFirstChar {it.uppercase()})};IconButton(onClick={info=selected}) {Icon(Icons.Default.Info,"Flag details")}})},
             bottomBar={if(!fullscreen && !desktop) NavigationBar {
                 NavigationBarItem(tab==0,{tab=0},icon={Icon(Icons.Default.Waves,null)},label={Text("Stage")})
                 NavigationBarItem(tab==1,{tab=1},icon={Icon(Icons.Default.Flag,null)},label={Text("Library")})
@@ -97,7 +97,7 @@ class MainActivity:ComponentActivity() {
             }}, snackbarHost={SnackbarHost(snack)}
         ) {padding ->
             Row(Modifier.fillMaxSize().padding(if(fullscreen) PaddingValues(0.dp) else padding)) {
-                if(desktop && !fullscreen) NavigationRail {
+                if(desktop && !fullscreen) NavigationRail(containerColor=MaterialTheme.colorScheme.background) {
                     NavigationRailItem(tab==0,{tab=0},icon={Icon(Icons.Default.Waves,null)},label={Text("Stage")})
                     NavigationRailItem(tab==1,{tab=1},icon={Icon(Icons.Default.Flag,null)},label={Text("Library")})
                     NavigationRailItem(tab==2,{tab=2},icon={Icon(Icons.Default.Tune,null)},label={Text("Controls")})
