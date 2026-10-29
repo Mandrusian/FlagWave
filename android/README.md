@@ -66,3 +66,11 @@ still need on-device testing. No phone performance measurements are claimed.
 Device visual QA, import deletion/renaming, export, live wallpaper and a stable
 release-signing workflow are follow-up work. This build does not request signing
 keys or publish a Play Store release.
+
+## Version 0.3
+
+Display name **Red Eureka**, orbit speeds from 0.1–60°/s, separate direction,
+solid ASCII `#`, target FPS, Auto/Low/High render quality, camera reset (button
+or double-tap), and saved Auto/Android/Desktop layout. Desktop uses a navigation
+rail and, on wide screens, an inline inspector. Android uses bottom navigation.
+Auto switches at 840dp. These controls are mirrored by the web version.

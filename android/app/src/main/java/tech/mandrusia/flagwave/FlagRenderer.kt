@@ -7,6 +7,7 @@ import android.opengl.GLSurfaceView
 import android.opengl.GLUtils
 import android.opengl.Matrix
 import android.view.MotionEvent
+import android.view.GestureDetector
 import android.view.ScaleGestureDetector
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
@@ -18,7 +19,9 @@ import kotlin.math.*
 data class RenderOptions(
     val paused: Boolean=false, val orbit: Boolean=true, val speed: Float=6f,
     val wind: Float=1f, val ascii: Boolean=true, val monochrome: Boolean=false,
-    val vertical: Boolean=false, val lowPower: Boolean=false, val cells: Float=100f
+    val vertical: Boolean=false, val lowPower: Boolean=false, val cells: Float=100f,
+    val fps: Int=60, val quality: String="auto", val blocks: Boolean=false,
+    val layout: String="auto", val resetToken: Int=0
 )
 object NativeCloth {
     init { System.loadLibrary("flagwave") }
@@ -27,6 +30,10 @@ object NativeCloth {
 class FlagSurface(context: Context): GLSurfaceView(context) {
     val engine=FlagRenderer()
     private var lastX=0f; private var lastY=0f
+    private val doubleTap=GestureDetector(context,object: GestureDetector.SimpleOnGestureListener() {
+        override fun onDown(e:MotionEvent)=true
+        override fun onDoubleTap(e:MotionEvent):Boolean {engine.resetRequested=true;return true}
+    })
     private val pinch=ScaleGestureDetector(context,object: ScaleGestureDetector.SimpleOnScaleGestureListener() {
         override fun onScale(detector: ScaleGestureDetector):Boolean {
             engine.zoom=(engine.zoom*detector.scaleFactor).coerceIn(.55f,1.8f); return true
@@ -34,6 +41,7 @@ class FlagSurface(context: Context): GLSurfaceView(context) {
     })
     init { setEGLContextClientVersion(3); preserveEGLContextOnPause=true; setRenderer(engine) }
     override fun onTouchEvent(event: MotionEvent):Boolean {
+        doubleTap.onTouchEvent(event)
         pinch.onTouchEvent(event)
         when(event.actionMasked) {
             MotionEvent.ACTION_DOWN -> { lastX=event.x; lastY=event.y; parent?.requestDisallowInterceptTouchEvent(true) }
@@ -58,6 +66,8 @@ class FlagRenderer: GLSurfaceView.Renderer {
     @Volatile var pitch=.12f
     @Volatile var zoom=1f
     @Volatile var failure:String?=null
+    @Volatile var resetRequested=false
+    private var resetToken=0
     private val vertices=ByteBuffer.allocateDirect(40*24*6*5*4).order(ByteOrder.nativeOrder()).asFloatBuffer()
     private val quad=ByteBuffer.allocateDirect(6*4*4).order(ByteOrder.nativeOrder()).asFloatBuffer().apply {
         put(floatArrayOf(-1f,-1f,0f,0f,1f,-1f,1f,0f,-1f,1f,0f,1f,1f,-1f,1f,0f,1f,1f,1f,1f,-1f,1f,0f,1f));position(0)
@@ -99,13 +109,17 @@ class FlagRenderer: GLSurfaceView.Renderer {
     override fun onDrawFrame(gl:GL10?) {
         if(failure!=null) {glClearColor(.05f,.08f,.1f,1f);glClear(GL_COLOR_BUFFER_BIT);return}
         val start=System.nanoTime();val s=options.get()
+        if(resetRequested || s.resetToken!=resetToken) {
+            dragYaw=.24f;pitch=.12f;zoom=1f;orbitAngle=0f;resetRequested=false;resetToken=s.resetToken
+        }
         val dt=if(previous==0L) 0f else ((start-previous)/1e9).toFloat().coerceIn(0f,.1f);previous=start
         if(!s.paused) { time+=dt; if(s.orbit) orbitAngle=(orbitAngle+s.speed*dt)%360f }
         pending.getAndSet(null)?.let { image ->
             retained?.recycle(); retained=image;imageAspect=image.width.toFloat()/image.height
             glBindTexture(GL_TEXTURE_2D,flagTexture);GLUtils.texImage2D(GL_TEXTURE_2D,0,image,0)
         }
-        val maxPixels=if(s.lowPower) 420 else 850
+        val maxPixels=if(s.lowPower || s.quality=="low") 420 else if(s.quality=="high")1280 else 850
+        if(s.quality!="auto") budget=1f
         val scale=min(1f,maxPixels*budget/max(w,h))
         try { target(max(1,(w*scale).toInt()),max(1,(h*scale).toInt())) }
         catch(e:Exception) {failure=e.message;return}
@@ -135,12 +149,13 @@ class FlagRenderer: GLSurfaceView.Renderer {
         glUniform2f(glGetUniformLocation(postProgram,"grid"),columns,max(12f,columns*h/w*.52f))
         glUniform1i(glGetUniformLocation(postProgram,"ascii"),if(s.ascii)1 else 0)
         glUniform1i(glGetUniformLocation(postProgram,"mono"),if(s.monochrome)1 else 0)
+        glUniform1i(glGetUniformLocation(postProgram,"blocks"),if(s.blocks)1 else 0)
         quad.position(0);glVertexAttribPointer(0,2,GL_FLOAT,false,16,quad)
         quad.position(2);glVertexAttribPointer(1,2,GL_FLOAT,false,16,quad)
         glDrawArrays(GL_TRIANGLES,0,6)
         val elapsed=(System.nanoTime()-start)/1e9
-        val fps=if(s.lowPower)24 else 60
-        if(elapsed>1.0/fps && budget>.5f) budget=max(.5f,budget-.1f)
+        val fps=if(s.lowPower)min(24,s.fps) else s.fps.coerceIn(5,60)
+        if(s.quality=="auto" && elapsed>1.0/fps && budget>.5f) budget=max(.5f,budget-.1f)
         val sleep=((1.0/fps-elapsed)*1000).toLong()
         if(sleep>0) Thread.sleep(sleep)
     }
@@ -181,11 +196,11 @@ void main(){gl_Position=vec4(position,0.0,1.0);uv=texCoord;}
 """
         const val asciiShader="""#version 300 es
 precision highp float;
-in vec2 uv;uniform sampler2D scene;uniform sampler2D glyphs;uniform vec2 grid;uniform bool ascii;uniform bool mono;out vec4 color;
+in vec2 uv;uniform sampler2D scene;uniform sampler2D glyphs;uniform vec2 grid;uniform bool ascii;uniform bool mono;uniform bool blocks;out vec4 color;
 void main(){vec3 bg=vec3(.035,.055,.065);vec2 cell=(floor(uv*grid)+.5)/grid;vec4 c=texture(scene,ascii?cell:uv);
 if(c.a<.1){color=vec4(bg,1);return;}float lum=dot(c.rgb,vec3(.2126,.7152,.0722));
 vec3 ink=mono?vec3(.35+lum*.65):max(c.rgb,vec3(.035));float a=1.;
-if(ascii){float index=floor(clamp(.4+lum*.59,0.,.999)*16.);vec2 local=fract(uv*grid);a=texture(glyphs,vec2((index+local.x)/16.,1.-local.y)).a;}
+if(ascii){float index=blocks?12.:floor(clamp(.4+lum*.59,0.,.999)*16.);vec2 local=fract(uv*grid);a=texture(glyphs,vec2((index+local.x)/16.,1.-local.y)).a;}
 color=vec4(mix(bg,ink,a),1.);}
 """
     }

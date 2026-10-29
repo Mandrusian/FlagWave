@@ -255,3 +255,12 @@ In Android, open Library and select **Political parties** or search the party
 name. For the terminal picker, press **a** and type a party name or ID.
 
 The expanded catalogue now has **424 entries**, with **59 newly added party flag entries**. More examples include PKI (Indonesia), the Lebanese Communist Party, Communist Refoundation (Italy), LDP (Japan), Pakistan People’s Party, CHP (Turkey), and clearly identified historical party flags. Each entry has a source and artwork license.
+
+## Web version and layout modes
+
+The [web app](web/README.md) matches the native Android design and shares its
+flag catalogue and GPU shaders. Auto, Android and Desktop layouts are available
+from the top bar or Controls. Android 0.3 adds the same layout selector, quality
+and frame-rate controls, solid ASCII style, 0.1–60°/s orbit and camera reset.
+The default flag's display name is simply **Red Eureka**; its ID and `rek` alias
+remain unchanged. See the web README for local builds and browser support.

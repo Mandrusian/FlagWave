@@ -72,6 +72,6 @@ class FlagStore(val context:Context) {
         prefs.edit().putString("name:${dest.name}",name).apply()
         return Flag("import:${dest.name}",name,dest.absolutePath,listOf("My images"))
     }
-    fun options()=RenderOptions(orbit=prefs.getBoolean("orbit",true),speed=prefs.getFloat("speed",6f),wind=prefs.getFloat("wind",1f),ascii=prefs.getBoolean("ascii",true),monochrome=prefs.getBoolean("mono",false),vertical=prefs.getBoolean("vertical",false),lowPower=prefs.getBoolean("lowPower",false),cells=prefs.getFloat("cells",100f))
-    fun save(o:RenderOptions) {prefs.edit().putBoolean("orbit",o.orbit).putFloat("speed",o.speed).putFloat("wind",o.wind).putBoolean("ascii",o.ascii).putBoolean("mono",o.monochrome).putBoolean("vertical",o.vertical).putBoolean("lowPower",o.lowPower).putFloat("cells",o.cells).apply()}
+    fun options()=RenderOptions(orbit=prefs.getBoolean("orbit",true),speed=prefs.getFloat("speed",6f),wind=prefs.getFloat("wind",1f),ascii=prefs.getBoolean("ascii",true),monochrome=prefs.getBoolean("mono",false),vertical=prefs.getBoolean("vertical",false),lowPower=prefs.getBoolean("lowPower",false),cells=prefs.getFloat("cells",100f),fps=prefs.getInt("fps",60),quality=prefs.getString("quality","auto")?:"auto",blocks=prefs.getBoolean("blocks",false),layout=prefs.getString("layout","auto")?:"auto")
+    fun save(o:RenderOptions) {prefs.edit().putBoolean("orbit",o.orbit).putFloat("speed",o.speed).putFloat("wind",o.wind).putBoolean("ascii",o.ascii).putBoolean("mono",o.monochrome).putBoolean("vertical",o.vertical).putBoolean("lowPower",o.lowPower).putFloat("cells",o.cells).putInt("fps",o.fps).putString("quality",o.quality).putBoolean("blocks",o.blocks).putString("layout",o.layout).apply()}
 }

@@ -1164,7 +1164,7 @@ diese Datei: Jwnabd
 - License: Public domain
 - Changes: resized PNG
 
-## Red Eureka (communist variant / REK) (`red-eureka`)
+## Red Eureka (`red-eureka`)
 
 - Source: https://commons.wikimedia.org/wiki/File:Eureka_Flag.svg
 - Credit: FlagWave red-field adaptation of the public-domain Eureka artwork

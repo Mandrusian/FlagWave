@@ -35,6 +35,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Lifecycle
@@ -61,6 +62,8 @@ class MainActivity:ComponentActivity() {
         var selected by remember {mutableStateOf(flags.find {it.id==store.prefs.getString("selected","red-eureka")}?:flags.first {it.id=="red-eureka"})}
         var settings by remember {mutableStateOf(store.options())}
         var favourites by remember {mutableStateOf(store.prefs.getStringSet("favourites",emptySet())!!.toSet())}
+        val wide=LocalConfiguration.current.screenWidthDp>=840
+        val desktop=settings.layout=="desktop" || (settings.layout=="auto" && wide)
         var tab by remember {mutableIntStateOf(0)}
         var fullscreen by remember {mutableStateOf(false)}
         var sheet by remember {mutableStateOf(false)}
@@ -86,17 +89,30 @@ class MainActivity:ComponentActivity() {
         BackHandler(fullscreen || tab!=0) {fullscreen=false;tab=0}
         Scaffold(
             containerColor=MaterialTheme.colorScheme.background,
-            topBar={if(!fullscreen) CenterAlignedTopAppBar(title={Text("FlagWave",fontWeight=FontWeight.Bold)},actions={IconButton(onClick={info=selected}) {Icon(Icons.Default.Info,"Flag details")}})},
-            bottomBar={if(!fullscreen) NavigationBar {
+            topBar={if(!fullscreen) CenterAlignedTopAppBar(title={Text("FlagWave",fontWeight=FontWeight.Bold)},actions={TextButton(onClick={val modes=listOf("auto","android","desktop");update(settings.copy(layout=modes[(modes.indexOf(settings.layout)+1)%3]))}) {Text(settings.layout.replaceFirstChar {it.uppercase()})};IconButton(onClick={info=selected}) {Icon(Icons.Default.Info,"Flag details")}})},
+            bottomBar={if(!fullscreen && !desktop) NavigationBar {
                 NavigationBarItem(tab==0,{tab=0},icon={Icon(Icons.Default.Waves,null)},label={Text("Stage")})
                 NavigationBarItem(tab==1,{tab=1},icon={Icon(Icons.Default.Flag,null)},label={Text("Library")})
                 NavigationBarItem(tab==2,{tab=2},icon={Icon(Icons.Default.Tune,null)},label={Text("Controls")})
             }}, snackbarHost={SnackbarHost(snack)}
         ) {padding ->
-            Box(Modifier.fillMaxSize().padding(if(fullscreen) PaddingValues(0.dp) else padding)) {
+            Row(Modifier.fillMaxSize().padding(if(fullscreen) PaddingValues(0.dp) else padding)) {
+                if(desktop && !fullscreen) NavigationRail {
+                    NavigationRailItem(tab==0,{tab=0},icon={Icon(Icons.Default.Waves,null)},label={Text("Stage")})
+                    NavigationRailItem(tab==1,{tab=1},icon={Icon(Icons.Default.Flag,null)},label={Text("Library")})
+                    NavigationRailItem(tab==2,{tab=2},icon={Icon(Icons.Default.Tune,null)},label={Text("Controls")})
+                }
+                Box(Modifier.weight(1f).fillMaxHeight()) {
                 when(tab) {
-                    0 -> Stage(store,selected,settings,fullscreen,selected.id in favourites,
-                        onOptions={update(it)},onFullscreen={fullscreen=!fullscreen},onControls={sheet=true},onFavourite={favourite(selected)})
+                    0 -> Row(Modifier.fillMaxSize()) {
+                        Box(Modifier.weight(1f).fillMaxHeight()) {
+                            Stage(store,selected,settings,fullscreen,selected.id in favourites,
+                                onOptions={update(it)},onFullscreen={fullscreen=!fullscreen},onControls={sheet=true},onFavourite={favourite(selected)})
+                        }
+                        if(desktop && wide && !fullscreen) Column(Modifier.width(320.dp).fillMaxHeight().verticalScroll(rememberScrollState()).padding(20.dp)) {
+                            Text("Motion & appearance",style=MaterialTheme.typography.titleLarge);Spacer(Modifier.height(16.dp));Controls(settings) {update(it)}
+                        }
+                    }
                     1 -> Library(store,flags,favourites,importing,onSelect={select(it)},onFavourite={favourite(it)},onInfo={info=it},onImport={picker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))})
                     2 -> Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp)) {
                         Text("Make it yours",style=MaterialTheme.typography.headlineLarge,fontWeight=FontWeight.Bold)
@@ -105,6 +121,7 @@ class MainActivity:ComponentActivity() {
                     }
                 }
             }
+        }
         }
         if(sheet) ModalBottomSheet(onDismissRequest={sheet=false}) {
             Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal=24.dp).padding(bottom=40.dp)) {
@@ -167,7 +184,7 @@ class MainActivity:ComponentActivity() {
             }
         }
         if(!fullscreen) {
-            if(!compact) Text("Drag to orbit · Pinch to zoom",Modifier.align(Alignment.CenterHorizontally),style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+            if(!compact) Text("Drag to orbit · Pinch to zoom · Double-tap to reset",Modifier.align(Alignment.CenterHorizontally),style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
             Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(12.dp)) {
                 FilledIconButton(onClick={onOptions(options.copy(paused=!options.paused))},modifier=Modifier.size(56.dp)) {Icon(if(options.paused) Icons.Default.PlayArrow else Icons.Default.Pause,if(options.paused) "Resume" else "Pause")}
                 FilledTonalButton(onClick={onOptions(options.copy(orbit=!options.orbit))},modifier=Modifier.weight(1f).height(56.dp)) {Icon(Icons.Default.RotateRight,null);Spacer(Modifier.width(8.dp));Text(if(options.orbit) "Orbit on" else "Orbit off")}
@@ -215,19 +232,31 @@ class MainActivity:ComponentActivity() {
 @Composable private fun Controls(o:RenderOptions,onChange:(RenderOptions)->Unit) {
     ControlSwitch("Automatic orbit","Slowly circle the waving flag",o.orbit) {onChange(o.copy(orbit=it))}
     Text("Orbit speed · ${"%.1f".format(abs(o.speed))}°/s",Modifier.padding(top=12.dp),fontWeight=FontWeight.SemiBold)
-    Slider(abs(o.speed),{onChange(o.copy(speed=it*(if(o.speed<0)-1 else 1)))},valueRange=.5f..30f)
+    Slider(abs(o.speed),{onChange(o.copy(speed=it*(if(o.speed<0)-1 else 1)))},valueRange=.1f..60f)
     ControlSwitch("Reverse direction","Rotate the other way",o.speed<0) {onChange(o.copy(speed=abs(o.speed)*(if(it)-1 else 1)))}
     Text("Wind · ${"%.1f".format(o.wind)}",Modifier.padding(top=12.dp),fontWeight=FontWeight.SemiBold)
     Slider(o.wind,{onChange(o.copy(wind=it))},valueRange=0f..2.5f)
     HorizontalDivider(Modifier.padding(vertical=16.dp))
     ControlSwitch("ASCII rendering","A terminal-inspired character canvas",o.ascii) {onChange(o.copy(ascii=it))}
+    ControlSwitch("Solid ASCII marks","Use # instead of shaded characters",o.blocks) {onChange(o.copy(blocks=it))}
     ControlSwitch("Monochrome","Use light characters instead of flag colours",o.monochrome) {onChange(o.copy(monochrome=it))}
     Text("Character detail · ${o.cells.toInt()} columns",Modifier.padding(top=12.dp),fontWeight=FontWeight.SemiBold)
     Slider(o.cells,{onChange(o.copy(cells=it))},valueRange=35f..180f)
     ControlSwitch("Vertical artwork","Rotate the image into a hanging banner",o.vertical) {onChange(o.copy(vertical=it))}
     HorizontalDivider(Modifier.padding(vertical=16.dp))
     ControlSwitch("Battery saver","Lower render resolution and frame rate",o.lowPower) {onChange(o.copy(lowPower=it))}
-    TextButton(onClick={onChange(RenderOptions())}) {Text("Restore default controls")}
+    Text("Target frame rate · ${o.fps} FPS",Modifier.padding(top=12.dp),fontWeight=FontWeight.SemiBold)
+    Slider(o.fps.toFloat(),{onChange(o.copy(fps=it.toInt()))},valueRange=5f..60f,steps=54)
+    Text("Render quality",fontWeight=FontWeight.SemiBold)
+    Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {listOf("auto","low","high").forEach {value ->
+        FilterChip(o.quality==value,{onChange(o.copy(quality=value))},label={Text(value.replaceFirstChar {it.uppercase()})})
+    }}
+    Text("Layout mode",Modifier.padding(top=12.dp),fontWeight=FontWeight.SemiBold)
+    Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {listOf("auto","android","desktop").forEach {value ->
+        FilterChip(o.layout==value,{onChange(o.copy(layout=value))},label={Text(value.replaceFirstChar {it.uppercase()})})
+    }}
+    TextButton(onClick={onChange(o.copy(resetToken=o.resetToken+1))}) {Icon(Icons.Default.RestartAlt,null);Spacer(Modifier.width(8.dp));Text("Reset camera")}
+    TextButton(onClick={onChange(RenderOptions(resetToken=o.resetToken+1))}) {Text("Restore default controls")}
 }
 @Composable private fun ControlSwitch(title:String,subtitle:String,checked:Boolean,onChange:(Boolean)->Unit) {
     Row(Modifier.fillMaxWidth().padding(vertical=8.dp),verticalAlignment=Alignment.CenterVertically) {

@@ -1,0 +1,31 @@
+name: Web app
+on:
+  push:
+    paths: ['web/**', 'tools/build-web.py', 'android/app/src/main/java/tech/mandrusia/flagwave/FlagRenderer.kt', 'archive/**', 'flags/**', '*.json', 'ARCHIVE-SOURCES.md', '.github/workflows/web.yml']
+  pull_request:
+    paths: ['web/**', 'tools/build-web.py', 'android/app/src/main/java/tech/mandrusia/flagwave/FlagRenderer.kt', 'archive/**', 'flags/**', '*.json', 'ARCHIVE-SOURCES.md', '.github/workflows/web.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build and test shared catalogue and rendering
+        run: |
+          python3 tools/build-web.py
+          node --input-type=module --check < web/app.js
+          node --input-type=module --check < web/renderer.js
+          node web/tests.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FlagWave-web
+          path: web/dist/
+          if-no-files-found: error
