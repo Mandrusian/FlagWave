@@ -1,0 +1,954 @@
+[
+  {
+    "id": "anarcha-feminism",
+    "name": "Anarcha-feminism - purple and black",
+    "period": "Symbolic design; no single adoption date",
+    "tags": [
+      "Anarchist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Anarchist_Feminism_flag_3.2_ratio.svg",
+    "source_file": "Anarchist Feminism flag 3.2 ratio.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Liftarn",
+    "asset": "archive/anarcha-feminism.png"
+  },
+  {
+    "id": "anarcho-capitalism",
+    "name": "Anarcho-capitalism - gold and black",
+    "period": "Symbolic design; no single adoption date",
+    "tags": [
+      "Libertarian",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Anarcho-capitalism.svg",
+    "source_file": "Flag of Anarcho-capitalism.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Rocket000",
+    "asset": "archive/anarcho-capitalism.png"
+  },
+  {
+    "id": "anarcho-pacifism",
+    "name": "Anarcho-pacifism - white and black",
+    "period": "Symbolic design; no single adoption date",
+    "tags": [
+      "Anarchist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Anarcho-Pacifist_flag.svg",
+    "source_file": "Anarcho-Pacifist flag.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Kharybdis (talk) (Uploads)",
+    "asset": "archive/anarcho-pacifism.png"
+  },
+  {
+    "id": "anarcho-syndicalism",
+    "name": "Anarcho-syndicalism / anarcho-communism - red and black",
+    "period": "Symbolic design; no single adoption date",
+    "tags": [
+      "Anarchist",
+      "Socialist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Anarchist_flag.svg",
+    "source_file": "Anarchist flag.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Boris23",
+    "asset": "archive/anarcho-syndicalism.png"
+  },
+  {
+    "id": "armenian-ssr",
+    "name": "Armenian SSR",
+    "period": "1952-1990",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Armenian_Soviet_Socialist_Republic_(1952%E2%80%931990).svg",
+    "source_file": "Flag of the Armenian Soviet Socialist Republic (1952–1990).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Aivazovsky and others",
+    "asset": "archive/armenian-ssr.png"
+  },
+  {
+    "id": "azerbaijan-ssr",
+    "name": "Azerbaijan SSR",
+    "period": "1952-1991",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Azerbaijan_Soviet_Socialist_Republic_(1952%E2%80%931991).svg",
+    "source_file": "Flag of the Azerbaijan Soviet Socialist Republic (1952–1991).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "",
+    "asset": "archive/azerbaijan-ssr.png"
+  },
+  {
+    "id": "black-flag",
+    "name": "Black flag - anarchist symbol",
+    "period": "Symbolic design; no single adoption date",
+    "tags": [
+      "Anarchist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Black_flag.svg",
+    "source_file": "Black flag.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "PavelD",
+    "asset": "archive/black-flag.png"
+  },
+  {
+    "id": "buf",
+    "name": "British Union of Fascists - party flag",
+    "period": "1930s",
+    "tags": [
+      "Historical",
+      "Fascist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_British_Union_of_Fascists.svg",
+    "source_file": "Flag of the British Union of Fascists.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "R-41",
+    "asset": "archive/buf.png"
+  },
+  {
+    "id": "byelorussian-ssr",
+    "name": "Byelorussian SSR",
+    "period": "1951-1991",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Byelorussian_Soviet_Socialist_Republic_(1951%E2%80%931991).svg",
+    "source_file": "Flag of the Byelorussian Soviet Socialist Republic (1951–1991).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Zscout370, reworked by Pianist",
+    "asset": "archive/byelorussian-ssr.png"
+  },
+  {
+    "id": "canada-red-1921",
+    "name": "Canada - Red Ensign",
+    "period": "1921-1957",
+    "tags": [
+      "Historical",
+      "WWII"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Canada_(1921%E2%80%931957).svg",
+    "source_file": "Flag of Canada (1921–1957).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Hoshie",
+    "asset": "archive/canada-red-1921.png"
+  },
+  {
+    "id": "chinese-soviet",
+    "name": "Chinese Soviet Republic",
+    "period": "1931-1937",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Chinese_Soviet_Republic.svg",
+    "source_file": "Flag of Chinese Soviet Republic.svg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Havsjö and Ericmetro",
+    "asset": "archive/chinese-soviet.png"
+  },
+  {
+    "id": "estonian-ssr",
+    "name": "Estonian SSR",
+    "period": "1953-1990",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Estonian_Soviet_Socialist_Republic_(1953%E2%80%931990).svg",
+    "source_file": "Flag of the Estonian Soviet Socialist Republic (1953–1990).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "First-uploaded SVG file versions authored by Urmas, Nokka",
+    "asset": "archive/estonian-ssr.png"
+  },
+  {
+    "id": "france-free",
+    "name": "Free France - Cross of Lorraine flag",
+    "period": "1940-1944",
+    "tags": [
+      "Historical",
+      "WWII"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Free_France_(1940-1944).svg",
+    "source_file": "Flag of Free France (1940-1944).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "See File history below for details.",
+    "asset": "archive/france-free.png"
+  },
+  {
+    "id": "gadsden",
+    "name": "Gadsden flag",
+    "period": "1775 design; later political uses",
+    "tags": [
+      "Historical",
+      "Libertarian",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Gadsden_flag.svg",
+    "source_file": "Gadsden flag.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Christopher Gadsden (1724–1805), Lexicon, Vikrum",
+    "asset": "archive/gadsden.png"
+  },
+  {
+    "id": "georgian-ssr",
+    "name": "Georgian SSR",
+    "period": "1951-1990",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Georgian_Soviet_Socialist_Republic_(1951%E2%80%931990).svg",
+    "source_file": "Flag of the Georgian Soviet Socialist Republic (1951–1990).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Dbenbenn, Nokka",
+    "asset": "archive/georgian-ssr.png"
+  },
+  {
+    "id": "east-germany",
+    "name": "German Democratic Republic (East Germany)",
+    "period": "1959-1990",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_East_Germany.svg",
+    "source_file": "Flag of East Germany.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flaggenentwurf: unbekannt\ndiese Datei: Jwnabd",
+    "asset": "archive/east-germany.png"
+  },
+  {
+    "id": "german-empire",
+    "name": "German Empire - national flag",
+    "period": "1871-1918",
+    "tags": [
+      "Historical",
+      "Monarchist",
+      "WWI"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany_(1867%E2%80%931918).svg",
+    "source_file": "Flag of Germany (1867–1918).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Original: Adolf Soetbeer, Otto von Bismarck Vector:  B1mbo, Madden",
+    "asset": "archive/german-empire.png"
+  },
+  {
+    "id": "imperial-war",
+    "name": "German Empire - war ensign",
+    "period": "1903-1918",
+    "tags": [
+      "Historical",
+      "WWI",
+      "Military",
+      "Monarchist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:War_Ensign_of_Germany_(1903-1918)_(Flaggenbuch).svg",
+    "source_file": "War Ensign of Germany (1903-1918) (Flaggenbuch).svg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Sshu94",
+    "asset": "archive/imperial-war.png"
+  },
+  {
+    "id": "green-anarchism",
+    "name": "Green anarchism - green and black",
+    "period": "Symbolic design; no single adoption date",
+    "tags": [
+      "Anarchist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Green_and_Black_flag.svg",
+    "source_file": "Green and Black flag.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Rocket000",
+    "asset": "archive/green-anarchism.png"
+  },
+  {
+    "id": "japan-army",
+    "name": "Imperial Japanese Army - Rising Sun flag",
+    "period": "1870-1945",
+    "tags": [
+      "Historical",
+      "WWII",
+      "Military"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:War_flag_of_the_Imperial_Japanese_Army_(1868%E2%80%931945).svg",
+    "source_file": "War flag of the Imperial Japanese Army (1868–1945).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "FDRMRZUSA",
+    "asset": "archive/japan-army.png"
+  },
+  {
+    "id": "pnf",
+    "name": "Italian National Fascist Party - party flag",
+    "period": "1927-1943 design",
+    "tags": [
+      "Historical",
+      "Fascist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_National_Fascist_Party_(PNF).svg",
+    "source_file": "Flag of the National Fascist Party (PNF).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "R-41",
+    "asset": "archive/pnf.png"
+  },
+  {
+    "id": "italy-rsi",
+    "name": "Italian Social Republic - war flag",
+    "period": "1943-1945",
+    "tags": [
+      "Historical",
+      "WWII",
+      "Military",
+      "Fascist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:War_flag_of_the_Italian_Social_Republic.svg",
+    "source_file": "War flag of the Italian Social Republic.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "F l a n k e r",
+    "asset": "archive/italy-rsi.png"
+  },
+  {
+    "id": "japan-navy",
+    "name": "Japan - naval Rising Sun ensign",
+    "period": "1889-1945; readopted 1954",
+    "tags": [
+      "Historical",
+      "WWII",
+      "Military"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Naval_Ensign_of_Japan.svg",
+    "source_file": "Naval Ensign of Japan.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "David Newton, uploader was Denelson83",
+    "asset": "archive/japan-navy.png"
+  },
+  {
+    "id": "jolly-roger",
+    "name": "Jolly Roger - skull and crossbones",
+    "period": "Generic pirate flag design",
+    "tags": [
+      "Historical",
+      "Maritime"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Pirate_Flag.svg",
+    "source_file": "Pirate Flag.svg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "credit": "Oren neu dag",
+    "asset": "archive/jolly-roger.png"
+  },
+  {
+    "id": "kazakh-ssr",
+    "name": "Kazakh SSR",
+    "period": "1953-1991",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Kazakh_Soviet_Socialist_Republic_(1953%E2%80%931991)%3B_Flag_of_Kazakhstan_(1991%E2%80%931992).svg",
+    "source_file": "Flag of the Kazakh Soviet Socialist Republic (1953–1991); Flag of Kazakhstan (1991–1992).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "No machine-readable author provided. Urmas assumed (based on copyright claims).",
+    "asset": "archive/kazakh-ssr.png"
+  },
+  {
+    "id": "italy-kingdom",
+    "name": "Kingdom of Italy - civil flag",
+    "period": "1861-1946",
+    "tags": [
+      "Historical",
+      "WWI",
+      "WWII",
+      "Monarchist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Italy_(1861%E2%80%931946).svg",
+    "source_file": "Flag of Italy (1861–1946).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "F l a n k e r",
+    "asset": "archive/italy-kingdom.png"
+  },
+  {
+    "id": "kirghiz-ssr",
+    "name": "Kirghiz SSR",
+    "period": "1952-1992",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Kirghiz_Soviet_Socialist_Republic_(1952%E2%80%931991)%3B_Flag_of_Kyrgyzstan_(1991%E2%80%931992).svg",
+    "source_file": "Flag of the Kirghiz Soviet Socialist Republic (1952–1991); Flag of Kyrgyzstan (1991–1992).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "",
+    "asset": "archive/kirghiz-ssr.png"
+  },
+  {
+    "id": "latvian-ssr",
+    "name": "Latvian SSR",
+    "period": "1953-1990",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Latvian_Soviet_Socialist_Republic_(1953%E2%80%931990).svg",
+    "source_file": "Flag of the Latvian Soviet Socialist Republic (1953–1990).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Denelson83, Urmas, Nokka, Great Brightstar",
+    "asset": "archive/latvian-ssr.png"
+  },
+  {
+    "id": "lithuanian-ssr",
+    "name": "Lithuanian SSR",
+    "period": "1953-1988",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Lithuanian_Soviet_Socialist_Republic_(1953%E2%80%931988).svg",
+    "source_file": "Flag of the Lithuanian Soviet Socialist Republic (1953–1988).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "",
+    "asset": "archive/lithuanian-ssr.png"
+  },
+  {
+    "id": "manchukuo",
+    "name": "Manchukuo",
+    "period": "1932-1945",
+    "tags": [
+      "Historical",
+      "WWII"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Manchukuo.svg",
+    "source_file": "Flag of Manchukuo.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Urmas",
+    "asset": "archive/manchukuo.png"
+  },
+  {
+    "id": "moldavian-ssr",
+    "name": "Moldavian SSR",
+    "period": "1952-1990",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Moldavian_Soviet_Socialist_Republic_(1952%E2%80%931990).svg",
+    "source_file": "Flag of the Moldavian Soviet Socialist Republic (1952–1990).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "SVG by Pianist",
+    "asset": "archive/moldavian-ssr.png"
+  },
+  {
+    "id": "mongolia-socialist",
+    "name": "Mongolian People's Republic",
+    "period": "1945-1992",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Mongolian_People%27s_Republic_(1945%E2%80%931992).svg",
+    "source_file": "Flag of the Mongolian People's Republic (1945–1992).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Drawn by User:latebird",
+    "asset": "archive/mongolia-socialist.png"
+  },
+  {
+    "id": "mutualism",
+    "name": "Mutualism - orange and black",
+    "period": "Symbolic design; no single adoption date",
+    "tags": [
+      "Anarchist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Diagonal_Orange_and_Black_flag.svg",
+    "source_file": "Diagonal Orange and Black flag.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "FugeeCamp",
+    "asset": "archive/mutualism.png"
+  },
+  {
+    "id": "nazi-germany",
+    "name": "Nazi Germany - national flag",
+    "period": "1935-1945",
+    "tags": [
+      "Historical",
+      "WWII",
+      "Fascist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany_(1935%E2%80%931945).svg",
+    "source_file": "Flag of Germany (1935–1945).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "German government",
+    "asset": "archive/nazi-germany.png"
+  },
+  {
+    "id": "reich-war",
+    "name": "Nazi Germany - war ensign",
+    "period": "1938-1945",
+    "tags": [
+      "Historical",
+      "WWII",
+      "Military",
+      "Fascist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:War_ensign_of_Germany_(1938%E2%80%931945).svg",
+    "source_file": "War ensign of Germany (1938–1945).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Unknown authorUnknown author",
+    "asset": "archive/reich-war.png"
+  },
+  {
+    "id": "ottoman",
+    "name": "Ottoman Empire - late-period flag",
+    "period": "1844-1922",
+    "tags": [
+      "Historical",
+      "Monarchist",
+      "WWI"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Ottoman_Empire_(1844%E2%80%931922).svg",
+    "source_file": "Flag of the Ottoman Empire (1844–1922).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "User:Orwellianist",
+    "asset": "archive/ottoman.png"
+  },
+  {
+    "id": "south-yemen",
+    "name": "People's Democratic Republic of Yemen",
+    "period": "1967-1990",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Yemen.svg",
+    "source_file": "Flag of South Yemen.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "National Front - الجبهة القومية",
+    "asset": "archive/south-yemen.png"
+  },
+  {
+    "id": "vichy-petain",
+    "name": "Philippe Petain - personal standard",
+    "period": "1940-1944; personal, not national",
+    "tags": [
+      "Historical",
+      "WWII",
+      "Fascist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Philippe_P%C3%A9tain%2C_Chief_of_State_of_Vichy_France.svg",
+    "source_file": "Flag of Philippe Pétain, Chief of State of Vichy France.svg",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "Original:  Tom Lemmens Vector:  Sbmehta",
+    "asset": "archive/vichy-petain.png"
+  },
+  {
+    "id": "qing",
+    "name": "Qing dynasty - rectangular flag",
+    "period": "1889-1912",
+    "tags": [
+      "Historical",
+      "Monarchist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_China_(1889%E2%80%931912).svg",
+    "source_file": "Flag of China (1889–1912).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Original: zh:清朝政府 Vector:  Sodacan",
+    "asset": "archive/qing.png"
+  },
+  {
+    "id": "red-crescent",
+    "name": "Red Crescent protective flag",
+    "period": "Protective emblem; not a war ensign",
+    "tags": [
+      "Military",
+      "Humanitarian"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Red_Crescent.svg",
+    "source_file": "Flag of the Red Crescent.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Hilal Ahmar",
+    "asset": "archive/red-crescent.png"
+  },
+  {
+    "id": "red-cross",
+    "name": "Red Cross protective flag",
+    "period": "Protective emblem; not a war ensign",
+    "tags": [
+      "Military",
+      "Humanitarian"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Red_Cross.svg",
+    "source_file": "Flag of the Red Cross.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Louis Appia and Henri Dufour",
+    "asset": "archive/red-cross.png"
+  },
+  {
+    "id": "red-flag",
+    "name": "Red flag - socialist and labour symbol",
+    "period": "Symbolic design; no single adoption date",
+    "tags": [
+      "Communist",
+      "Socialist",
+      "Political"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Red_flag.svg",
+    "source_file": "Red flag.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "burts",
+    "asset": "archive/red-flag.png"
+  },
+  {
+    "id": "china-five-races",
+    "name": "Republic of China - five-coloured flag",
+    "period": "1912-1928",
+    "tags": [
+      "Historical",
+      "Republican"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_China_(1912%E2%80%931928).svg",
+    "source_file": "Flag of China (1912–1928).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Original: en:Provisional Government of the Republic of China (1912) Vector:  Kibinsky",
+    "asset": "archive/china-five-races.png"
+  },
+  {
+    "id": "south-vietnam",
+    "name": "Republic of Vietnam (South Vietnam)",
+    "period": "1955-1975",
+    "tags": [
+      "Historical",
+      "Republican"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Vietnam.svg",
+    "source_file": "Flag of South Vietnam.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "(many, see history)",
+    "asset": "archive/south-vietnam.png"
+  },
+  {
+    "id": "russian-empire",
+    "name": "Russian Empire - black, yellow and white",
+    "period": "1858-1896 design",
+    "tags": [
+      "Historical",
+      "Monarchist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Russia_(1858%E2%80%931896).svg",
+    "source_file": "Flag of Russia (1858–1896).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Кёне, Бернгард Васильевич",
+    "asset": "archive/russian-empire.png"
+  },
+  {
+    "id": "russian-sfsr",
+    "name": "Russian SFSR",
+    "period": "1954-1991",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Russian_Soviet_Federative_Socialist_Republic_(1954%E2%80%931991).svg",
+    "source_file": "Flag of the Russian Soviet Federative Socialist Republic (1954–1991).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Pianist",
+    "asset": "archive/russian-sfsr.png"
+  },
+  {
+    "id": "spain-republic",
+    "name": "Second Spanish Republic",
+    "period": "1931-1939",
+    "tags": [
+      "Historical",
+      "Republican"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain_(1931%E2%80%931939).svg",
+    "source_file": "Flag of Spain (1931–1939).svg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "SanchoPanzaXXI",
+    "asset": "archive/spain-republic.png"
+  },
+  {
+    "id": "albania-socialist",
+    "name": "Socialist Albania",
+    "period": "1946-1992",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Albania_(1946%E2%80%931992).svg",
+    "source_file": "Flag of Albania (1946–1992).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Sadik Kaceli",
+    "asset": "archive/albania-socialist.png"
+  },
+  {
+    "id": "romania-socialist",
+    "name": "Socialist Republic of Romania",
+    "period": "1965-1989",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Romania_(1965%E2%80%931989).svg",
+    "source_file": "Flag of Romania (1965–1989).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Various, see File History below for details.",
+    "asset": "archive/romania-socialist.png"
+  },
+  {
+    "id": "yugoslavia",
+    "name": "Socialist Yugoslavia",
+    "period": "1946-1992",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Yugoslavia_(1946-1992).svg",
+    "source_file": "Flag of Yugoslavia (1946-1992).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flag designed by Đorđe Andrejević-Kun[3]SVG coding: Zscout370",
+    "asset": "archive/yugoslavia.png"
+  },
+  {
+    "id": "ussr",
+    "name": "Soviet Union",
+    "period": "1955-1991",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Soviet_Union.svg",
+    "source_file": "Flag of the Soviet Union.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "СССР",
+    "asset": "archive/ussr.png"
+  },
+  {
+    "id": "ussr-navy",
+    "name": "Soviet Union - naval ensign",
+    "period": "1950-1992",
+    "tags": [
+      "Historical",
+      "Military",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Naval_Ensign_of_the_Soviet_Union_(1950%E2%80%931991).svg",
+    "source_file": "Naval Ensign of the Soviet Union (1950–1991).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "User:Zscout370",
+    "asset": "archive/ussr-navy.png"
+  },
+  {
+    "id": "ussr-1936",
+    "name": "Soviet Union - WWII-era design",
+    "period": "1936-1955",
+    "tags": [
+      "Historical",
+      "WWII",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Soviet_Union_(1936_%E2%80%93_1955).svg",
+    "source_file": "Flag of the Soviet Union (1936 – 1955).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "created by rotemliss from Image:Flag of the Soviet Union.svg.",
+    "asset": "archive/ussr-1936.png"
+  },
+  {
+    "id": "spain-1945",
+    "name": "Spain - state flag",
+    "period": "1945-1977",
+    "tags": [
+      "Historical"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain_(1945%E2%80%931977).svg",
+    "source_file": "Flag of Spain (1945–1977).svg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "SanchoPanzaXXI",
+    "asset": "archive/spain-1945.png"
+  },
+  {
+    "id": "tajik-ssr",
+    "name": "Tajik SSR",
+    "period": "1953-1991",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Tajik_Soviet_Socialist_Republic_(1953%E2%80%931991)%2C_Flag_of_Tajikistan_(1991%E2%80%931992).svg",
+    "source_file": "Flag of the Tajik Soviet Socialist Republic (1953–1991), Flag of Tajikistan (1991–1992).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "SVG by Pianist",
+    "asset": "archive/tajik-ssr.png"
+  },
+  {
+    "id": "turkmen-ssr",
+    "name": "Turkmen SSR",
+    "period": "1974-1991; retained to 1992",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Turkmen_Soviet_Socialist_Republic_(1974%E2%80%931991)%2C_Flag_of_Turkmenistan_(1991%E2%80%931992).svg",
+    "source_file": "Flag of the Turkmen Soviet Socialist Republic (1974–1991), Flag of Turkmenistan (1991–1992).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Denelson83, Urmas, Nokka",
+    "asset": "archive/turkmen-ssr.png"
+  },
+  {
+    "id": "ukrainian-ssr",
+    "name": "Ukrainian SSR",
+    "period": "1949-1991",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Ukrainian_Soviet_Socialist_Republic_(1949%E2%80%931991).svg",
+    "source_file": "Flag of the Ukrainian Soviet Socialist Republic (1949–1991).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Zscout370 and others. All authors are listed in the \"File versions\" section below.",
+    "asset": "archive/ukrainian-ssr.png"
+  },
+  {
+    "id": "uk-white-ensign",
+    "name": "United Kingdom - White Ensign",
+    "period": "1801-present",
+    "tags": [
+      "Military",
+      "WWI",
+      "WWII"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Naval_ensign_of_the_United_Kingdom.svg",
+    "source_file": "Naval ensign of the United Kingdom.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "",
+    "asset": "archive/uk-white-ensign.png"
+  },
+  {
+    "id": "usa-48",
+    "name": "United States - 48-star flag",
+    "period": "1912-1959",
+    "tags": [
+      "Historical",
+      "WWI",
+      "WWII"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States_(1912-1959).svg",
+    "source_file": "Flag of the United States (1912-1959).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Created by jacobolus using Adobe Illustrator.",
+    "asset": "archive/usa-48.png"
+  },
+  {
+    "id": "usa-betsy-ross",
+    "name": "United States - Betsy Ross pattern",
+    "period": "13-star historical pattern",
+    "tags": [
+      "Historical",
+      "Republican"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Betsy_Ross_flag.svg",
+    "source_file": "Betsy Ross flag.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "DevinCook / Created by jacobolus using Adobe Illustrator, and released into the public domain.",
+    "asset": "archive/usa-betsy-ross.png"
+  },
+  {
+    "id": "uzbek-ssr",
+    "name": "Uzbek SSR",
+    "period": "1952-1991",
+    "tags": [
+      "Historical",
+      "Communist"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Uzbek_Soviet_Socialist_Republic_(1952%E2%80%931991).svg",
+    "source_file": "Flag of the Uzbek Soviet Socialist Republic (1952–1991).svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Denelson83, Urmas, Nokka",
+    "asset": "archive/uzbek-ssr.png"
+  },
+  {
+    "id": "white-flag",
+    "name": "White flag - truce or surrender",
+    "period": "Symbolic design; no single adoption date",
+    "tags": [
+      "Military",
+      "Maritime"
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:White_flag_of_surrender.svg",
+    "source_file": "White flag of surrender.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Upload:  Jeremy Nimmo",
+    "asset": "archive/white-flag.png"
+  }
+]

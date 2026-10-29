@@ -30,7 +30,7 @@ publish_flagwave() {
         account_id="$(gh api user --jq .id)"
         git config user.email "$account_id+$account@users.noreply.github.com"
     fi
-    git add .gitignore .github LICENSE README.md countries.json flags flagwave.py tui.py install.sh publish-github.sh requirements.txt tests docs
+    git add .gitignore .github LICENSE README.md ARCHIVE-SOURCES.md countries.json archive.json archive flags flagwave.py tui.py install.sh publish-github.sh requirements.txt tests docs
     git commit -m 'Add FlagWave 3D ASCII flag renderer and interactive TUI'
     gh auth setup-git
     gh repo create "$repo" --public --source=. --remote=origin --push \

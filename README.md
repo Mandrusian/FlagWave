@@ -3,24 +3,35 @@
 An animated 3D ASCII flag for Fedora Asahi and other Linux terminals.
 Python + NumPy + Pillow; no GPU, desktop session, pip, or compilation required.
 
-## Install on Fedora Asahi
-
-Extract this folder, then run:
+## Install on Linux (curl)
 
 ```bash
-bash install.sh
-~/.local/bin/flagwave au
+curl -fsSL https://raw.githubusercontent.com/Mandrusian/FlagWave/main/install.sh | bash
 ```
 
-The installer uses Fedora's native aarch64 packages when dependencies are missing.
-It installs to `${XDG_DATA_HOME:-~/.local/share}/flagwave` and creates
-`~/.local/bin/flagwave`. If that directory is already in PATH, just use `flagwave`.
+Then run `~/.local/bin/flagwave au`, or `flagwave au` if `~/.local/bin` is in PATH.
+Open the historical/alternate collection with `flagwave --archive` or press **a**.
+
+The same installer supports Fedora/Asahi, Debian/Ubuntu, Arch, openSUSE, Alpine
+and Void using their native packages. On other Linux distributions it uses a
+Python virtual environment if Python 3.10+, venv and pip are already available.
+Install those prerequisites with your distro's package manager if prompted.
+This is Linux support, not a claim that every distribution was hardware-tested.
+Root access is used only to install missing distro packages. The application
+installs into your home directory, and saved imports survive updates.
+
+For a local checkout, run `bash install.sh`. No GPU or display server is needed.
 
 ## Examples
 
 ```bash
 flagwave au
 flagwave china
+flagwave ussr
+flagwave ussr-1936
+flagwave nazi-germany
+flagwave --archive
+flagwave --list-archive
 flagwave "United Kingdom"
 flagwave --random
 flagwave --image ~/Pictures/my-flag.png
@@ -36,6 +47,29 @@ the first frame. Alpha is used to cut out transparent areas (including Nepal's
 nonrectangular flag); partially transparent pixels use a 100/255 threshold.
 Raster image aspect ratios are preserved before the cloth is deformed.
 SVG is not supported: export it to PNG first.
+
+## Historical, wartime and political flags
+
+**62 additional designs**, alongside the 195 country flags. Press **a** for the
+archive; type to search by name, ID, period or category. **Ctrl-F / Ctrl-R**
+cycles category filters; **Ctrl-O** shows dates, attribution and the source.
+Press **d** on the stage to inspect the active archive flag.
+
+The collection includes the USSR (WWII-era and later designs), all 15 Soviet
+republics, East Germany, Yugoslavia, Nazi Germany and its war ensign, Italian
+fascist party and RSI flags, the British Union of Fascists, Imperial Japanese
+army/naval flags, Allied WWII flags, imperial/monarchist and republican flags,
+anarchist variants, a red socialist flag and the Gadsden flag. Civil, national,
+party, military, personal and symbolic designs have distinct labels.
+
+All entries use the same controls, rendering and alphabetical presentation.
+Labels describe historical use and political association without endorsement.
+Symbolic ideology flags are representative designs, not universal official
+standards. The archive is a growing selection rather than an exhaustive list.
+
+[Artwork sources, credits, periods and licenses](ARCHIVE-SOURCES.md) are bundled
+with the project, so the entire archive works offline. Original images were
+resized/rasterized into palette PNG; the flag designs were not altered.
 
 ## Interactive TUI
 
@@ -62,6 +96,8 @@ without adding it to My images.
 | Key on the stage | Action |
 | --- | --- |
 | f or / | Search country flags |
+| a | Historical / military / political archive |
+| d | Details and attribution of the active archive flag |
 | i | Browse folders and import an image |
 | b | Open saved imports |
 | s | Settings: wind, target FPS, colour, orientation, ASCII style |
@@ -78,7 +114,7 @@ without adding it to My images.
 | q | Quit from the stage |
 
 Ctrl-C quits from any screen. In pickers, use arrows and Enter; type to search;
-Esc returns to the stage; Tab switches between countries, browser and My images.
+Esc returns to the stage; Tab switches between countries, the archive, the browser and My images.
 PgUp/PgDn scroll by 12 entries. Smaller terminals hide the preview/sidebar.
 
 ## Publish to GitHub

@@ -92,6 +92,37 @@ class ApplicationTests(unittest.TestCase):
         app.open('countries');app.query='nonexistentzzz'; app.input('DOWN');app.input('ENTER')
         self.assertEqual(app.mode,'countries'); self.assertEqual(app.selected,0)
 
+    def test_archive_sources_and_images(self):
+        self.assertGreaterEqual(len(core.ARCHIVE),60)
+        self.assertEqual(len(core.ARCHIVE),len(core.ARCHIVE_BY_ID))
+        for entry in core.ARCHIVE:
+            image=core.load_image(core.ROOT/entry['asset'])
+            self.assertEqual(image.shape[2],4)
+            self.assertTrue(entry['source'].startswith('https://commons.wikimedia.org/wiki/'))
+            if entry['license'].startswith('CC BY'): self.assertTrue(entry['credit'])
+            self.assertTrue(entry['license'])
+        for flag in ['ussr','ussr-1936','nazi-germany','pnf','buf','black-flag','mutualism']:
+            self.assertIn(flag,core.ARCHIVE_BY_ID)
+
+    def test_archive_search_selection_and_details(self):
+        app=tui.App(options(),'au'); app.input('a')
+        app.query='soviet wwii'; app.input('ENTER')
+        self.assertEqual(app.archive_id,'ussr-1936')
+        self.assertEqual(app.mode,'stage')
+        app.input('d'); self.assertEqual(app.mode,'details')
+        self.assertEqual(app.info_record['id'],'ussr-1936')
+        app.input('ESC'); app.input('v');app.input('n')
+        self.assertIsNone(app.archive_id)
+
+    def test_archive_categories_and_cli(self):
+        app=tui.App(options(),'au'); app.open('archive'); app.group='Fascist'
+        self.assertTrue(all('Fascist' in core.ARCHIVE_BY_ID[item[2].split(':')[1]]['tags'] for item in app.items()))
+        app.input('\x06'); self.assertNotEqual(app.group,'Fascist')
+        self.assertEqual(core.resolve_archive('soviet union'),'ussr')
+        self.assertEqual(core.resolve_archive('germany-ww2'),'nazi-germany')
+        result=subprocess.run([sys.executable,str(core.ROOT/'flagwave.py'),'--list-archive'],capture_output=True,text=True,check=True)
+        self.assertEqual(len(result.stdout.splitlines()),len(core.ARCHIVE))
+
     def test_terminal_restoration(self):
         master,slave=pty.openpty(); old=termios.tcgetattr(slave)
         import fcntl

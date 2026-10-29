@@ -7,11 +7,12 @@ import select
 import shutil
 import sys
 import time
+import textwrap
 
 import numpy as np
 from PIL import Image
 
-from flagwave import COUNTRIES, ROOT, Renderer, Terminal, clean, load_image
+from flagwave import ARCHIVE, ARCHIVE_BY_ID, COUNTRIES, ROOT, Renderer, Terminal, clean, load_image
 
 RESET='\x1b[0m'
 CYAN='\x1b[96m'
@@ -88,6 +89,10 @@ class Screen:
 class App:
     def __init__(self,args,code):
         self.args=args; self.code=code; self.path=args.image.expanduser() if args.image else None
+        self.archive_id=getattr(args,'archive_id',None) if not self.path else None
+        if self.archive_id: self.path=ROOT/ARCHIVE_BY_ID[self.archive_id]['asset']
+        self.group='All'; self.groups=['All']+sorted({tag for e in ARCHIVE for tag in e['tags']})
+        self.info_record=None; self.info_return='stage'; self.info_scroll=0
         self.yaw=.24; self.pitch=.12; self.wind=args.wind; self.paused=False
         self.color='none' if args.mono else args.color
         self.clock=0.; self.mode='stage'; self.query=''; self.selected=0; self.offset=0
@@ -96,6 +101,7 @@ class App:
         self.error=''; self.message=''; self.side=True; self.preview_key=None; self.preview=None
         self.fps=0.; self.entries=[]; self.show_hidden=False; self.setting=0; self.goto=None
         self.renderer=None; self.reload()
+        if getattr(args,'archive',False): self.open('archive')
 
     def reload(self):
         tex=load_image(self.path if self.path else ROOT/'flags'/f'{self.code}.png')
@@ -109,6 +115,10 @@ class App:
         q=self.query.casefold()
         if self.mode=='countries':
             return [(f'{c.upper()}  {n}',ROOT/'flags'/f'{c}.png',c,False) for c,n in COUNTRIES.items() if q in n.casefold() or q in c]
+        if self.mode=='archive':
+            return [(e['name'],ROOT/e['asset'],'archive:'+e['id'],False) for e in ARCHIVE
+                    if (self.group=='All' or self.group in e['tags'])
+                    and all(word in (e['id']+' '+e['name']+' '+e['period']+' '+' '.join(e['tags'])).casefold() for word in q.split())]
         if self.mode=='collection':
             paths=sorted(collection_dir().glob('*.png'))
             return [(p.stem.rsplit('-',1)[0],p,None,False) for p in paths if q in p.name.casefold()]
@@ -136,8 +146,12 @@ class App:
             dest=save_import(path) if self.mode=='browser' else path
             newtex=load_image(dest)
             self.renderer=Renderer(np.rot90(newtex,3).copy() if self.args.vertical else newtex)
-            if code: self.code=code; self.path=None
-            else: self.path=dest
+            if code and code.startswith('archive:'):
+                self.archive_id=code.split(':',1)[1]; self.path=dest
+            elif code:
+                self.code=code; self.path=None; self.archive_id=None
+            else:
+                self.path=dest; self.archive_id=None
             self.message='Imported and saved: '+label if self.mode=='browser' else 'Selected: '+label
             self.mode='stage'; self.error=''
         except (OSError,ValueError,Image.DecompressionBombError) as e: self.error=clean(e)
@@ -156,14 +170,14 @@ class App:
                     elif path.is_file():
                         dest=save_import(path); newtex=load_image(dest)
                         self.renderer=Renderer(np.rot90(newtex,3).copy() if self.args.vertical else newtex)
-                        self.path=dest; self.mode='stage'; self.goto=None; self.message='Imported and saved: '+clean(path.name)
+                        self.path=dest; self.archive_id=None; self.mode='stage'; self.goto=None; self.message='Imported and saved: '+clean(path.name)
                     else: self.error='Path does not exist.'
                 except (OSError,ValueError,Image.DecompressionBombError) as e: self.error=clean(e)
             elif key=='BACKSPACE': self.goto=self.goto[:-1]
             elif key=='\x15': self.goto=''
             elif len(key)==1 and key.isprintable(): self.goto+=key
             return True
-        if self.mode in ('countries','browser','collection'):
+        if self.mode in ('countries','archive','browser','collection'):
             self.entries=self.items()
             self.selected=min(self.selected,max(0,len(self.entries)-1))
             if key=='ESC': self.mode='stage'; self.error=''
@@ -175,13 +189,24 @@ class App:
             elif key=='END': self.selected=max(0,len(self.entries)-1)
             elif key=='ENTER': self.accept()
             elif key=='TAB':
-                modes=['countries','browser','collection']; self.open(modes[(modes.index(self.mode)+1)%3])
+                modes=['countries','archive','browser','collection']; self.open(modes[(modes.index(self.mode)+1)%len(modes)])
+            elif key in ('\x06','\x12') and self.mode=='archive':
+                direction=-1 if key=='\x12' else 1
+                self.group=self.groups[(self.groups.index(self.group)+direction)%len(self.groups)]
+                self.selected=0; self.offset=0
+            elif key=='\x0f' and self.mode=='archive' and self.entries:
+                self.details(self.entries[self.selected][2].split(':',1)[1])
             elif key=='LEFT' and self.mode=='browser':
                 self.folder=self.folder.parent; self.query=''; self.selected=0
             elif key=='\x07' and self.mode=='browser': self.goto=''
             elif key=='\x04' and self.mode=='browser': self.show_hidden=not self.show_hidden
             elif key=='BACKSPACE': self.query=self.query[:-1]; self.selected=0
             elif len(key)==1 and key.isprintable(): self.query+=key; self.selected=0
+            return True
+        if self.mode=='details':
+            if key in ('ESC','ENTER','d'): self.mode=self.info_return
+            elif key in ('DOWN','PGDOWN'): self.info_scroll+=1 if key=='DOWN' else 10
+            elif key in ('UP','PGUP'): self.info_scroll=max(0,self.info_scroll-(1 if key=='UP' else 10))
             return True
         if self.mode=='help':
             if key: self.mode='stage'
@@ -201,6 +226,8 @@ class App:
             return True
         if key=='q': return False
         if key in ('f','/'): self.open('countries')
+        elif key=='a': self.open('archive')
+        elif key=='d' and self.archive_id: self.details(self.archive_id)
         elif key=='i': self.open('browser')
         elif key=='b': self.open('collection')
         elif key=='s': self.open('settings')
@@ -218,8 +245,12 @@ class App:
         elif key=='r': self.yaw=.24; self.pitch=.12; self.wind=1.
         elif key in ('n','p'):
             codes=list(COUNTRIES); self.code=codes[(codes.index(self.code)+(1 if key=='n' else -1))%len(codes)]
-            self.path=None; self.reload()
+            self.path=None; self.archive_id=None; self.reload()
         return True
+
+    def details(self,archive_id):
+        self.info_record=ARCHIVE_BY_ID[archive_id]
+        self.info_return=self.mode; self.info_scroll=0; self.mode='details'
 
     def header(self,s,title,subtitle):
         s.text(0,0,'  F L A G W A V E                                      3D ASCII CLOTH',style=CYAN)
@@ -234,8 +265,19 @@ class App:
         if s.w<48 or s.h<16:
             s.text(0,0,'FlagWave: enlarge terminal to 49 columns x 16 rows.',style=CYAN)
             s.text(0,2,'q / Ctrl-C: quit'); s.present(); return
-        if self.mode in ('countries','browser','collection'):
+        if self.mode in ('countries','archive','browser','collection'):
             self.draw_picker(s)
+        elif self.mode=='details':
+            e=self.info_record
+            self.header(s,'FLAG DETAILS','Up/down: scroll   Esc: back')
+            paragraphs=[e['name'],'Period: '+e['period'],'Categories: '+', '.join(e['tags']),
+                        'ID: '+e['id'],'Source: '+e['source'],'Artwork: '+e['source_file'],
+                        'License: '+e['license'],'Credit: '+e['credit'],
+                        'Description: '+e.get('description','')]
+            lines=[]
+            for paragraph in paragraphs: lines.extend(textwrap.wrap(clean(paragraph),max(15,s.w-6)) or ['']); lines.append('')
+            visible=s.h-8; self.info_scroll=min(self.info_scroll,max(0,len(lines)-visible))
+            for row,line in enumerate(lines[self.info_scroll:self.info_scroll+visible]): s.text(3,5+row,line,s.w-6,WHITE)
         elif self.mode=='settings':
             self.header(s,'SETTINGS','Up/down: choose   Left/right: adjust   Esc: back')
             items=[('Wind strength',f'{self.wind:.1f}'),('Target frame rate',f'{self.args.fps} FPS'),
@@ -244,29 +286,31 @@ class App:
             for i,(label,value) in enumerate(items): s.text(3,5+i*2,f' {label:<24} {value}',s.w-6,SELECT if i==self.setting else WHITE)
         elif self.mode=='help':
             self.header(s,'KEYBOARD GUIDE','Press any key to return')
-            help_lines=['f or /    Search the 195 country flags','i         Browse folders and import an image','b         Open your saved imported images',
+            help_lines=['a         Historical / military / ideology archive','f or /    Search the 195 country flags','i         Browse folders and import an image','b         Open your saved imported images',
                         's         Settings: wind, FPS, colour, orientation','Arrows    Orbit and tilt the camera','+ / -     Adjust wind strength','Space     Pause / resume cloth',
                         'n / p     Next / previous country','v / c     Rotate artwork / cycle colours','Tab       Toggle stage sidebar','r         Reset wind and camera','q         Quit (Ctrl-C works on every screen)']
             for i,line in enumerate(help_lines[:s.h-6]): s.text(3,5+i,line)
         else:
-            name=clean(self.path.stem.rsplit('-',1)[0] if self.path else COUNTRIES[self.code])
+            name=clean(ARCHIVE_BY_ID[self.archive_id]['name'] if self.archive_id else (self.path.stem.rsplit('-',1)[0] if self.path else COUNTRIES[self.code]))
             self.header(s,name,('PAUSED' if self.paused else 'LIVE')+f'   |   Wind {self.wind:.1f}   |   {self.fps:.0f}/{self.args.fps} FPS   |   '+self.color)
             sidebar=25 if self.side and s.w>=90 else 0
             if sidebar:
-                lines=[('EXPLORE',CYAN),('f  Country flags',WHITE),('i  Import image',WHITE),('b  My images',WHITE),('s  Settings',WHITE),('?  Keyboard guide',WHITE),('',DIM),('195 offline flags',DIM),('PNG / JPG / WebP',DIM),('No GPU required',DIM),('',DIM),('Arrows  Orbit camera',DIM),('+ / -   Wind',DIM),('Space   Pause',DIM),('Tab     Hide sidebar',DIM)]
+                lines=[('EXPLORE',CYAN),('f  Country flags',WHITE),('a  Historical archive',WHITE),('i  Import image',WHITE),('b  My images',WHITE),('s  Settings',WHITE),('?  Keyboard guide',WHITE),('',DIM),(f'{195+len(ARCHIVE)} offline flags',DIM),('PNG / JPG / WebP',DIM),('No GPU required',DIM),('',DIM),('Arrows  Orbit camera',DIM),('+ / -   Wind',DIM),('Space   Pause',DIM),('Tab     Hide sidebar',DIM)]
                 for i,(line,style) in enumerate(lines[:s.h-8]): s.text(2,5+i,line,22,style)
             s.art(sidebar,4,self.renderer.frame(s.w-sidebar,max(1,s.h-7),self.clock,self.wind,self.yaw,self.pitch,self.color,self.args.blocks))
         s.text(0,s.h-2,'  '+(self.error or self.message or 'Ready. Choose a country or import your own flag.'),style='\x1b[91m' if self.error else DIM)
-        if self.mode in ('countries','browser','collection'):
+        if self.mode in ('countries','archive','browser','collection'):
             footer=' Enter: select  Esc: back  Tab: switch  Type: filter'
+            if self.mode=='archive': footer=' Ctrl-F/R: category  Ctrl-O: details  Enter: wave  Esc: back'
             if self.mode=='browser': footer=' Enter: open/import  Left: parent  Ctrl-G: path  Esc: back'
-        else: footer=' f: flags  i: import  b: my images  s: settings  ?: help  q: quit'
+        else: footer=' f: flags  a: archive  i: import  b: images  s: settings  d: details  q: quit'
         s.text(0,s.h-1,footer,style=SELECT)
         s.present()
 
     def draw_picker(self,s):
-        title={'countries':'COUNTRY FLAGS','browser':'IMPORT IMAGE','collection':'MY IMAGES'}[self.mode]
+        title={'countries':'COUNTRY FLAGS','archive':'HISTORICAL & ALTERNATE FLAGS','browser':'IMPORT IMAGE','collection':'MY IMAGES'}[self.mode]
         subtitle=clean(self.folder) if self.mode=='browser' else ('195 included flags. Type to search.' if self.mode=='countries' else 'Imported images are saved here for reuse.')
+        if self.mode=='archive': subtitle=f'Category: {self.group} | {len(ARCHIVE)} designs | Ctrl-F / Ctrl-R: cycle categories'
         self.header(s,title,subtitle)
         self.entries=self.items(); self.selected=min(self.selected,max(0,len(self.entries)-1))
         if self.goto is not None: s.text(2,4,'Path > '+self.goto,style=CYAN)
@@ -297,6 +341,10 @@ class App:
                         self.preview_key=key
                     s.art(x,6,self.preview.frame(width,max(4,s.h-13),self.clock,1,.24,.12,self.color))
                     s.text(x,s.h-6,'Enter to '+('import and save' if self.mode=='browser' else 'wave this flag'),width,CYAN)
+                    if self.mode=='archive':
+                        info=ARCHIVE_BY_ID[entry[2].split(':',1)[1]]
+                        s.text(x,s.h-5,info['period'],width,DIM)
+                        s.text(x,s.h-4,', '.join(info['tags']),width,DIM)
                 except (OSError,ValueError,Image.DecompressionBombError) as e:
                     s.text(x,8,'Cannot preview this image.',width,DIM)
                     s.text(x,9,clean(e),width,DIM)

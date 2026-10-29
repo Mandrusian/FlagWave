@@ -18,6 +18,8 @@ from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent
 COUNTRIES = json.loads((ROOT / 'countries.json').read_text())
+ARCHIVE = json.loads((ROOT / 'archive.json').read_text())
+ARCHIVE_BY_ID = {entry['id']:entry for entry in ARCHIVE}
 RAMP = np.array(list('.,:;irsXA253hMHGS#9B&@'))
 
 
@@ -151,11 +153,26 @@ def resolve(value):
     raise ValueError('Enter a country code or a unique country name. Try --list.')
 
 
+def resolve_archive(value):
+    value=value.casefold().strip()
+    aliases={'soviet union':'ussr','soviet-union':'ussr','su':'ussr','ussr-ww2':'ussr-1936',
+             'germany-ww2':'nazi-germany','nazi':'nazi-germany','east germany':'east-germany',
+             'gdr':'east-germany','rising-sun':'japan-army'}
+    value=aliases.get(value,value)
+    if value in ARCHIVE_BY_ID: return value
+    matches=[entry['id'] for entry in ARCHIVE if value==entry['name'].casefold()]
+    matches=matches or [entry['id'] for entry in ARCHIVE if value in entry['name'].casefold()]
+    if len(matches)==1: return matches[0]
+    raise ValueError('No unique flag match. Try --list, --list-archive, or the TUI archive (a).')
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('country',nargs='?',default='au',help='ISO code or country name (default au)')
+    p.add_argument('country',nargs='?',default='au',help='country code/name or historical flag ID (default au)')
     p.add_argument('--image',type=Path,help='PNG/JPG/WebP/GIF/BMP; first frame for animated images')
     p.add_argument('--list',action='store_true',help='list the 195 included flags')
+    p.add_argument('--list-archive',action='store_true',help='list historical, military and political flag IDs')
+    p.add_argument('--archive',action='store_true',help='open the historical and alternate flag picker')
     p.add_argument('--random',action='store_true',help='start with a random flag')
     p.add_argument('--fps',type=int,default=25)
     p.add_argument('--wind',type=float,default=1.)
@@ -165,6 +182,10 @@ def main():
     p.add_argument('--vertical',action='store_true',help='rotate the image to make a hanging banner')
     p.add_argument('--frames',type=int,default=0,help='stop after this many frames (0 = unlimited)')
     args=p.parse_args()
+    if args.list_archive:
+        for entry in ARCHIVE:
+            print(f"{entry['id']:<24} {entry['name']} | {entry['period']} | {', '.join(entry['tags'])}")
+        return
     if args.list:
         for c,n in COUNTRIES.items(): print(f'{c.upper()}  {n}')
         return
@@ -174,7 +195,11 @@ def main():
     if not sys.stdin.isatty() or not sys.stdout.isatty(): p.error('run in an interactive terminal; --list works in pipes')
     import random
     try: code=random.choice(list(COUNTRIES)) if args.random else resolve(args.country)
-    except ValueError as e: p.error(str(e))
+    except ValueError:
+        try:
+            args.archive_id=resolve_archive(args.country)
+            code='au'
+        except ValueError as e: p.error(str(e))
     from tui import App
     def stop(*_): raise KeyboardInterrupt
     signal.signal(signal.SIGTERM,stop)
