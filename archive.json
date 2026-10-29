@@ -1,5 +1,47 @@
 [
   {
+    "id": "us-al",
+    "name": "Alabama (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-al.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-al.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-ak",
+    "name": "Alaska (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ak.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ak.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "as",
+    "name": "American Samoa",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/as.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "as.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "anarcha-feminism",
     "name": "Anarcha-feminism - purple and black",
     "period": "Symbolic design; no single adoption date",
@@ -61,6 +103,62 @@
     "asset": "archive/anarcho-syndicalism.png"
   },
   {
+    "id": "ai",
+    "name": "Anguilla",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/ai.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "ai.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "aq",
+    "name": "Antarctica",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/aq.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "aq.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-az",
+    "name": "Arizona (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-az.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-az.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-ar",
+    "name": "Arkansas (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ar.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ar.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "armenian-ssr",
     "name": "Armenian SSR",
     "period": "1952-1990",
@@ -106,6 +204,20 @@
     "asset": "archive/black-flag.png"
   },
   {
+    "id": "io",
+    "name": "British Indian Ocean Territory",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/io.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "io.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "buf",
     "name": "British Union of Fascists - party flag",
     "period": "1930s",
@@ -120,6 +232,20 @@
     "license_url": "",
     "credit": "R-41",
     "asset": "archive/buf.png"
+  },
+  {
+    "id": "vg",
+    "name": "British Virgin Islands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/vg.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "vg.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "byelorussian-ssr",
@@ -137,6 +263,20 @@
     "asset": "archive/byelorussian-ssr.png"
   },
   {
+    "id": "us-ca",
+    "name": "California (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ca.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ca.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "canada-red-1921",
     "name": "Canada - Red Ensign",
     "period": "1921-1957",
@@ -150,6 +290,20 @@
     "license_url": "",
     "credit": "Hoshie",
     "asset": "archive/canada-red-1921.png"
+  },
+  {
+    "id": "ky",
+    "name": "Cayman Islands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/ky.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "ky.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "chinese-soviet",
@@ -167,6 +321,104 @@
     "asset": "archive/chinese-soviet.png"
   },
   {
+    "id": "cx",
+    "name": "Christmas Island",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/cx.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "cx.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-co",
+    "name": "Colorado (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-co.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-co.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-ct",
+    "name": "Connecticut (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ct.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ct.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "ck",
+    "name": "Cook Islands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/ck.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "ck.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "cw",
+    "name": "Curaçao",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/cw.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "cw.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-de",
+    "name": "Delaware (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-de.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-de.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "gb-eng",
+    "name": "England",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/gb-eng.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "gb-eng.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "estonian-ssr",
     "name": "Estonian SSR",
     "period": "1953-1990",
@@ -180,6 +432,77 @@
     "license_url": "",
     "credit": "First-uploaded SVG file versions authored by Urmas, Nokka",
     "asset": "archive/estonian-ssr.png"
+  },
+  {
+    "id": "eureka",
+    "name": "Eureka flag",
+    "period": "1854 design; modern reconstruction",
+    "tags": [
+      "Historical",
+      "Australian"
+    ],
+    "asset": "archive/eureka.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Eureka_Flag.svg",
+    "source_file": "Eureka Flag.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "See Wikimedia Commons file history"
+  },
+  {
+    "id": "eu",
+    "name": "European Union",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "International"
+    ],
+    "asset": "archive/eu.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "eu.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "fk",
+    "name": "Falkland Islands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/fk.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "fk.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "fo",
+    "name": "Faroe Islands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/fo.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "fo.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-fl",
+    "name": "Florida (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-fl.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-fl.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "france-free",
@@ -197,6 +520,48 @@
     "asset": "archive/france-free.png"
   },
   {
+    "id": "gf",
+    "name": "French Guiana",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/gf.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "gf.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "pf",
+    "name": "French Polynesia",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/pf.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "pf.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "tf",
+    "name": "French Southern and Antarctic Lands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/tf.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "tf.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "gadsden",
     "name": "Gadsden flag",
     "period": "1775 design; later political uses",
@@ -211,6 +576,20 @@
     "license_url": "",
     "credit": "Christopher Gadsden (1724–1805), Lexicon, Vikrum",
     "asset": "archive/gadsden.png"
+  },
+  {
+    "id": "us-ga",
+    "name": "Georgia (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ga.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ga.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "georgian-ssr",
@@ -276,6 +655,20 @@
     "asset": "archive/imperial-war.png"
   },
   {
+    "id": "gi",
+    "name": "Gibraltar",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/gi.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "gi.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "green-anarchism",
     "name": "Green anarchism - green and black",
     "period": "Symbolic design; no single adoption date",
@@ -289,6 +682,132 @@
     "license_url": "",
     "credit": "Rocket000",
     "asset": "archive/green-anarchism.png"
+  },
+  {
+    "id": "gl",
+    "name": "Greenland",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/gl.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "gl.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "gp",
+    "name": "Guadeloupe",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/gp.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "gp.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "gu",
+    "name": "Guam",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/gu.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "gu.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "gg",
+    "name": "Guernsey",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/gg.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "gg.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-hi",
+    "name": "Hawaii (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-hi.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-hi.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "hm",
+    "name": "Heard Island and McDonald Islands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/hm.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "hm.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "hk",
+    "name": "Hong Kong",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/hk.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "hk.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-id",
+    "name": "Idaho (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-id.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-id.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-il",
+    "name": "Illinois (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-il.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-il.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "japan-army",
@@ -305,6 +824,48 @@
     "license_url": "",
     "credit": "FDRMRZUSA",
     "asset": "archive/japan-army.png"
+  },
+  {
+    "id": "us-in",
+    "name": "Indiana (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-in.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-in.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-ia",
+    "name": "Iowa (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ia.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ia.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "im",
+    "name": "Isle of Man",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/im.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "im.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "pnf",
@@ -356,6 +917,20 @@
     "asset": "archive/japan-navy.png"
   },
   {
+    "id": "je",
+    "name": "Jersey",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/je.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "je.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "jolly-roger",
     "name": "Jolly Roger - skull and crossbones",
     "period": "Generic pirate flag design",
@@ -371,6 +946,20 @@
     "asset": "archive/jolly-roger.png"
   },
   {
+    "id": "us-ks",
+    "name": "Kansas (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ks.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ks.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "kazakh-ssr",
     "name": "Kazakh SSR",
     "period": "1953-1991",
@@ -384,6 +973,20 @@
     "license_url": "",
     "credit": "No machine-readable author provided. Urmas assumed (based on copyright claims).",
     "asset": "archive/kazakh-ssr.png"
+  },
+  {
+    "id": "us-ky",
+    "name": "Kentucky (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ky.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ky.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "italy-kingdom",
@@ -418,6 +1021,20 @@
     "asset": "archive/kirghiz-ssr.png"
   },
   {
+    "id": "xk",
+    "name": "Kosovo",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/xk.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "xk.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "latvian-ssr",
     "name": "Latvian SSR",
     "period": "1953-1990",
@@ -448,6 +1065,48 @@
     "asset": "archive/lithuanian-ssr.png"
   },
   {
+    "id": "us-la",
+    "name": "Louisiana (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-la.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-la.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "mo",
+    "name": "Macau",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/mo.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "mo.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-me",
+    "name": "Maine (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-me.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-me.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "manchukuo",
     "name": "Manchukuo",
     "period": "1932-1945",
@@ -461,6 +1120,118 @@
     "license_url": "",
     "credit": "Urmas",
     "asset": "archive/manchukuo.png"
+  },
+  {
+    "id": "mq",
+    "name": "Martinique",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/mq.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "mq.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-md",
+    "name": "Maryland (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-md.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-md.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-ma",
+    "name": "Massachusetts (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ma.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ma.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "yt",
+    "name": "Mayotte",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/yt.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "yt.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-mi",
+    "name": "Michigan (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-mi.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-mi.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-mn",
+    "name": "Minnesota (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-mn.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-mn.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-ms",
+    "name": "Mississippi (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ms.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ms.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-mo",
+    "name": "Missouri (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-mo.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-mo.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "moldavian-ssr",
@@ -491,6 +1262,34 @@
     "license_url": "",
     "credit": "Drawn by User:latebird",
     "asset": "archive/mongolia-socialist.png"
+  },
+  {
+    "id": "us-mt",
+    "name": "Montana (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-mt.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-mt.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "ms",
+    "name": "Montserrat",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/ms.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "ms.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "mutualism",
@@ -541,6 +1340,230 @@
     "asset": "archive/reich-war.png"
   },
   {
+    "id": "us-ne",
+    "name": "Nebraska (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ne.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ne.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-nv",
+    "name": "Nevada (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-nv.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-nv.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "nc",
+    "name": "New Caledonia",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/nc.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "nc.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-nh",
+    "name": "New Hampshire (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-nh.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-nh.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-nj",
+    "name": "New Jersey (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-nj.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-nj.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-nm",
+    "name": "New Mexico (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-nm.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-nm.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-ny",
+    "name": "New York (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ny.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ny.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "nu",
+    "name": "Niue",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/nu.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "nu.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "nf",
+    "name": "Norfolk Island",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/nf.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "nf.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-nc",
+    "name": "North Carolina (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-nc.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-nc.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-nd",
+    "name": "North Dakota (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-nd.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-nd.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "gb-nir",
+    "name": "Northern Ireland",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/gb-nir.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "gb-nir.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "mp",
+    "name": "Northern Mariana Islands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/mp.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "mp.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-oh",
+    "name": "Ohio (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-oh.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-oh.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-ok",
+    "name": "Oklahoma (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ok.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ok.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-or",
+    "name": "Oregon (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-or.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-or.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "ottoman",
     "name": "Ottoman Empire - late-period flag",
     "period": "1844-1922",
@@ -555,6 +1578,20 @@
     "license_url": "",
     "credit": "User:Orwellianist",
     "asset": "archive/ottoman.png"
+  },
+  {
+    "id": "us-pa",
+    "name": "Pennsylvania (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-pa.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-pa.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "south-yemen",
@@ -586,6 +1623,34 @@
     "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "credit": "Original:  Tom Lemmens Vector:  Sbmehta",
     "asset": "archive/vichy-petain.png"
+  },
+  {
+    "id": "pn",
+    "name": "Pitcairn Islands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/pn.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "pn.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "pr",
+    "name": "Puerto Rico",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/pr.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "pr.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "qing",
@@ -631,6 +1696,23 @@
     "license_url": "",
     "credit": "Louis Appia and Henri Dufour",
     "asset": "archive/red-cross.png"
+  },
+  {
+    "id": "red-eureka",
+    "name": "Red Eureka (communist variant / REK)",
+    "period": "Red-field Eureka variant; recoloured reconstruction",
+    "tags": [
+      "Australian",
+      "Communist",
+      "Political"
+    ],
+    "asset": "archive/red-eureka.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Eureka_Flag.svg",
+    "source_file": "Eureka Flag.svg",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "FlagWave red-field adaptation of the public-domain Eureka artwork",
+    "description": "Red field with white Eureka cross and stars. A recoloured reconstruction, not an attribution to one particular organisation."
   },
   {
     "id": "red-flag",
@@ -679,6 +1761,20 @@
     "asset": "archive/south-vietnam.png"
   },
   {
+    "id": "us-ri",
+    "name": "Rhode Island (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ri.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ri.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "russian-empire",
     "name": "Russian Empire - black, yellow and white",
     "period": "1858-1896 design",
@@ -709,6 +1805,90 @@
     "asset": "archive/russian-sfsr.png"
   },
   {
+    "id": "re",
+    "name": "Réunion",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/re.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "re.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "bl",
+    "name": "Saint Barthélemy",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/bl.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "bl.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "sh",
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/sh.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "sh.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "mf",
+    "name": "Saint Martin",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/mf.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "mf.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "pm",
+    "name": "Saint Pierre and Miquelon",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/pm.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "pm.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "gb-sct",
+    "name": "Scotland",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/gb-sct.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "gb-sct.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "spain-republic",
     "name": "Second Spanish Republic",
     "period": "1931-1939",
@@ -722,6 +1902,20 @@
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "credit": "SanchoPanzaXXI",
     "asset": "archive/spain-republic.png"
+  },
+  {
+    "id": "sx",
+    "name": "Sint Maarten",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/sx.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "sx.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "albania-socialist",
@@ -767,6 +1961,48 @@
     "license_url": "",
     "credit": "Flag designed by Đorđe Andrejević-Kun[3]SVG coding: Zscout370",
     "asset": "archive/yugoslavia.png"
+  },
+  {
+    "id": "us-sc",
+    "name": "South Carolina (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-sc.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-sc.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-sd",
+    "name": "South Dakota (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-sd.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-sd.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "gs",
+    "name": "South Georgia",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/gs.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "gs.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "ussr",
@@ -830,6 +2066,34 @@
     "asset": "archive/spain-1945.png"
   },
   {
+    "id": "sj",
+    "name": "Svalbard and Jan Mayen",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/sj.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "sj.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "tw",
+    "name": "Taiwan",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/tw.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "tw.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "tajik-ssr",
     "name": "Tajik SSR",
     "period": "1953-1991",
@@ -845,6 +2109,48 @@
     "asset": "archive/tajik-ssr.png"
   },
   {
+    "id": "us-tn",
+    "name": "Tennessee (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-tn.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-tn.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-tx",
+    "name": "Texas (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-tx.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-tx.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "tk",
+    "name": "Tokelau",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/tk.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "tk.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "turkmen-ssr",
     "name": "Turkmen SSR",
     "period": "1974-1991; retained to 1992",
@@ -858,6 +2164,20 @@
     "license_url": "",
     "credit": "Denelson83, Urmas, Nokka",
     "asset": "archive/turkmen-ssr.png"
+  },
+  {
+    "id": "tc",
+    "name": "Turks and Caicos Islands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/tc.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "tc.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   },
   {
     "id": "ukrainian-ssr",
@@ -891,6 +2211,20 @@
     "asset": "archive/uk-white-ensign.png"
   },
   {
+    "id": "un",
+    "name": "United Nations",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "International"
+    ],
+    "asset": "archive/un.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "un.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "usa-48",
     "name": "United States - 48-star flag",
     "period": "1912-1959",
@@ -922,6 +2256,48 @@
     "asset": "archive/usa-betsy-ross.png"
   },
   {
+    "id": "um",
+    "name": "United States Minor Outlying Islands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/um.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "um.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "vi",
+    "name": "United States Virgin Islands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/vi.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "vi.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-ut",
+    "name": "Utah (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-ut.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-ut.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "uzbek-ssr",
     "name": "Uzbek SSR",
     "period": "1952-1991",
@@ -937,6 +2313,104 @@
     "asset": "archive/uzbek-ssr.png"
   },
   {
+    "id": "us-vt",
+    "name": "Vermont (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-vt.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-vt.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-va",
+    "name": "Virginia (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-va.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-va.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "gb-wls",
+    "name": "Wales",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/gb-wls.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "gb-wls.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "wf",
+    "name": "Wallis and Futuna",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/wf.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "wf.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-wa",
+    "name": "Washington (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-wa.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-wa.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-wv",
+    "name": "West Virginia (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-wv.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-wv.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "eh",
+    "name": "Western Sahara",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/eh.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "eh.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
     "id": "white-flag",
     "name": "White flag - truce or surrender",
     "period": "Symbolic design; no single adoption date",
@@ -950,5 +2424,47 @@
     "license_url": "",
     "credit": "Upload:  Jeremy Nimmo",
     "asset": "archive/white-flag.png"
+  },
+  {
+    "id": "us-wi",
+    "name": "Wisconsin (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-wi.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-wi.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "us-wy",
+    "name": "Wyoming (US state)",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "US states"
+    ],
+    "asset": "archive/us-wy.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "us-wy.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
+  },
+  {
+    "id": "ax",
+    "name": "Åland Islands",
+    "period": "Contemporary design snapshot",
+    "tags": [
+      "Regional"
+    ],
+    "asset": "archive/ax.png",
+    "source": "https://flagpedia.net/download/api",
+    "source_file": "ax.png",
+    "license": "Public domain",
+    "license_url": "",
+    "credit": "Flagpedia / Wikimedia Commons"
   }
 ]

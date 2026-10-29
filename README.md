@@ -25,6 +25,10 @@ For a local checkout, run `bash install.sh`. No GPU or display server is needed.
 ## Examples
 
 ```bash
+flagwave
+flagwave rek
+flagwave eureka
+flagwave eu
 flagwave au
 flagwave china
 flagwave ussr
@@ -50,7 +54,7 @@ SVG is not supported: export it to PNG first.
 
 ## Historical, wartime and political flags
 
-**62 additional designs**, alongside the 195 country flags. Press **a** for the
+**170 additional designs**, alongside the 195 country flags. Press **a** for the
 archive; type to search by name, ID, period or category. **Ctrl-F / Ctrl-R**
 cycles category filters; **Ctrl-O** shows dates, attribution and the source.
 Press **d** on the stage to inspect the active archive flag.
@@ -174,3 +178,28 @@ The program's MIT license does not change the status of the flag images.
 rm -f "$HOME/.local/bin/flagwave"
 rm -rf "${XDG_DATA_HOME:-$HOME/.local/share}/flagwave"
 ```
+
+## Older laptops and tiny terminal fonts
+
+The default is Red Eureka (`rek` / `red-eureka`), a red-field reconstruction
+with a white Eureka cross and stars. Use `flagwave eureka` for the blue design,
+or `flagwave eu` for the EU flag. The archive now also includes regional flags
+and all 50 US state flags. Artwork sources are in ARCHIVE-SOURCES.md.
+
+Auto quality is the default: 20 FPS target, lower sampling cost and automatic
+quality/canvas reduction when rendering misses the frame budget. The animation
+is capped at 140 x 50 cells even in a huge terminal with tiny fonts. It stays
+centred instead of scaling CPU and output traffic with the full window size.
+The entire TUI is also capped at 220 x 75 cells and centred, so file pickers
+and menus cannot flood the terminal when fonts are tiny. Static stage areas
+are no longer erased/redrawn on every frame.
+
+For older laptops, including Intel MacBooks on Arch:
+
+```bash
+flagwave --low-power
+```
+
+Low power uses 12 FPS and at most 90 x 34 animated cells. `--quality high`
+raises the cap to 200 x 70; `--fps 15` sets a lower target independently.
+Performance still depends on the CPU, terminal emulator and system load.

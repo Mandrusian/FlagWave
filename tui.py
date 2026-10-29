@@ -68,19 +68,20 @@ class Keys:
 class Screen:
     def __init__(self):
         size=shutil.get_terminal_size((100,35))
-        self.w=max(1,size.columns-1); self.h=max(1,size.lines)
+        self.w=max(1,min(220,size.columns-1)); self.h=max(1,min(75,size.lines))
+        self.ox=max(0,(size.columns-1-self.w)//2); self.oy=max(0,(size.lines-self.h)//2)
         self.parts=['\x1b[H']
 
     def text(self,x,y,value,width=None,style=''):
         if y<0 or y>=self.h or x>=self.w: return
         width=max(0,min(self.w-x,width if width is not None else self.w-x))
         text=clean(value)[:width].ljust(width)
-        self.parts.append(f'\x1b[{y+1};{x+1}H{style}{text}{RESET}')
+        self.parts.append(f'\x1b[{y+self.oy+1};{x+self.ox+1}H{style}{text}{RESET}')
 
     def art(self,x,y,rows):
         for offset,row in enumerate(rows.split('\r\n')):
             if y+offset>=self.h: break
-            self.parts.append(f'\x1b[{y+offset+1};{x+1}H{row}')
+            self.parts.append(f'\x1b[{y+offset+self.oy+1};{x+self.ox+1}H{row}')
 
     def present(self):
         sys.stdout.write(''.join(self.parts)+RESET); sys.stdout.flush()
@@ -100,12 +101,12 @@ class App:
         if not self.folder.is_dir(): self.folder=Path.home()
         self.error=''; self.message=''; self.side=True; self.preview_key=None; self.preview=None
         self.fps=0.; self.entries=[]; self.show_hidden=False; self.setting=0; self.goto=None
-        self.renderer=None; self.reload()
+        self.render_scale=1.; self.last_layout=None; self.renderer=None; self.reload()
         if getattr(args,'archive',False): self.open('archive')
 
     def reload(self):
         tex=load_image(self.path if self.path else ROOT/'flags'/f'{self.code}.png')
-        self.renderer=Renderer(np.rot90(tex,3).copy() if self.args.vertical else tex)
+        self.renderer=Renderer(np.rot90(tex,3).copy() if self.args.vertical else tex,getattr(self.args,"quality","auto"))
 
     def open(self,mode):
         self.mode=mode; self.query=''; self.selected=0; self.offset=0; self.error=''; self.goto=None
@@ -145,7 +146,7 @@ class App:
         try:
             dest=save_import(path) if self.mode=='browser' else path
             newtex=load_image(dest)
-            self.renderer=Renderer(np.rot90(newtex,3).copy() if self.args.vertical else newtex)
+            self.renderer=Renderer(np.rot90(newtex,3).copy() if self.args.vertical else newtex,getattr(self.args,"quality","auto"))
             if code and code.startswith('archive:'):
                 self.archive_id=code.split(':',1)[1]; self.path=dest
             elif code:
@@ -169,7 +170,7 @@ class App:
                     if path.is_dir(): self.folder=path.resolve(); self.goto=None; self.query=''; self.selected=0
                     elif path.is_file():
                         dest=save_import(path); newtex=load_image(dest)
-                        self.renderer=Renderer(np.rot90(newtex,3).copy() if self.args.vertical else newtex)
+                        self.renderer=Renderer(np.rot90(newtex,3).copy() if self.args.vertical else newtex,getattr(self.args,"quality","auto"))
                         self.path=dest; self.archive_id=None; self.mode='stage'; self.goto=None; self.message='Imported and saved: '+clean(path.name)
                     else: self.error='Path does not exist.'
                 except (OSError,ValueError,Image.DecompressionBombError) as e: self.error=clean(e)
@@ -261,7 +262,11 @@ class App:
     def draw(self):
         s=Screen()
         # Clear each row so layout changes and resize never leave stale content.
-        for y in range(s.h): s.text(0,y,'')
+        layout=(self.mode,s.w,s.h,s.ox,s.oy,self.side)
+        if layout!=self.last_layout: s.parts.append("\x1b[2J")
+        if layout!=self.last_layout or self.mode!='stage':
+            for y in range(s.h): s.text(0,y,'')
+        self.last_layout=layout
         if s.w<48 or s.h<16:
             s.text(0,0,'FlagWave: enlarge terminal to 49 columns x 16 rows.',style=CYAN)
             s.text(0,2,'q / Ctrl-C: quit'); s.present(); return
@@ -297,7 +302,12 @@ class App:
             if sidebar:
                 lines=[('EXPLORE',CYAN),('f  Country flags',WHITE),('a  Historical archive',WHITE),('i  Import image',WHITE),('b  My images',WHITE),('s  Settings',WHITE),('?  Keyboard guide',WHITE),('',DIM),(f'{195+len(ARCHIVE)} offline flags',DIM),('PNG / JPG / WebP',DIM),('No GPU required',DIM),('',DIM),('Arrows  Orbit camera',DIM),('+ / -   Wind',DIM),('Space   Pause',DIM),('Tab     Hide sidebar',DIM)]
                 for i,(line,style) in enumerate(lines[:s.h-8]): s.text(2,5+i,line,22,style)
-            s.art(sidebar,4,self.renderer.frame(s.w-sidebar,max(1,s.h-7),self.clock,self.wind,self.yaw,self.pitch,self.color,self.args.blocks))
+            quality=getattr(self.args,'quality','auto')
+            capw,caph={'low':(90,34),'auto':(140,50),'high':(200,70)}[quality]
+            aw=min(s.w-sidebar,max(50,int(capw*self.render_scale)))
+            ah=min(max(1,s.h-7),max(18,int(caph*self.render_scale)))
+            ax=sidebar+max(0,(s.w-sidebar-aw)//2); ay=4+max(0,(s.h-7-ah)//2)
+            s.art(ax,ay,self.renderer.frame(aw,ah,self.clock,self.wind,self.yaw,self.pitch,self.color,self.args.blocks))
         s.text(0,s.h-2,'  '+(self.error or self.message or 'Ready. Choose a country or import your own flag.'),style='\x1b[91m' if self.error else DIM)
         if self.mode in ('countries','archive','browser','collection'):
             footer=' Enter: select  Esc: back  Tab: switch  Type: filter'
@@ -337,9 +347,9 @@ class App:
                     key=(str(path),self.args.vertical)
                     if key!=self.preview_key:
                         tex=load_image(path)
-                        self.preview=Renderer(np.rot90(tex,3).copy() if self.args.vertical else tex)
+                        self.preview=Renderer(np.rot90(tex,3).copy() if self.args.vertical else tex,getattr(self.args,"quality","auto"))
                         self.preview_key=key
-                    s.art(x,6,self.preview.frame(width,max(4,s.h-13),self.clock,1,.24,.12,self.color))
+                    s.art(x,6,self.preview.frame(min(width,80),min(35,max(4,s.h-13)),self.clock,1,.24,.12,self.color))
                     s.text(x,s.h-6,'Enter to '+('import and save' if self.mode=='browser' else 'wave this flag'),width,CYAN)
                     if self.mode=='archive':
                         info=ARCHIVE_BY_ID[entry[2].split(':',1)[1]]
@@ -365,5 +375,11 @@ class App:
                 self.draw(); count+=1
                 if self.args.frames and count>=self.args.frames: return
                 elapsed=time.monotonic()-start
+                if getattr(self.args,"quality","auto")=="auto":
+                    active=self.renderer if self.mode=="stage" else self.preview
+                    if active is not None and elapsed>1/self.args.fps:
+                        active.sample_scale=max(.45,active.sample_scale-.1)
+                        if self.mode=="stage" and self.render_scale>.6:
+                            self.render_scale=round(max(.6,self.render_scale-.1),1); self.last_layout=None
                 self.fps=.85*self.fps+.15*(1/max(elapsed,1/self.args.fps))
                 time.sleep(max(0,1/self.args.fps-elapsed))

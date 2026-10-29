@@ -98,7 +98,7 @@ class ApplicationTests(unittest.TestCase):
         for entry in core.ARCHIVE:
             image=core.load_image(core.ROOT/entry['asset'])
             self.assertEqual(image.shape[2],4)
-            self.assertTrue(entry['source'].startswith('https://commons.wikimedia.org/wiki/'))
+            self.assertTrue(entry['source'].startswith('https://'))
             if entry['license'].startswith('CC BY'): self.assertTrue(entry['credit'])
             self.assertTrue(entry['license'])
         for flag in ['ussr','ussr-1936','nazi-germany','pnf','buf','black-flag','mutualism']:
@@ -122,6 +122,15 @@ class ApplicationTests(unittest.TestCase):
         self.assertEqual(core.resolve_archive('germany-ww2'),'nazi-germany')
         result=subprocess.run([sys.executable,str(core.ROOT/'flagwave.py'),'--list-archive'],capture_output=True,text=True,check=True)
         self.assertEqual(len(result.stdout.splitlines()),len(core.ARCHIVE))
+
+    def test_tiny_font_canvas_is_bounded(self):
+        import io
+        app=tui.App(options(),'au')
+        with patch('shutil.get_terminal_size',return_value=os.terminal_size((1000,300))), patch('sys.stdout',new_callable=io.StringIO), patch.object(app.renderer,'frame',return_value='') as frame:
+            app.draw()
+            self.assertLessEqual(frame.call_args.args[0],140)
+            self.assertLessEqual(frame.call_args.args[1],50)
+        self.assertEqual(core.resolve_archive('rek'),'red-eureka')
 
     def test_terminal_restoration(self):
         master,slave=pty.openpty(); old=termios.tcgetattr(slave)

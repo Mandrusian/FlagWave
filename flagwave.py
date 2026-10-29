@@ -43,16 +43,19 @@ def surface(u, v, t, wind):
 
 
 class Renderer:
-    def __init__(self, texture):
+    def __init__(self, texture, quality="auto"):
         self.texture = texture
+        self.quality=quality
+        self.sample_scale=1.0
         self.grid_key = None
 
     def frame(self, width, height, t, wind=1., yaw=.24, pitch=.12, color='truecolor', blocks=False):
         # Supersample the cloth, project into character cells, and depth-test.
-        key = (width, height)
+        key = (width, height, self.quality, round(self.sample_scale,1))
         if self.grid_key != key:
-            nu = max(100, min(1100, width*5))
-            nv = max(80, min(800, height*7))
+            factor={"low":1.35,"auto":2.3,"high":5.0}[self.quality]*self.sample_scale
+            nu = max(45, min(600, int(width*factor)))
+            nv = max(30, min(400, int(height*factor*1.3)))
             self.u, self.v = np.meshgrid(np.linspace(0,1,nu), np.linspace(0,1,nv))
             self.grid_key = key
         u, v = self.u, self.v
@@ -155,7 +158,7 @@ def resolve(value):
 
 def resolve_archive(value):
     value=value.casefold().strip()
-    aliases={'soviet union':'ussr','soviet-union':'ussr','su':'ussr','ussr-ww2':'ussr-1936',
+    aliases={'rek':'red-eureka','red eureka':'red-eureka','communist-eureka':'red-eureka','soviet union':'ussr','soviet-union':'ussr','su':'ussr','ussr-ww2':'ussr-1936',
              'germany-ww2':'nazi-germany','nazi':'nazi-germany','east germany':'east-germany',
              'gdr':'east-germany','rising-sun':'japan-army'}
     value=aliases.get(value,value)
@@ -168,13 +171,15 @@ def resolve_archive(value):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('country',nargs='?',default='au',help='country code/name or historical flag ID (default au)')
+    p.add_argument('country',nargs='?',default='red-eureka',help='country code/name or archive ID (default red-eureka)')
     p.add_argument('--image',type=Path,help='PNG/JPG/WebP/GIF/BMP; first frame for animated images')
     p.add_argument('--list',action='store_true',help='list the 195 included flags')
     p.add_argument('--list-archive',action='store_true',help='list historical, military and political flag IDs')
     p.add_argument('--archive',action='store_true',help='open the historical and alternate flag picker')
     p.add_argument('--random',action='store_true',help='start with a random flag')
-    p.add_argument('--fps',type=int,default=25)
+    p.add_argument('--fps',type=int,default=20)
+    p.add_argument('--quality',choices=['auto','low','high'],default='auto',help='auto adapts sampling to your CPU')
+    p.add_argument('--low-power',action='store_true',help='12 FPS with low-cost sampling')
     p.add_argument('--wind',type=float,default=1.)
     p.add_argument('--color',choices=['truecolor','256','none'],default='truecolor')
     p.add_argument('--mono',action='store_true',help='uncoloured ASCII')
@@ -182,6 +187,7 @@ def main():
     p.add_argument('--vertical',action='store_true',help='rotate the image to make a hanging banner')
     p.add_argument('--frames',type=int,default=0,help='stop after this many frames (0 = unlimited)')
     args=p.parse_args()
+    if args.low_power: args.quality="low"; args.fps=12
     if args.list_archive:
         for entry in ARCHIVE:
             print(f"{entry['id']:<24} {entry['name']} | {entry['period']} | {', '.join(entry['tags'])}")

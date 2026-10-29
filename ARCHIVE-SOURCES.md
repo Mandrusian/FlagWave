@@ -1,6 +1,6 @@
 # Historical and alternate flag artwork
 
-62 designs. Labels distinguish national, civil, military, party and symbolic flags.
+170 designs. Labels distinguish national, civil, military, party and symbolic flags.
 Categories and dates describe the selected design, not an endorsement or a ranking.
 Symbolic ideology flags are representative designs; movements do not necessarily have one official flag.
 
@@ -631,3 +631,759 @@ diese Datei: Jwnabd
 - Artist/credit: Upload:  Jeremy Nimmo
 - License: Public domain
 - Changes: rasterized/resized to PNG; design unchanged.
+
+## Alabama (`us-al`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Alaska (`us-ak`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## American Samoa (`as`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Anguilla (`ai`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Antarctica (`aq`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Arizona (`us-az`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Arkansas (`us-ar`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## British Indian Ocean Territory (`io`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## British Virgin Islands (`vg`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## California (`us-ca`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Cayman Islands (`ky`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Christmas Island (`cx`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Colorado (`us-co`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Connecticut (`us-ct`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Cook Islands (`ck`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Curaçao (`cw`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Delaware (`us-de`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## England (`gb-eng`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Eureka flag (`eureka`)
+
+- Source: https://commons.wikimedia.org/wiki/File:Eureka_Flag.svg
+- Credit: See Wikimedia Commons file history
+- License: Public domain
+- Changes: resized PNG
+
+## European Union (`eu`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Falkland Islands (`fk`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Faroe Islands (`fo`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Florida (`us-fl`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## French Guiana (`gf`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## French Polynesia (`pf`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## French Southern and Antarctic Lands (`tf`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Georgia (`us-ga`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Gibraltar (`gi`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Greenland (`gl`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Guadeloupe (`gp`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Guam (`gu`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Guernsey (`gg`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Hawaii (`us-hi`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Heard Island and McDonald Islands (`hm`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Hong Kong (`hk`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Idaho (`us-id`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Illinois (`us-il`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Indiana (`us-in`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Iowa (`us-ia`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Isle of Man (`im`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Jersey (`je`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Kansas (`us-ks`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Kentucky (`us-ky`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Kosovo (`xk`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Louisiana (`us-la`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Macau (`mo`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Maine (`us-me`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Martinique (`mq`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Maryland (`us-md`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Massachusetts (`us-ma`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Mayotte (`yt`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Michigan (`us-mi`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Minnesota (`us-mn`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Mississippi (`us-ms`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Missouri (`us-mo`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Montana (`us-mt`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Montserrat (`ms`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Nebraska (`us-ne`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Nevada (`us-nv`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## New Caledonia (`nc`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## New Hampshire (`us-nh`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## New Jersey (`us-nj`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## New Mexico (`us-nm`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## New York (`us-ny`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Niue (`nu`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Norfolk Island (`nf`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## North Carolina (`us-nc`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## North Dakota (`us-nd`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Northern Ireland (`gb-nir`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Northern Mariana Islands (`mp`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Ohio (`us-oh`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Oklahoma (`us-ok`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Oregon (`us-or`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Pennsylvania (`us-pa`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Pitcairn Islands (`pn`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Puerto Rico (`pr`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Red Eureka (communist variant / REK) (`red-eureka`)
+
+- Source: https://commons.wikimedia.org/wiki/File:Eureka_Flag.svg
+- Credit: FlagWave red-field adaptation of the public-domain Eureka artwork
+- License: Public domain
+- Changes: resized PNG; blue areas recoloured red
+
+## Rhode Island (`us-ri`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Réunion (`re`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Saint Barthélemy (`bl`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Saint Helena, Ascension and Tristan da Cunha (`sh`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Saint Martin (`mf`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Saint Pierre and Miquelon (`pm`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Scotland (`gb-sct`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Sint Maarten (`sx`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## South Carolina (`us-sc`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## South Dakota (`us-sd`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## South Georgia (`gs`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Svalbard and Jan Mayen (`sj`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Taiwan (`tw`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Tennessee (`us-tn`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Texas (`us-tx`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Tokelau (`tk`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Turks and Caicos Islands (`tc`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## United Nations (`un`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## United States Minor Outlying Islands (`um`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## United States Virgin Islands (`vi`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Utah (`us-ut`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Vermont (`us-vt`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Virginia (`us-va`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Wales (`gb-wls`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Wallis and Futuna (`wf`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Washington (`us-wa`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## West Virginia (`us-wv`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Western Sahara (`eh`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Wisconsin (`us-wi`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Wyoming (`us-wy`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
+
+## Åland Islands (`ax`)
+
+- Source: https://flagpedia.net/download/api
+- Credit: Flagpedia / Wikimedia Commons
+- License: Public domain
+- Changes: resized PNG
