@@ -4,9 +4,10 @@ permissions:
   contents: read
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ubuntu-latest, macos-latest]
         python: ['3.11', '3.13']
     steps:
       - uses: actions/checkout@v4
@@ -16,3 +17,14 @@ jobs:
       - run: python -m pip install numpy Pillow
       - run: python -m unittest discover -s tests -v
       - run: bash -n install.sh publish-github.sh
+      - name: Smoke-test terminal installer and launcher
+        env:
+          XDG_DATA_HOME: ${{ runner.temp }}/flagwave-installer
+          FLAGWAVE_TEST_HOME: ${{ runner.temp }}/flagwave-home
+        run: |
+          mkdir -p "$FLAGWAVE_TEST_HOME"
+          HOME="$FLAGWAVE_TEST_HOME" bash install.sh
+          "$FLAGWAVE_TEST_HOME/.local/bin/flagwave" --list > "$RUNNER_TEMP/flagwave-countries.txt"
+          grep -q '^AU  Australia$' "$RUNNER_TEMP/flagwave-countries.txt"
+          "$FLAGWAVE_TEST_HOME/.local/bin/flagwave" --list-archive > "$RUNNER_TEMP/flagwave-archive.txt"
+          grep -q '^red-eureka ' "$RUNNER_TEMP/flagwave-archive.txt"
