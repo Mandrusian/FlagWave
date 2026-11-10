@@ -2,12 +2,35 @@
 # Local install, or: curl -fsSL https://raw.githubusercontent.com/Mandrusian/FlagWave/main/install.sh | bash
 set -euo pipefail
 install_flagwave() {
-    local source_dir='' staging='' target python_bin manager
+    local source_dir='' staging='' target python_bin manager platform
     target="${XDG_DATA_HOME:-$HOME/.local/share}/flagwave"
     if [[ -f "${BASH_SOURCE[0]:-}" ]]; then
         source_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
     fi
-    if ! command -v python3 >/dev/null 2>&1 || ! python3 -c 'import numpy; from PIL import Image' >/dev/null 2>&1; then
+    platform="$(uname -s)"
+    if [[ "$platform" == "Darwin" ]]; then
+        # Avoid macOS system Python if it is too old; prefer an existing 3.10+.
+        if ! command -v python3 >/dev/null 2>&1 || ! python3 -c 'import sys; sys.exit(sys.version_info < (3,10))' >/dev/null 2>&1; then
+            local brew_bin='' brew_prefix=''
+            if command -v brew >/dev/null 2>&1; then
+                brew_bin="$(command -v brew)"
+            elif [[ -x /opt/homebrew/bin/brew ]]; then
+                brew_bin=/opt/homebrew/bin/brew
+            elif [[ -x /usr/local/bin/brew ]]; then
+                brew_bin=/usr/local/bin/brew
+            fi
+            if [[ -z "$brew_bin" ]]; then
+                echo 'macOS requires Python 3.10+. Install it via Homebrew (https://brew.sh) or python.org, then rerun.' >&2
+                return 1
+            fi
+            brew_prefix="$("$brew_bin" --prefix)"
+            if [[ ! -x "$brew_prefix/bin/python3" ]] || ! "$brew_prefix/bin/python3" -c 'import sys; sys.exit(sys.version_info < (3,10))' >/dev/null 2>&1; then
+                "$brew_bin" install python
+            fi
+            export PATH="$brew_prefix/bin:$PATH"
+        fi
+    fi
+    if [[ "$platform" != "Darwin" ]] && { ! command -v python3 >/dev/null 2>&1 || ! python3 -c 'import numpy; from PIL import Image' >/dev/null 2>&1; }; then
         local -a elevate=()
         manager=''
         for manager in apt-get dnf pacman zypper apk xbps-install; do
@@ -39,13 +62,23 @@ install_flagwave() {
     python3 -c 'import sys; assert sys.version_info >= (3,10), "Python 3.10+ is required"'
     mkdir -p "$target" "$HOME/.local/bin"
     python_bin="$(command -v python3)"
-    if ! "$python_bin" -c 'import numpy; from PIL import Image' >/dev/null 2>&1; then
-        # Fallback for other distributions; never modifies the system Python.
+    if [[ "$platform" == "Darwin" ]]; then
+        # Homebrew Python is externally managed (PEP 668); always use a venv.
         "$python_bin" -m venv "$target/venv" || {
-            printf 'Enable Python venv/pip support on your distro, then rerun.\n' >&2
+            echo 'Could not create a Python virtual environment on macOS. Check your Python installation.' >&2
             return 1
         }
         python_bin="$target/venv/bin/python"
+    fi
+    if ! "$python_bin" -c 'import numpy; from PIL import Image' >/dev/null 2>&1; then
+        if [[ "$platform" != "Darwin" ]]; then
+            # Linux fallback for distributions without NumPy and Pillow packages.
+            "$python_bin" -m venv "$target/venv" || {
+                echo 'Enable Python venv/pip support on your distro, then rerun.' >&2
+                return 1
+            }
+            python_bin="$target/venv/bin/python"
+        fi
         "$python_bin" -m pip install numpy Pillow
     fi
     if [[ -z "$source_dir" || ! -f "$source_dir/flagwave.py" || ! -f "$source_dir/archive.json" ]]; then
@@ -85,5 +118,8 @@ path.write_text('#!/usr/bin/env bash\nexec '+shlex.quote(python)+' '+shlex.quote
 path.chmod(0o755)
 PY
     printf '\nFlagWave installed: 195 country flags + historical archive.\nRun: %s au\nArchive: %s --archive\n' "$HOME/.local/bin/flagwave" "$HOME/.local/bin/flagwave"
+    if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+        echo "Add $HOME/.local/bin to PATH to run flagwave directly (e.g. in ~/.zprofile on macOS)."
+    fi
 }
 install_flagwave "$@"
