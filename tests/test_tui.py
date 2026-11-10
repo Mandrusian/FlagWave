@@ -199,7 +199,15 @@ class ApplicationTests(unittest.TestCase):
             os.write(master,b'q');drain(.3)
             proc.wait(timeout=5)
             self.assertEqual(proc.returncode,0)
-            self.assertEqual(termios.tcgetattr(slave),old)
+            current=termios.tcgetattr(slave)
+            if sys.platform == 'darwin':
+                # PENDIN is a kernel-managed "retype pending input" state bit.
+                # macOS may set it after PTY activity; it is not a terminal
+                # setting changed by FlagWave or restored via tcsetattr.
+                pending=getattr(termios,'PENDIN',0x20000000)
+                current[3] &= ~pending
+                old[3] &= ~pending
+            self.assertEqual(current,old)
             self.assertIn(b'China',output)
             self.assertIn(b'MY IMAGES',output)
             self.assertEqual(len(list((Path(temp.name)/'flagwave/imports').glob('*.png'))),1)
