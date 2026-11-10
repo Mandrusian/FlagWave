@@ -15,6 +15,7 @@ camera and automatic orbit. **Red Eureka** is selected on first launch.
 | --- | --- | --- |
 | **Web** | [Launch FlagWave](https://mandrusian.github.io/FlagWave/) — no sign-in | Material 3 style UI, WebGL 2, Canvas fallback |
 | **Android** | [Download an APK build](https://github.com/Mandrusian/FlagWave/actions/workflows/android.yml) | Native Kotlin / Material 3, C++ cloth, OpenGL ES 3 |
+| **macOS terminal** | Use the installer below | Apple Silicon and Intel; Terminal.app, iTerm2 or any ANSI terminal |
 | **Linux terminal** | Use the installer below | Searchable TUI, Python + NumPy + Pillow; no GPU or display server required |
 
 ## Features
@@ -33,21 +34,33 @@ camera and automatic orbit. **Red Eureka** is selected on first launch.
 The cloth is procedural animation, pinned along its left edge. Vertical artwork
 rotates the image into a banner; it does not move the pinned edge.
 
-## Linux quick start
+## macOS and Linux quick start
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Mandrusian/FlagWave/main/install.sh | bash
 flagwave
 ```
 
-If `~/.local/bin` is not in your PATH, run `~/.local/bin/flagwave`.
+If `~/.local/bin` is not in your PATH, run `~/.local/bin/flagwave`. On macOS,
+you can add it to zsh with
+`echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zprofile` and open a new terminal.
+The installer does not edit shell startup files.
 For an existing checkout, use `bash install.sh` from the repository root.
 
-The installer supports Fedora / Asahi, Debian / Ubuntu, Arch, openSUSE, Alpine
-and Void through their package managers. Other distributions can use a Python
-virtual environment when Python 3.10+, venv and pip are available. Root access
-is used only for missing system packages; the app installs into your home
-directory. Rerunning the installer updates the app and preserves saved imports.
+On **macOS** (Apple Silicon and Intel), the installer uses an existing Python
+3.10+ or installs it through Homebrew when Homebrew is already available. If
+neither is installed, set up Python via [Homebrew](https://brew.sh/) or
+[python.org](https://www.python.org/downloads/macos/) first. It creates a
+private virtual environment for NumPy and Pillow rather than modifying
+Homebrew or macOS system packages. This is the **terminal interface**, not
+a native macOS GUI.
+
+On **Linux**, the installer supports Fedora / Asahi, Debian / Ubuntu, Arch,
+openSUSE, Alpine and Void through their package managers. Other distributions
+can use a Python virtual environment when Python 3.10+, venv and pip are
+available. Root access is used only for missing Linux system packages; the
+app installs into your home directory on either platform. Reinstalling
+preserves saved imports.
 
 Use a terminal with ANSI support. Truecolor is the default; 256-colour and
 monochrome modes are also available. No runtime network connection is required.
@@ -231,7 +244,7 @@ Android APK, and builds, tests and deploys the web app to GitHub Pages when its
 source or shared assets change on `main`. Platform-specific build instructions
 are in the [Android](android/README.md) and [web](web/README.md) documentation.
 
-## Uninstall the Linux app
+## Uninstall the macOS or Linux terminal app
 
 The following removes the app **and all saved terminal imports**:
 
