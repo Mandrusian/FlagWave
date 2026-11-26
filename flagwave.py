@@ -6,11 +6,9 @@ import math
 import os
 from pathlib import Path
 import select
-import shutil
 import signal
 import sys
 import termios
-import time
 import tty
 
 import numpy as np

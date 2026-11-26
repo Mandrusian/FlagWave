@@ -71,8 +71,27 @@ class ApplicationTests(unittest.TestCase):
             path=Path(root)/'hello.png';Image.new('RGB',(50,80),'blue').save(path)
             app=tui.App(options(),'au');app.open('browser');app.input('\x07')
             self.assertIsNotNone(app.goto);app.input('ESC');self.assertIsNone(app.goto)
+            app.input('\x07');app.goto=str(Path(root)/'missing.png');app.input('ENTER')
+            self.assertTrue(app.error)
             app.goto=str(path);app.input('ENTER')
-            self.assertEqual(app.mode,'stage');self.assertTrue(app.path.is_file())
+            self.assertEqual(app.mode,'stage');self.assertTrue(app.path.is_file());self.assertEqual(app.error,'')
+
+    def test_image_label_and_stage_wind_rounding(self):
+        import io
+        self.assertEqual(tui.image_label(Path('my-custom-flag.png')),'my-custom-flag')
+        self.assertEqual(tui.image_label(Path('my-custom-flag-0123456789abcdef.png')),'my-custom-flag')
+        with tempfile.TemporaryDirectory() as root:
+            path=Path(root)/'my-flag.png'; Image.new('RGBA',(40,25),'green').save(path)
+            opts=options(); opts.image=path
+            app=tui.App(opts,'au')
+            buf=io.StringIO()
+            with patch('shutil.get_terminal_size',return_value=os.terminal_size((100,30))), patch('sys.stdout',buf):
+                app.draw()
+            self.assertIn('my-flag',buf.getvalue())
+            for _ in range(3): app.input('+')
+            self.assertEqual(app.wind,1.3)
+            for _ in range(13): app.input('-')
+            self.assertEqual(app.wind,0.0)
 
     def test_batched_keys(self):
         master,slave=pty.openpty()

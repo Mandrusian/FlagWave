@@ -4,6 +4,7 @@ import math
 import hashlib
 import os
 from pathlib import Path
+import re
 import select
 import shutil
 import sys
@@ -27,6 +28,11 @@ EXTENSIONS={'.png','.jpg','.jpeg','.webp','.bmp','.gif','.tif','.tiff','.ico'}
 
 def collection_dir():
     return Path(os.environ.get('XDG_DATA_HOME',Path.home()/'.local/share'))/'flagwave/imports'
+
+
+def image_label(path):
+    """Strip only the 16-hex import digest suffix, keeping hyphens in user filenames."""
+    return re.sub(r'-[0-9a-f]{16}$', '', path.stem)
 
 
 def save_import(path):
@@ -127,7 +133,7 @@ class App:
                     and all(word in (e['id']+' '+e['name']+' '+e['period']+' '+' '.join(e['tags'])).casefold() for word in q.split())]
         if self.mode=='collection':
             paths=sorted(collection_dir().glob('*.png'))
-            return [(p.stem.rsplit('-',1)[0],p,None,False) for p in paths if q in p.name.casefold()]
+            return [(image_label(p),p,None,False) for p in paths if q in p.name.casefold()]
         try:
             entries=list(self.folder.iterdir())
         except OSError as e:
@@ -165,18 +171,18 @@ class App:
     def input(self,key):
         if key=='QUIT': return False
         if self.goto is not None:
-            if key=='ESC': self.goto=None
+            if key=='ESC': self.goto=None; self.error=''
             elif key=='ENTER':
                 raw=self.goto.strip().strip("\"'")
-                if not raw: self.goto=None; return True
+                if not raw: self.goto=None; self.error=''; return True
                 path=Path(raw).expanduser()
                 if not path.is_absolute(): path=self.folder/path
                 try:
-                    if path.is_dir(): self.folder=path.resolve(); self.goto=None; self.query=''; self.selected=0
+                    if path.is_dir(): self.folder=path.resolve(); self.goto=None; self.query=''; self.selected=0; self.error=''
                     elif path.is_file():
                         dest=save_import(path); newtex=load_image(dest)
                         self.renderer=Renderer(np.rot90(newtex,3).copy() if self.args.vertical else newtex,getattr(self.args,"quality","auto"))
-                        self.path=dest; self.archive_id=None; self.mode='stage'; self.goto=None; self.message='Imported and saved: '+clean(path.name)
+                        self.path=dest; self.archive_id=None; self.mode='stage'; self.goto=None; self.error=''; self.message='Imported and saved: '+clean(path.name)
                     else: self.error='Path does not exist.'
                 except (OSError,ValueError,Image.DecompressionBombError) as e: self.error=clean(e)
             elif key=='BACKSPACE': self.goto=self.goto[:-1]
@@ -268,14 +274,14 @@ class App:
         elif key in ('RIGHT','l'): self.yaw+=.1
         elif key in ('UP','k'): self.pitch=min(.9,self.pitch+.1)
         elif key in ('DOWN','j'): self.pitch=max(-.9,self.pitch-.1)
-        elif key in ('+','='): self.wind=min(2.5,self.wind+.1)
-        elif key=='-': self.wind=max(0,self.wind-.1)
+        elif key in ('+','='): self.wind=round(min(2.5,self.wind+.1),1)
+        elif key=='-': self.wind=round(max(0.,self.wind-.1),1)
         elif key=='v': self.args.vertical=not self.args.vertical; self.reload()
         elif key=='c': self.color={'truecolor':'256','256':'none','none':'truecolor'}[self.color]
         elif key=='r': self.yaw=.24; self.pitch=.12; self.wind=1.
         elif key in ('n','p'):
             codes=list(COUNTRIES); self.code=codes[(codes.index(self.code)+(1 if key=='n' else -1))%len(codes)]
-            self.path=None; self.archive_id=None; self.reload()
+            self.path=None; self.archive_id=None; self.error=''; self.reload()
         return True
 
     def details(self,archive_id):
@@ -330,7 +336,7 @@ class App:
                         'n / p     Next / previous country','v / c     Rotate artwork / cycle colours','Tab       Toggle stage sidebar','r         Reset wind and camera','q         Quit (Ctrl-C works on every screen)']
             for i,line in enumerate(help_lines[:s.h-6]): s.text(3,5+i,line)
         else:
-            name=clean(ARCHIVE_BY_ID[self.archive_id]['name'] if self.archive_id else (self.path.stem.rsplit('-',1)[0] if self.path else COUNTRIES[self.code]))
+            name=clean(ARCHIVE_BY_ID[self.archive_id]['name'] if self.archive_id else (image_label(self.path) if self.path else COUNTRIES[self.code]))
             self.header(s,name,('PAUSED' if self.paused else 'LIVE')+f'   |   Wind {self.wind:.1f}   |   {self.fps:.0f}/{self.args.fps} FPS   |   '+self.color+(f'   |   ORBIT {self.orbit_speed:g} deg/s' if self.orbit else ''))
             sidebar=25 if self.side and s.w>=90 else 0
             if sidebar:
@@ -385,7 +391,7 @@ class App:
                         tex=load_image(path)
                         self.preview=Renderer(np.rot90(tex,3).copy() if self.args.vertical else tex,getattr(self.args,"quality","auto"))
                         self.preview_key=key
-                    s.art(x,6,self.preview.frame(min(width,80),min(35,max(4,s.h-13)),self.clock,1,.24,.12,self.color))
+                    s.art(x,6,self.preview.frame(min(width,80),min(35,max(4,s.h-13)),self.clock,1,.24,.12,self.color,self.args.blocks))
                     s.text(x,s.h-6,'Enter to '+('import and save' if self.mode=='browser' else 'wave this flag'),width,CYAN)
                     if self.mode=='archive':
                         info=ARCHIVE_BY_ID[entry[2].split(':',1)[1]]
