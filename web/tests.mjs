@@ -30,4 +30,25 @@ assert.equal(sextant.state.size,shaded.state.size*6);
 assert.equal(renderSample(true,0).calls.length,1); // Only the background, no opaque rectangle.
 assert(renderSample(false,255,false).calls.some(c=>c.ink==='rgb(0 0 0)'));
 assert(!renderSample(true,255,true,false).calls.some(c=>c.kind==='text'));
+
+// Degenerate tall/narrow canvas stays bounded and stale load errors are ignored.
+const narrowCtx={fillRect(){},fillText(){}};
+const narrow={canvas:{width:1,height:500,getBoundingClientRect:()=>({width:1,height:500})},ctx:narrowCtx,options:{cells:100,ascii:true,sextants:false,liftDark:true,wind:1},tex:{width:2,height:2,data:new Uint8Array(16).fill(255)},aspect:1.5,zoom:1,yaw:0,pitch:0,angle:0,time:0};
+SoftwareRenderer.prototype.draw.call(narrow);
+assert(narrow.size<=100*180);
+
+const errors=[];
+const origImage=globalThis.Image;
+try {
+ let rejectFirst;
+ globalThis.Image=class { decode(){ return new Promise((_,rej)=>{ if(!rejectFirst) rejectFirst=rej; }); } };
+ const loader={generation:0,onError(msg){errors.push(msg);}};
+ const first=SoftwareRenderer.prototype.load.call(loader,'a.png');
+ SoftwareRenderer.prototype.load.call(loader,'b.png');
+ rejectFirst(new Error('stale'));
+ await first;
+ assert.deepEqual(errors,[]);
+} finally {
+ globalThis.Image=origImage;
+}
 console.log('Dark-colour contrast, sextant subcells, transparency and textured rendering passed.');
